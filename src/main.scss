@@ -2,3 +2,102 @@
 @import "global/variables";
 @import "global/development";
 @import "global/icons";
+
+$logo-text-color: #002259;
+$logo-arrow-light: #00359E;
+$logo-arrow-dark: #002259;
+$logo-circles-color: #EF4B00;
+
+.logo {
+  max-width: 400px;
+  &:hover,
+  &:focus {
+    .logo {
+      &-arrow-wrapper {
+        animation: fade-out 5s ease-in-out infinite;
+      }
+
+      &-circle{
+        &-animate-inner {
+          animation: 5s wave-md .75s ease-in-out infinite;
+        }
+        &-animate-outer {
+          animation: 5s wave-lg .85s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
+  &-circle {
+    transform-origin: 12.8% 52.1%;
+    fill: $logo-circles-color;
+  }
+
+  &-arrow {
+    &-light {
+      fill: $logo-arrow-light;
+    }
+
+    &-dark {
+      fill: $logo-arrow-dark;
+    }
+
+    &-wrapper {
+
+    }
+  }
+
+  &-text {
+    fill: $logo-text-color;
+  }
+}
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  4% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  4.0001% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  4.5% {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes wave-md {
+  0%,15.0001%,100% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  15% {
+    opacity: .2;
+    transform: scale(1);
+  }
+}
+
+@keyframes wave-lg {
+  0%,30.0001%,100% {
+    opacity: .5;
+    transform: scale(0);
+  }
+  30% {
+    opacity: .1;
+    transform: scale(1);
+  }
+}

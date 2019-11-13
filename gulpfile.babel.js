@@ -53,9 +53,13 @@ const sources = {
 // Styles
 export const buildStyles = () => src(sources.styles.toCompile, {nodir: true})
 	.pipe(sourcemaps.init())
-	.pipe(sass.sync({outputStyle: production ? 'compressed' : 'expanded', includePaths: ['node_modules']}).on('error', sass.logError))
+	.pipe(sass.sync({
+		outputStyle: production ? 'compressed' : 'expanded',
+		includePaths: ['node_modules']
+	}).on('error', sass.logError))
 	.pipe(sourcemaps.write())
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(reload({stream: true}));
 
 // Views
 export const buildViews = () => src(sources.views.toCompile)
@@ -66,7 +70,8 @@ export const buildViews = () => src(sources.views.toCompile)
 		context: {env: production ? 'public' : 'live'}
 	}))
 	.pipe(flatten())
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(reload({stream: true}));
 
 // Scripts
 export const buildScripts = () => src(sources.scripts.toCompile)
@@ -77,7 +82,8 @@ export const buildScripts = () => src(sources.scripts.toCompile)
 // Webpack
 export const buildWebpack = () => src(sources.scripts.toCompile)
 	.pipe(webpackStream(webpackConfig), webpack)
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(reload({stream: true}));
 
 // Images
 export const convertImages = () => src(sources.images.toCompile, {nodir: true})
@@ -100,9 +106,8 @@ export const buildImages = () => src(sources.images.toCompile, {nodir: true})
 	.pipe(dest(PATH.build));
 
 // Fonts TODO: simplify converting(fontforge?)
-export const buildFonts = () => src(sources.fonts.toCompile, {nodir: true})
-	.pipe(dest(PATH.build))
-	.pipe(livereload());
+export const buildFonts = () => src(sources.fonts.toCompile)
+	.pipe(dest(PATH.build));
 
 // Data
 export const buildData = () => src(sources.data.toCompile, {nodir: true})
@@ -123,15 +128,22 @@ const reload = browserSync.reload;
 
 // Watch Task
 export const devWatch = () => {
-	browserSync.init({server: {baseDir: "./live"}});
-	watch(sources.styles.toWatch, buildStyles).on("change", reload);
-	watch(sources.views.toWatch, buildViews).on("change", reload);
-	watch(sources.scripts.toWatch, buildWebpack).on("change", reload);
-	watch(sources.images.toWatch, buildImages).on("change", reload);
-	watch(sources.fonts.toWatch, buildFonts).on("change", reload);
-	watch(sources.data.toWatch, buildData).on("change", reload);
-	watch(sources.audio.toWatch, buildAudio).on("change", reload);
-	watch(sources.video.toWatch, buildVideo).on("change", reload);
+	browserSync.init({
+		server: {
+			baseDir: "./live"
+		},
+		port: 3000,
+		open: true,
+		notify: false
+	});
+	watch(sources.styles.toWatch, buildStyles);
+	watch(sources.views.toWatch, buildViews);
+	watch(sources.scripts.toWatch, buildWebpack);
+	watch(sources.images.toWatch, buildImages);
+	watch(sources.fonts.toWatch, buildFonts);
+	watch(sources.data.toWatch, buildData);
+	watch(sources.audio.toWatch, buildAudio);
+	watch(sources.video.toWatch, buildVideo);
 };
 
 // Default task

@@ -2,13 +2,13 @@
   position: fixed;
   top: 0;
   right: 0;
-  background: rgba(255,0,0,.5);
+  background: rgba(255, 0, 0, .5);
   color: #fff;
   font-weight: 400;
   font-size: 16px;
   padding: 7px 10px;
   pointer-events: none;
-  box-shadow: 0 9px 16px 0 rgba(0,0,0,.28);
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, .28);
   z-index: 9999999;
   border-bottom-left-radius: 6px;
 
@@ -18,5 +18,29 @@
 
   &-live {
     opacity: .3;
+  }
+}
+
+.component-section {
+  background: rgba(0, 0, 0, .05);
+  margin-bottom: 50px;
+  padding: 15px;
+  overflow: hidden;
+
+  span[class^="icon-"] {
+    display: block;
+    float: left;
+    color: #f00;
+    font-size: 40px;
+    margin: 10px;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .component-section {
+    margin: 0 0 10px;
+    background: rgba(0,0,0,.1);
   }
 }

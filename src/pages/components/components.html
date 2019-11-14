@@ -20,7 +20,8 @@
                     c-16.3,0-29.5,13.2-29.5,29.5S42.8,98.2,59,98.2c16.3,0,29.5-13.2,29.5-29.5S75.3,39.3,59,39.3z"></path>
 
         <g class="logo-arrow-wrapper">
-          <path class="logo-arrow-light" d="M60.3,70.2 38.1,20.4 30.5,32.8 33.2,42.9 33.2,42.9 22.3,41.3 10,49.3"></path>
+          <path class="logo-arrow-light"
+                d="M60.3,70.2 38.1,20.4 30.5,32.8 33.2,42.9 33.2,42.9 22.3,41.3 10,49.3"></path>
           <path class="logo-arrow-dark" d="M60.3,70.2 60.3,70.2 44.3,54.3 33.2,42.9 33.2,42.9 22.3,41.3 10,49.3"></path>
         </g>
       </g>
@@ -157,6 +158,7 @@
 
     <section class="component-section">
       <h5>Selects</h5>
+      <h6>Default selects:</h6>
       <div class="form-group">
         <label for="exampleFormControlSelect1">Example select</label>
         <select class="form-control" id="exampleFormControlSelect1">
@@ -172,12 +174,47 @@
         <select class="form-control form-control-lg">
           <option>Large select</option>
         </select>
-        <select class="form-control mt-2">
-          <option>Default select</option>
-        </select>
         <select class="form-control form-control-sm mt-2">
           <option>Small select</option>
         </select>
+      </div>
+
+      <h6>Custom selects:</h6>
+      <div class="form-group">
+        <select class="custom-select mt-2">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <h6>Sizes</h6>
+      <div class="form-group">
+        <select class="custom-select custom-select-lg mt-2">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+
+        <select class="custom-select custom-select-sm mt-2">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <h6>Wrapped</h6>
+      <div class="form-group">
+        <div class="custom-select-wrapper">
+          <label for="wrapped">Choose a custom test:</label>
+          <select id="wrapped" class="custom-select custom-select-sm">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
       </div>
     </section>
   </section>

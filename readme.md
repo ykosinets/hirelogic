@@ -11,12 +11,12 @@
 
 ------------
 
-###### Color Palett
+### Color Palett
 ![Color Pallete](color-pallet.png "Color Pallet")
 
 ------------
 
-###### File structure
+### File structure
 ┌ **src** (sources directory)\
 ├── **assets** (assets directory)\
 ├──── **images**\
@@ -34,4 +34,6 @@
 ├ **public** (production build)\
 ├ package.json (main project config)\
 ├ gulpfile.babel.js (main building tool config)\
-└ webpack.config.js (es6)\
+└ webpack.config.js (es6)
+
+------------

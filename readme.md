@@ -34,4 +34,4 @@
 ├ **public** (production build)\
 ├ package.json (main project config)\
 ├ gulpfile.babel.js (main building tool config)\
-└ webpack.config.js (es6)\
+└ webpack.config.js (es6)

@@ -1,0 +1,27 @@
+$btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show > &.dropdown-toggle";
+
+.btn {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-secondary,
+.btn-light,
+.btn-link,
+.btn-outline-secondary,
+.btn-outline-light,
+.btn-outline-link{
+  #{$btn-state-all} {
+    color: $primary;
+  }
+}
+
+.btn-warning,
+.btn-info,
+.btn-danger,
+.btn-success,
+.btn-dark{
+  #{$btn-state-all} {
+    color: $white;
+  }
+}

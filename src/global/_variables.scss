@@ -1,5 +1,85 @@
+//project vars
 $path-font: './fonts';
 $path-img: './images';
+
+$roboto: "Roboto", sans-serif;
+
+
+//main
+//$enable-responsive-font-sizes: true;
+$enable-shadows: false;
+$font-size-base: 16;
+$font-family-base: $roboto;
+$primary: #063dc7;
+$secondary: #f4f4fc;
+$danger: #ef4b00;
+$success: #90c706;
+$warning: #daba00;
+$info: #17a2b8;
+$light: #f9f9fd;
+$dark: #343a40;
+$white: #fff;
+$color: $primary;
+
+//buttons
+$btn-padding-y-sm: 12px;
+$btn-padding-y: 15px;
+$btn-padding-y-lg: 16px;
+
+$btn-padding-x-sm: 26px;
+$btn-padding-x: 38px;
+$btn-padding-x-lg: 40px;
+
+$btn-font-size-sm: .575rem;
+$btn-font-size: .625rem;
+$btn-font-size-lg: .825rem;
+
+$btn-border-radius-sm: 20px;
+$btn-border-radius: 30px;
+$btn-border-radius-lg: 40px;
+
+$btn-line-height-sm: 1;
+$btn-line-height: 1;
+$btn-line-height-lg: 1.25;
+
+$btn-border-width: 1px;
+$btn-primary-color: $white;
+$btn-secondary-color: $primary;
+$btn-font-weight: 500;
+
+//inputs
+$input-height-sm: 30px;
+$input-height: 40px;
+$input-height-lg: 50px;
+
+$input-font-size-sm: .75rem;
+$input-font-size: .75rem;
+$input-font-size-lg: 1rem;
+
+$input-border-color: #d9d9e2;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $primary;
+$input-focus-color: $primary;
+
+$input-line-height-sm: 1.2;
+$input-line-height: 1;
+$input-line-height-lg: 1;
+
+$input-padding-x-sm: 1rem;
+$input-padding-x: 1.4375rem;
+$input-padding-x-lg: 1.875rem;
+
+$input-padding-y-sm: .4rem;
+$input-padding-y: .8125rem;
+$input-padding-y-lg: 1rem;
+
+$input-border-radius-sm: 20px;
+$input-border-radius: 30px;
+$input-border-radius-lg: 40px;
+
+//labels
+$label-margin-bottom: 15px;
 
 $color-controls: #011c62;
 $color-text: #8c8ca2;

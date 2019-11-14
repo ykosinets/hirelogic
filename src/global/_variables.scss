@@ -19,7 +19,15 @@ $info: #17a2b8;
 $light: #f9f9fd;
 $dark: #343a40;
 $white: #fff;
+$controls: #011c62;
+$text: #8c8ca2;
 $color: $primary;
+
+//typography
+$small-font-size: .75rem;
+
+//labels
+$label-margin-bottom: 15px;
 
 //buttons
 $btn-padding-y-sm: 12px;
@@ -57,10 +65,9 @@ $input-font-size: .75rem;
 $input-font-size-lg: 1rem;
 
 $input-border-color: #d9d9e2;
-$input-box-shadow: none;
-$input-focus-box-shadow: none;
-$input-focus-border-color: $primary;
-$input-focus-color: $primary;
+$input-color: $controls;
+$input-focus-border-color: $controls;
+$input-focus-color: $controls;
 
 $input-line-height-sm: 1.2;
 $input-line-height: 1;
@@ -75,11 +82,9 @@ $input-padding-y: .8125rem;
 $input-padding-y-lg: 1rem;
 
 $input-border-radius-sm: 20px;
-$input-border-radius: 30px;
-$input-border-radius-lg: 40px;
+$input-border-radius: 22px;
+$input-border-radius-lg: 50px;
 
-//labels
-$label-margin-bottom: 15px;
 
 //select
 $custom-select-height-sm: $input-height-sm;
@@ -88,7 +93,3 @@ $custom-select-height-lg: $input-height-lg;
 $custom-select-border-radius-sm: $input-border-radius-sm;
 $custom-select-border-radius: $input-border-radius;
 $custom-select-border-radius-lg: $input-border-radius-lg;
-
-$color-controls: #011c62;
-$color-text: #8c8ca2;
-$color-brand: #063dc7;

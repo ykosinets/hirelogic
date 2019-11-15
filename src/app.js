@@ -13,10 +13,16 @@ import RangeDatepicker from "./components/datepicker/datepicker";
 window.$ = window.jQuery = $;
 
 //init datepicker
-new RangeDatepicker();
+let rangeDatepickers = document.querySelectorAll('.input-daterange input');
+rangeDatepickers.forEach((el) => {
+	new RangeDatepicker(el);
+});
 
 //init file upload
-new FileUpload();
+let fileUploads = document.querySelectorAll('input[type="file"]');
+fileUploads.forEach((el) => {
+	new FileUpload(el);
+});
 
 //init counter inputs
 let counterInputs = document.querySelectorAll(".input-number .form-control");

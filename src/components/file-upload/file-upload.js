@@ -1,8 +1,10 @@
-export default function FileUpload() {
+export default function FileUpload(element) {
+	if (!element) return;
+
 	let self = this;
 	this.fileData = {};
 	const dropZone = document.querySelector('.file-loader-drop-area');
-	const input = dropZone.querySelector('input[type="file"]');
+	const input = element;
 	const message = dropZone.querySelector('.file-loader-drop-message');
 	const preview = document.querySelector('.file-loader-preview');
 	const previewImg = preview.querySelector('img');

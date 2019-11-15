@@ -22,7 +22,6 @@ export default function FileUpload() {
 			reader.onload = (e) => {
 				if (this.fileData.type === "image") {
 					previewImg.src = e.target.result;
-					console.log();
 					message.classList.remove('active');
 					preview.classList.add('active');
 					previewImg.onload = () => {
@@ -68,7 +67,6 @@ export default function FileUpload() {
 		self.readFiles(e.dataTransfer.files);
 	};
 
-	console.log(input);
 	input.onchange = function(e){
 		self.readFiles(this.files);
 	}

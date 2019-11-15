@@ -1,23 +1,19 @@
 //vendors
 import $ from "jquery";
+
 import 'bootstrap';
-
 //pages
-import "./pages/home/home";
 
+import "./pages/home/home";
 //custom
 import CounterInput from "./components/number-input/number-input";
 import FileUpload from "./components/file-upload/file-upload";
-import { datepicker } from "bootstrap-datepicker";
+import RangeDatepicker from "./components/datepicker/datepicker";
 
-window.$ =window.jQuery = $;
+window.$ = window.jQuery = $;
 
 //init datepicker
-$('.input-daterange input').datepicker({
-	keepEmptyValues: true,
-	multidate: 2,
-	multidateSeparator: " - "
-});
+new RangeDatepicker();
 
 //init file upload
 new FileUpload();

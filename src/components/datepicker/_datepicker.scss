@@ -17,7 +17,7 @@
   label {
     color: $text;
     white-space: nowrap;
-    margin: 0 15px 0 0 ;
+    margin: 0 15px 0 0;
   }
 }
 
@@ -64,3 +64,63 @@
 }
 
 
+.datepicker td,
+.datepicker th {
+  padding: 4px 5px;
+  min-width: 30px;
+  font-size: 12px;
+  height: 30px;
+}
+
+.datepicker table tr td.in-range:not(.active){
+  background: lighten($primary, 57%);
+  border-radius: 0;
+
+  &:hover{
+    background: lighten($primary, 52%);
+  }
+}
+
+.datepicker table tr td.in-range.start{
+  &,
+  &:hover {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.datepicker table tr td.in-range.end{
+  &,
+  &:hover {
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.datepicker table tr td.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active:hover {
+  background: $primary;
+  border-radius: 8px;
+}
+
+.datepicker .next{
+  font-size: 0;
+
+  &:after{
+    font-family: icomoon;
+    font-size: 12px;
+    content: '\e914';
+  }
+}
+.datepicker .prev{
+  font-size: 0;
+
+  &:after{
+    font-family: icomoon;
+    font-size: 12px;
+    content: '\e913';
+  }
+}

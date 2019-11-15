@@ -43,7 +43,6 @@ export default function CounterInput(input) {
 
 	this.init = () => {
 		const wrapper = this.getParent(this.input, '.input-number');
-		console.log(wrapper);
 		const plusButton = wrapper.querySelector('.btn-plus');
 		const minusButton = wrapper.querySelector('.btn-minus');
 

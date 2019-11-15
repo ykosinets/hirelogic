@@ -1,0 +1,52 @@
+.nav-tabs{
+  box-shadow: 1px 1px 5px 0 #e9e9ee;
+  border: none;
+  margin-bottom: 15px;
+  padding: 0 5px;
+
+  .nav-item{
+    padding: 0 25px;
+  }
+
+  .nav-link{
+    font-size: .875rem;
+    font-weight: 500;
+    padding: 23px 0;
+    line-height: 1;
+    border: none !important;
+    margin-right: 30px;
+    position: relative;
+    will-change: color;
+    transition: .2s color ease-in-out;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-bottom: solid 2px;
+      transform: translate(0, 2px);
+      will-change: transform;
+      transition: .2s transform ease-in-out;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.active,
+    &.show {
+      &:after {
+        transform: translate(0);
+      }
+    }
+  }
+}
+
+.tab-content{
+  color: $text;
+  font-size: .8125rem;
+  padding: 15px 30px;
+}

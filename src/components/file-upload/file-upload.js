@@ -75,23 +75,11 @@ export default function FileUpload() {
 	dropZone.ondrop = function (e) {
 		e.target.classList.remove('hover');
 		e.preventDefault();
-		console.log(self.readFiles(e.dataTransfer.files));
+		self.readFiles(e.dataTransfer.files);
 	};
 
-};
-
-/*function readURL(input) {
-	if (input.files && input.files[0]) {
-		let reader = new FileReader();
-
-		reader.onload = function(e) {
-			$('#blah').attr('src', e.target.result);
-		}
-
-		reader.readAsDataURL(input.files[0]);
+	console.log(input);
+	input.onchange = function(e){
+		self.readFiles(this.files);
 	}
-}
-
-$("#imgInp").change(function() {
-	readURL(this);
-});*/
+};

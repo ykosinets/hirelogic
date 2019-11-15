@@ -1,0 +1,49 @@
+.accordion {
+  &-item{
+    margin-bottom: 10px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &-heading {
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: .8125rem;
+    line-height: 1.25;
+    padding: 7px 20px;
+    position: relative;
+    cursor: pointer;
+
+    .state {
+      margin-right: 10px;
+      font-size: .875rem;
+    }
+
+    .icon-arrow-right {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: .625rem;
+      pointer-events: none;
+      user-select: none;
+      will-change: transform;
+      transform: translate(0, -50%) rotate(90deg);
+      transition: .25s transform ease-in-out;
+    }
+
+    &.collapsed{
+      .icon-arrow-right {
+        transform: translate(0, -50%) rotate(0);
+      }
+    }
+  }
+
+  &-body {
+    padding: 15px 20px 5px;
+    color: $text;
+    font-size: .8125rem;
+    line-height: 1.54;
+  }
+}

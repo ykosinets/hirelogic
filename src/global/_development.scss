@@ -27,15 +27,17 @@
   padding: 15px;
   overflow: hidden;
 
-  span[class^="icon-"] {
-    display: block;
-    float: left;
-    color: #f00;
-    font-size: 40px;
-    margin: 10px;
+  &-icons {
+    span[class^="icon-"] {
+      display: block;
+      float: left;
+      color: #f00;
+      font-size: 40px;
+      margin: 10px;
 
-    &:hover {
-      color: #000;
+      &:hover {
+        color: #000;
+      }
     }
   }
 

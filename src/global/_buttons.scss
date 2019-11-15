@@ -10,7 +10,8 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 .btn-link,
 .btn-outline-secondary,
 .btn-outline-light,
-.btn-outline-link{
+.btn-outline-link,
+.btn-none{
   #{$btn-state-all} {
     color: $primary;
   }
@@ -20,8 +21,15 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 .btn-info,
 .btn-danger,
 .btn-success,
-.btn-dark{
+.btn-dark {
   #{$btn-state-all} {
     color: $white;
   }
+}
+
+
+.btn-none {
+  @include button-variant(transparent, transparent, transparent, transparent, transparent, transparent);
+  padding: 0;
+  border: none !important;
 }

@@ -35,7 +35,7 @@
   <section class="component-section">
     <h2>Icons</h2>
 
-    <section class="component-section">
+    <section class="component-section-icons component-section">
       <span class="icon-checkmark"></span>
       <span class="icon-stones"></span>
       <span class="icon-clock"></span>
@@ -225,6 +225,18 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         <small class="form-text text-muted">Separate correct answers using commas.</small>
       </div>
+    </section>
+
+    <section class="component-section">
+      <h5>Number input</h5>
+      @@include('components/number-input/number-input.html', {"value": "3", "max": "10", "min": "-5"})
+
+      @@include('components/number-input/number-input.html', {"value": "50", "max": "60", "min": "0"})
+    </section>
+
+    <section class="component-section">
+      <h5>File upload</h5>
+      @@include('components/file-upload/file-upload.html')
     </section>
   </section>
 </div>

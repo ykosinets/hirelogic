@@ -1,0 +1,51 @@
+textarea.form-control{
+  line-height: 1.4;
+  min-height: 100px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 18px;
+
+  &::-webkit-scrollbar-track {
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, .02);
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 22px;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, .05);
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &::-webkit-resizer {
+    border-bottom-right-radius: 18px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 0 0 #d9d9e2;
+    transition: .1s box-shadow .15s ease-in-out;
+    border-top-left-radius: 10px;
+  }
+
+  &:focus,
+  &.focus{
+    &::-webkit-resizer {
+      width: 22px;
+      height: 22px;
+      background: rgba(0, 0, 0, 0.1);
+      box-shadow: 0.1rem 0.1rem 0 0.1rem rgba(6, 61, 199, 0.25), 1px 1px 0 0 $controls;
+    }
+  }
+}

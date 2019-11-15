@@ -1,0 +1,40 @@
+.custom-select,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-overflow:'';
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCA5IDYiPgogICAgPHBhdGggZmlsbD0iIzA2M0RDNyIgZmlsbC1ydWxlPSJldmVub2RkIgogICAgICAgICAgZD0iTTEuNDQ1LjA2OGEuMjIuMjIgMCAwIDAtLjMxNiAwTC4wNjUgMS4xNzJhLjIzNy4yMzcgMCAwIDAgMCAuMzI1bDQuMjc3IDQuNDM1YS4yMTkuMjE5IDAgMCAwIC4zMTYgMEw4LjkzNSAxLjVhLjIzNy4yMzcgMCAwIDAgMC0uMzI2TDcuODcxLjA2OWEuMjIuMjIgMCAwIDAtLjMxNiAwTDQuNSAzLjIzIDEuNDQ1LjA2OHoiLz4KPC9zdmc+Cg==");
+  background-position: calc(100% - 1rem) center;
+  background-repeat: no-repeat;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  option {
+    min-height: 1rem;
+    line-height: 1rem;
+    font-size: 1rem;
+    padding: .075rem .5rem;
+  }
+}
+
+.custom-select-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 15px 2rem;
+  background: $light;
+  border-radius: 36px;
+
+  label{
+    margin: 0 1.25rem 0 0;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 400;
+  }
+}

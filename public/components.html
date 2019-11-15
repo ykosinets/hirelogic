@@ -1,4 +1,34 @@
-@@include('views/head.html', {"title" : "Components"})
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Components</title>
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#063dc7">
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="HireLogic">
+  <meta name="application-name" content="HireLogic">
+  <meta name="msapplication-TileColor" content="#fdffc8">
+  <meta name="msapplication-config" content="./images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap"
+        rel="stylesheet">
+  <!-- /fonts -->
+
+  <!-- styles -->
+  <link rel="stylesheet" href="./main.css">
+  <!-- /styles -->
+</head>
+
 <body>
 <div class="container mt-5 mb-5">
   <section class="component-section">
@@ -229,34 +259,195 @@
 
     <section class="component-section">
       <h5>Number input</h5>
-      @@include('components/number-input/number-input.html', {"value": "3", "max": "10", "min": "-5"})
+      <div class="input-number mb-3">
+  <button class="btn btn-none btn-left btn-minus">
+    <span class="icon-minus-rounded-circle"></span>
+  </button>
+  <input type="number" class="form-control" aria-label="Number picker" value="3" min="-5" max="10">
+  <button class="btn btn-none btn-right btn-plus">
+    <span class="icon-plus-rounded-circle"></span>
+  </button>
+</div>
 
-      @@include('components/number-input/number-input.html', {"value": "50", "max": "60", "min": "0"})
+
+      <div class="input-number mb-3">
+  <button class="btn btn-none btn-left btn-minus">
+    <span class="icon-minus-rounded-circle"></span>
+  </button>
+  <input type="number" class="form-control" aria-label="Number picker" value="50" min="0" max="60">
+  <button class="btn btn-none btn-right btn-plus">
+    <span class="icon-plus-rounded-circle"></span>
+  </button>
+</div>
+
     </section>
 
     <section class="component-section">
       <h5>File upload</h5>
-      @@include('components/file-upload/file-upload.html')
+      <div class="file-loader">
+  <div class="file-loader-drop-area">
+    <form class="file-loader-form">
+      <p class="file-loader-drop-message active">Drop a file here to upload a logo.</p>
+      <input type="file" id="fileLoader" class="file-loader-input btn btn-primary" accept="image/*">
+    </form>
+
+    <div class="file-loader-preview">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Image preview">
+      <p class="file-loader-preview-info"></p>
+
+      <a href="javascript:void(0)" class="file-loader-preview-remove">Delete</a>
+    </div>
+  </div>
+</div>
+
+
     </section>
 
     <section class="component-section">
       <h5>Datepicker</h5>
-      @@include('components/datepicker/datepicker.html')
+      <div class="input-daterange">
+  <label for="date">Date range:</label><input id="date" type="text" class="form-control" autocomplete="off">
+</div>
+
+
     </section>
 
     <section class="component-section">
       <h5>Accordion</h5>
-      @@include('components/accordion/accordion.html')
+      <div class="accordion" id="accordionComponent">
+  <div class="accordion-item">
+    <h2 id="headingOne"
+        class="accordion-heading m-0 btn btn-secondary btn-block text-left"
+        data-toggle="collapse"
+        data-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne">
+      <span class="state text-success">+</span>
+      Lorem ipsum dolor sit amet enim.
+      <span class="icon-arrow-right"></span>
+    </h2>
+
+    <div id="collapseOne"
+         class="collapse show"
+         aria-labelledby="headingOne"
+         data-parent="#accordionComponent">
+      <div class="accordion-body">
+        <p>
+          Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas
+          malesuada
+          elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum
+          commodo volutpat a, convallis ac, laoreet enim.
+        </p>
+
+        <p>
+          Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus,
+          mauris.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 id="headingTwo"
+        class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+        data-toggle="collapse"
+        data-target="#collapseTwo"
+        aria-expanded="false"
+        aria-controls="collapseTwo">
+      <span class="state text-danger">—</span>
+      Lorem ipsum dolor sit amet enim.
+      <span class="icon-arrow-right"></span>
+    </h2>
+
+    <div id="collapseTwo"
+         class="collapse"
+         aria-labelledby="headingTwo"
+         data-parent="#accordionComponent">
+      <div class="accordion-body">
+        <p>
+          Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas
+          malesuada
+          elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum
+          commodo volutpat a, convallis ac, laoreet enim.
+        </p>
+
+        <p>
+          Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus,
+          mauris.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 id="headingThree"
+        class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+        data-toggle="collapse"
+        data-target="#collapseThree"
+        aria-expanded="false"
+        aria-controls="collapseThree">
+      <span class="state text-danger">—</span>
+      Lorem ipsum dolor sit amet enim.
+      <span class="icon-arrow-right"></span>
+    </h2>
+
+    <div id="collapseThree"
+         class="collapse"
+         aria-labelledby="headingThree"
+         data-parent="#accordionComponent">
+      <div class="accordion-body">
+        <p>
+          Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas
+          malesuada
+          elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum
+          commodo volutpat a, convallis ac, laoreet enim.
+        </p>
+
+        <p>
+          Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus,
+          mauris.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
     </section>
 
     <section class="component-section">
       <h5>Tabs</h5>
-      @@include('components/tabs/tabs.html')
+      <ul class="nav nav-tabs" id="tabComponent" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+       aria-selected="true">Profile</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" id="test-tab" data-toggle="tab" href="#test" role="tab" aria-controls="test"
+       aria-selected="false">Detailed Test Results</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history"
+       aria-selected="false">History</a>
+  </li>
+</ul>
+
+<div class="tab-content" id="tabComponentContent">
+  <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">Profile</div>
+  <div class="tab-pane fade" id="test" role="tabpanel" aria-labelledby="test-tab">Detailed Test Results</div>
+  <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">History</div>
+</div>
+
     </section>
   </section>
 </div>
 
 
-@@include('views/scripts.html')
+
+
+
+<script type="text/javascript" src="./bundle.js"></script>
+
 </body>
 </html>

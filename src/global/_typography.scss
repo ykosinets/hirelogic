@@ -1,0 +1,7 @@
+small{
+  color: #8c8ca2;
+
+  .form-control + &{
+    margin-top: 1rem;
+  }
+}

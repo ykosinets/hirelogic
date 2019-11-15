@@ -1,0 +1,66 @@
+.input-daterange {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+
+  .form-control {
+    max-width: 250px;
+
+    &,
+    &:last-child,
+    &:first-child {
+      @extend .form-control;
+    }
+  }
+
+  label {
+    color: $text;
+    white-space: nowrap;
+    margin: 0 15px 0 0 ;
+  }
+}
+
+
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top {
+  border: none;
+  box-shadow: 1px 1px 35px 0 #e9e9ee;
+  max-width: 240px;
+  border-radius: 8px;
+  padding: 0;
+
+  & > * {
+    z-index: 2;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+  }
+
+  &, & .table-condensed {
+    width: 100%;
+  }
+
+  &:before {
+    display: none;
+  }
+
+  &:after {
+    border: none;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    box-shadow: 1px 1px 35px 0 #ddd;
+    background: $white;
+    z-index: -1;
+  }
+}
+
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 20px;
+}
+
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 20px;
+}
+
+

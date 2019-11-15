@@ -37,6 +37,9 @@
 @import "bootstrap/scss/utilities";
 //@import "bootstrap/scss/print";
 
+@import "bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min";
+
+
 @import "global/development";
 @import "global/icons";
 @import "global/logo";
@@ -48,4 +51,5 @@
 
 @import "components/number-input/number-input";
 @import "components/file-upload/file-uplaod";
+@import "components/datepicker/datepicker";
 

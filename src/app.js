@@ -8,9 +8,16 @@ import "./pages/home/home";
 //custom
 import CounterInput from "./components/number-input/number-input";
 import FileUpload from "./components/file-upload/file-upload";
-
+import { datepicker } from "bootstrap-datepicker";
 
 window.$ =window.jQuery = $;
+
+//init datepicker
+$('.input-daterange input').datepicker({
+	keepEmptyValues: true,
+	multidate: 2,
+	multidateSeparator: " - "
+});
 
 //init file upload
 new FileUpload();

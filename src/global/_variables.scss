@@ -23,6 +23,9 @@ $controls: #011c62;
 $text: #8c8ca2;
 $color: $primary;
 
+$input-placeholder-color: $text;
+$border-radius: 8px;
+
 //typography
 $small-font-size: .75rem;
 
@@ -31,7 +34,7 @@ $label-margin-bottom: 15px;
 
 //buttons
 $btn-padding-y-sm: 12px;
-$btn-padding-y: 15px;
+$btn-padding-y: 14px;
 $btn-padding-y-lg: 16px;
 
 $btn-padding-x-sm: 26px;
@@ -120,3 +123,8 @@ $dropdown-item-padding-y: .25rem;
 
 //checkbox
 $custom-checkbox-indicator-border-radius: 3px;
+
+//input groups
+$input-group-addon-bg: $white;
+$input-group-addon-color: $controls;
+$input-group-addon-border-color: $input-border-color;

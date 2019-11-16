@@ -1,5 +1,6 @@
-export default function CounterInput(input) {
-	this.input = input || document.querySelector(".input-number .form-control");
+export default function CounterInput(element) {
+	if(!element) return;
+	this.input = element;
 
 	this.increment = () => {
 		let val = getVal();

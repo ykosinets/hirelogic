@@ -19,15 +19,15 @@
 @import "bootstrap/scss/nav";
 //@import "bootstrap/scss/navbar";
 @import "bootstrap/scss/card";
-//@import "bootstrap/scss/breadcrumb";
-//@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
 //@import "bootstrap/scss/badge";
 //@import "bootstrap/scss/jumbotron";
 //@import "bootstrap/scss/alert";
 //@import "bootstrap/scss/progress";
 //@import "bootstrap/scss/media";
 @import "bootstrap/scss/list-group";
-//@import "bootstrap/scss/close";
+@import "bootstrap/scss/close";
 //@import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal";
 //@import "bootstrap/scss/tooltip";
@@ -48,6 +48,7 @@
 @import "global/textarea";
 @import "global/typography";
 @import "global/labels";
+@import "global/checkboxes";
 
 @import "components/number-input/number-input";
 @import "components/file-upload/file-uplaod";

@@ -38,10 +38,15 @@ counterInputs.forEach((el) => {
 	new CounterInput(el);
 });
 
-//init counter inputs
+//init rating
 let rating = document.querySelectorAll(".rating-stars");
 rating.forEach((el) => {
 	new Rating(el);
+});
+
+//init tooltips
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
 });
 
 

@@ -128,3 +128,23 @@ $custom-checkbox-indicator-border-radius: 3px;
 $input-group-addon-bg: $white;
 $input-group-addon-color: $controls;
 $input-group-addon-border-color: $input-border-color;
+
+//tooltip
+$tooltip-arrow-color: $white;
+$tooltip-arrow-height: 20px;
+$tooltip-bg: $white;
+$tooltip-arrow-width: 20px;
+$tooltip-border-radius: $border-radius;
+$tooltip-color: $controls;
+$tooltip-font-size: .75rem;
+$tooltip-opacity: 1;
+$tooltip-padding-x: 15px;
+$tooltip-padding-y: 10px;
+
+//tables
+$table-bg: $white;
+$table-color: $controls;
+$table-accent-bg: darken($secondary, .5%);
+$table-head-bg: darken($secondary, 2%);
+$table-active-bg: darken($secondary, 1%);
+$table-hover-bg: darken($secondary, 2%);

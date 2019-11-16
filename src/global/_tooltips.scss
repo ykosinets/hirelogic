@@ -1,0 +1,28 @@
+.tooltip {
+  background: transparent;
+
+  .arrow {
+    box-shadow: 1px 1px 35px 0 #e9e9ee;
+    transform: rotate(-45deg);
+    background: $tooltip-arrow-color;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .tooltip-inner {
+    box-shadow: 1px 1px 35px 0 #e9e9ee;
+    font-weight: 500;
+  }
+}
+
+.bs-tooltip {
+  &-top .arrow {
+    margin-bottom: 10px;
+  }
+
+  &-bottom .arrow {
+    margin-top: 10px;
+  }
+}

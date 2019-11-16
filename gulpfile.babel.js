@@ -85,7 +85,7 @@ export const buildWebpack = () => src(sources.scripts.toCompile)
 	.pipe(livereload());
 
 // Images
-export const convertImages = () => src(sources.images.toCompile, {nodir: true})
+export const convertImages = () => src([sources.images.toCompile, '!' + `${PATH.src}` + '/assets/images/favicon/*'], {nodir: true})
 	.pipe(webp())
 	.pipe(dest(PATH.build));
 

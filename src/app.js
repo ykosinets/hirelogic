@@ -10,6 +10,7 @@ import CounterInput from "./components/number-input/number-input";
 import FileUpload from "./components/file-upload/file-upload";
 import RangeDatepicker from "./components/datepicker/datepicker";
 import FileInput from "./components/file-input/file-input";
+import Rating from "./components/rating/rating";
 
 window.$ = window.jQuery = $;
 
@@ -35,6 +36,12 @@ fileInput.forEach((el) => {
 let counterInputs = document.querySelectorAll(".input-number .form-control");
 counterInputs.forEach((el) => {
 	new CounterInput(el);
+});
+
+//init counter inputs
+let rating = document.querySelectorAll(".rating-stars");
+rating.forEach((el) => {
+	new Rating(el);
 });
 
 

@@ -25,7 +25,7 @@ export default function CounterInput(element) {
 		let val = getVal();
 		let min = getMin();
 		let max = getMax();
-		if (val < min) this.input.value = min;
+		if (val < min || val === '') this.input.value = min;
 		if (val > max) this.input.value = max;
 	};
 

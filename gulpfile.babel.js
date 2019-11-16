@@ -12,10 +12,8 @@ import image from "gulp-image";
 import webp from "gulp-webp";
 import del from "del";
 import flatten from "gulp-flatten";
-import browserSync from "browser-sync";
+import livereload from "gulp-livereload";
 import plumber from "gulp-plumber";
-
-browserSync.create();
 
 // Recognise `production`
 const production = process.env.NODE_ENV.trim() === "production";
@@ -59,7 +57,7 @@ export const buildStyles = () => src(sources.styles.toCompile, {nodir: true})
 	}).on('error', sass.logError))
 	.pipe(sourcemaps.write())
 	.pipe(dest(PATH.build))
-	.pipe(reload({stream: true}));
+	.pipe(livereload());
 
 // Views
 export const buildViews = () => src(sources.views.toCompile)
@@ -71,19 +69,20 @@ export const buildViews = () => src(sources.views.toCompile)
 	}))
 	.pipe(flatten())
 	.pipe(dest(PATH.build))
-	.pipe(reload({stream: true}));
+	.pipe(livereload());
 
 // Scripts
 export const buildScripts = () => src(sources.scripts.toCompile)
 	.pipe(plumber())
 	.pipe(babel({presets: ['@babel/preset-env']}))
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(livereload());
 
 // Webpack
 export const buildWebpack = () => src(sources.scripts.toCompile)
 	.pipe(webpackStream(webpackConfig), webpack)
 	.pipe(dest(PATH.build))
-	.pipe(reload({stream: true}));
+	.pipe(livereload());
 
 // Images
 export const convertImages = () => src(sources.images.toCompile, {nodir: true})
@@ -103,39 +102,35 @@ export const buildImages = () => src(sources.images.toCompile, {nodir: true})
 		concurrent: 10,
 		quiet: true // defaults to false
 	}))
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(livereload());
 
 // Fonts TODO: simplify converting(fontforge?)
 export const buildFonts = () => src(sources.fonts.toCompile)
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(livereload());
 
 // Data
 export const buildData = () => src(sources.data.toCompile, {nodir: true})
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(livereload());
 
 // Audio TODO: add ffmpeg converting
 export const buildAudio = () => src(sources.audio.toCompile, {nodir: true})
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(livereload());
 
 // Video TODO: add ffmpeg converting
 export const buildVideo = () => src(sources.video.toCompile, {nodir: true})
-	.pipe(dest(PATH.build));
+	.pipe(dest(PATH.build))
+	.pipe(livereload());
 
 // Clean
 export const clean = () => del([PATH.build]);
 
-const reload = browserSync.reload;
-
 // Watch Task
 export const devWatch = () => {
-	browserSync.init({
-		server: {
-			baseDir: "./live"
-		},
-		port: 3000,
-		open: true,
-		notify: false
-	});
+	livereload.listen();
 	watch(sources.styles.toWatch, buildStyles);
 	watch(sources.views.toWatch, buildViews);
 	watch(sources.scripts.toWatch, buildWebpack);

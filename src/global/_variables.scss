@@ -148,3 +148,20 @@ $table-accent-bg: darken($secondary, .5%);
 $table-head-bg: darken($secondary, 2%);
 $table-active-bg: darken($secondary, 1%);
 $table-hover-bg: darken($secondary, 2%);
+
+//pagination
+$pagination-bg: transparent;
+$pagination-color: $controls;
+$pagination-padding-x: 5px;
+$pagination-padding-y: 6px;
+$pagination-border-color: transparent;
+$pagination-border-width: 0;
+$pagination-line-height: 1;
+//$pagination-hover-bg;
+//$pagination-hover-border-color
+//$pagination-hover-color;
+$pagination-active-bg: $primary;
+//$pagination-active-border-color;
+//$pagination-active-color;
+//$pagination-focus-box-shadow;
+//$pagination-focus-outline;

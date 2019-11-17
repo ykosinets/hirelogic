@@ -39,7 +39,7 @@ counterInputs.forEach((el) => {
 });
 
 //init rating
-let rating = document.querySelectorAll(".rating-stars");
+let rating = document.querySelectorAll(".rating");
 rating.forEach((el) => {
 	new Rating(el);
 });

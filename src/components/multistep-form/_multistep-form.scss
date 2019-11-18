@@ -1,0 +1,75 @@
+.multistep-form {
+  .tab {
+    display: none;
+  }
+
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    display: block;
+    position: relative;
+    background: $secondary;
+    z-index: 12;
+    white-space: nowrap;
+    transition: .25s background-color ease-in-out;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 3px $secondary;
+      background-color: $secondary;
+      border-radius: 100%;
+    }
+
+    &-indicator {
+      font-size: 0;
+      width: 100%;
+      height: 11px;
+      background: $secondary;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    &.finish,
+    &.active {
+      &:after {
+        background-color: $primary;
+      }
+    }
+  }
+
+  &-header {
+    &-controls {
+      color: $primary;
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      .icon-arrow-left {
+        margin-right: 15px;
+      }
+
+      .icon-arrow-right {
+        margin-left: 15px;
+      }
+
+      .btn {
+        margin-left: 15px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

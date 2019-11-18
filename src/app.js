@@ -11,6 +11,7 @@ import FileUpload from "./components/file-upload/file-upload";
 import RangeDatepicker from "./components/datepicker/datepicker";
 import FileInput from "./components/file-input/file-input";
 import Rating from "./components/rating/rating";
+import multistepForm from "./components/multistep-form/multistep-form";
 
 window.$ = window.jQuery = $;
 
@@ -27,8 +28,8 @@ fileUploads.forEach((el) => {
 });
 
 //init file input
-let fileInput = document.querySelectorAll('.input-group input[type="file"]');
-fileInput.forEach((el) => {
+let fileInputs = document.querySelectorAll('.input-group input[type="file"]');
+fileInputs.forEach((el) => {
 	new FileInput(el);
 });
 
@@ -39,14 +40,20 @@ counterInputs.forEach((el) => {
 });
 
 //init rating
-let rating = document.querySelectorAll(".rating");
-rating.forEach((el) => {
+let ratings = document.querySelectorAll(".rating");
+ratings.forEach((el) => {
 	new Rating(el);
 });
 
 //init tooltips
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
+});
+
+//init multistep form
+let multistepForms = document.querySelectorAll(".multistep-form");
+multistepForms.forEach((el) => {
+	new multistepForm(el);
 });
 
 

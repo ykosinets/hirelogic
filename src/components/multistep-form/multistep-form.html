@@ -1,0 +1,132 @@
+<form class="multistep-form" id="regForm" action="">
+
+  <!-- Circles which indicates the steps of the form: -->
+  <div class="multistep-form-header mt-5">
+    <div class="multistep-form-header-title">Questions</div>
+    <div class="multistep-form-header-controls">
+      <span class="icon-arrow-left"></span>
+      <div class="step-indicator"></div>
+      <span class="icon-arrow-right"></span>
+      <button type="button" class="btn-prev btn btn-secondary">Add Question</button>
+    </div>
+  </div>
+
+  <h1>New test</h1>
+
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Test name:</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+             placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <label for="">Number of Questions</label>
+        @@include('components/number-input/number-input.html', {"value": "3", "max": "10", "min": "-5"})
+      </div>
+      <div class="col-6">
+        <label for="">Time Limit</label>
+        @@include('components/number-input/number-input.html', {"value": "3", "max": "10", "min": "-5"})
+      </div>
+    </div>
+
+    <p class="color-text">Number of qustions might be modified later.</p>
+  </div>
+
+  <div class="tab">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+             placeholder="Enter email">
+    </div>
+
+    <div class="form-group d-flex flex-row align-items-center justify-content-between">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck2">
+        <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck3">
+        <label class="custom-control-label" for="customCheck3">Check this custom checkbox</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck4">
+        <label class="custom-control-label" for="customCheck4">Check this custom checkbox</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+             placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <small class="form-text text-muted">Separate correct answers using commas.</small>
+    </div>
+  </div>
+
+  <div class="tab">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+             placeholder="Enter email">
+    </div>
+
+    <div class="form-group d-flex flex-row align-items-center justify-content-between">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck2">
+        <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck3">
+        <label class="custom-control-label" for="customCheck3">Check this custom checkbox</label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck4">
+        <label class="custom-control-label" for="customCheck4">Check this custom checkbox</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+             placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                 placeholder="Enter email">
+        </div>
+
+        <div class="col-6">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                 placeholder="Enter email"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row align-items-center justify-content-start">
+    <div>
+      <button type="button" class="btn-next btn btn-primary">Save and Continue</button>
+      <button type="button" class="btn-prev btn btn-secondary">Cancel</button>
+    </div>
+  </div>
+</form>

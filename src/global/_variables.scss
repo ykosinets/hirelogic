@@ -23,6 +23,9 @@ $controls: #011c62;
 $text: #8c8ca2;
 $color: $primary;
 
+$input-placeholder-color: $text;
+$border-radius: 8px;
+
 //typography
 $small-font-size: .75rem;
 
@@ -31,7 +34,7 @@ $label-margin-bottom: 15px;
 
 //buttons
 $btn-padding-y-sm: 12px;
-$btn-padding-y: 15px;
+$btn-padding-y: 14px;
 $btn-padding-y-lg: 16px;
 
 $btn-padding-x-sm: 26px;
@@ -93,3 +96,72 @@ $custom-select-height-lg: $input-height-lg;
 $custom-select-border-radius-sm: $input-border-radius-sm;
 $custom-select-border-radius: $input-border-radius;
 $custom-select-border-radius-lg: $input-border-radius-lg;
+
+//dropdown
+$dropdown-box-shadow: 1px 1px 35px 0 #e9e9ee;
+$dropdown-bg: $white;
+$dropdown-color: $controls;
+$dropdown-min-width: 240px;
+$dropdown-font-size: .75rem;
+//$dropdown-divider-bg;
+//$dropdown-divider-margin-y;
+//$dropdown-header-color;
+//$dropdown-spacer;
+$dropdown-padding-y: 1.25rem;
+$dropdown-border-width: 0;
+//$dropdown-border-color;
+$dropdown-border-radius: $input-border-radius;
+$dropdown-inner-border-radius: $input-border-radius;
+$dropdown-item-padding-x: 1rem;
+$dropdown-item-padding-y: .25rem;
+//$dropdown-link-color: $controls;
+//$dropdown-link-disabled-color: $text;
+//$dropdown-link-active-bg;
+//$dropdown-link-active-color;
+//$dropdown-link-hover-bg;
+//$dropdown-link-hover-color;
+
+//checkbox
+$custom-checkbox-indicator-border-radius: 3px;
+
+//input groups
+$input-group-addon-bg: $white;
+$input-group-addon-color: $controls;
+$input-group-addon-border-color: $input-border-color;
+
+//tooltip
+$tooltip-arrow-color: $white;
+$tooltip-arrow-height: 20px;
+$tooltip-bg: $white;
+$tooltip-arrow-width: 20px;
+$tooltip-border-radius: $border-radius;
+$tooltip-color: $controls;
+$tooltip-font-size: .75rem;
+$tooltip-opacity: 1;
+$tooltip-padding-x: 15px;
+$tooltip-padding-y: 10px;
+
+//tables
+$table-bg: $white;
+$table-color: $controls;
+$table-accent-bg: darken($secondary, .5%);
+$table-head-bg: darken($secondary, 2%);
+$table-active-bg: darken($secondary, 1%);
+$table-hover-bg: darken($secondary, 2%);
+
+//pagination
+$pagination-bg: transparent;
+$pagination-color: $controls;
+$pagination-padding-x: 5px;
+$pagination-padding-y: 6px;
+$pagination-border-color: transparent;
+$pagination-border-width: 0;
+$pagination-line-height: 1;
+//$pagination-hover-bg;
+//$pagination-hover-border-color
+//$pagination-hover-color;
+$pagination-active-bg: $primary;
+//$pagination-active-border-color;
+//$pagination-active-color;
+//$pagination-focus-box-shadow;
+//$pagination-focus-outline;

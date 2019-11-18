@@ -11,7 +11,7 @@
 
 ------------
 
-### Color Palett
+### Color Pallet
 ![Color Pallete](color-pallet.png "Color Pallet")
 
 ------------
@@ -37,3 +37,8 @@
 └ webpack.config.js (es6)
 
 ------------
+
+### Environment
+[Livereload](https://chrome.google.com/webstore/search/livereload?hl=ru) extension for development mode\
+`node 10.16.0`\
+`npm 6.13.0`

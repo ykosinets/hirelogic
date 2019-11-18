@@ -1,0 +1,27 @@
+.rating-stars {
+  display: block;
+  direction: rtl;
+  width: auto;
+
+  li{
+    padding: 0 2.5px;
+    display: inline-block;
+    font-size: 0;
+    direction: ltr;
+  }
+
+  .star {
+    color: $text;
+    font-size: 20px;
+    cursor: pointer;
+    will-change: color;
+    transition: .2s color ease-in-out;
+
+    &:hover,
+    &.active,
+    &:hover ~ .star,
+    &.active ~ .star {
+      color: #efcc00;
+    }
+  }
+}

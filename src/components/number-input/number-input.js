@@ -1,5 +1,6 @@
-export default function CounterInput(input) {
-	this.input = input || document.querySelector(".input-number .form-control");
+export default function CounterInput(element) {
+	if(!element) return;
+	this.input = element;
 
 	this.increment = () => {
 		let val = getVal();
@@ -24,7 +25,7 @@ export default function CounterInput(input) {
 		let val = getVal();
 		let min = getMin();
 		let max = getMax();
-		if (val < min) this.input.value = min;
+		if (val < min || (val !== 0 && !val)) this.input.value = min;
 		if (val > max) this.input.value = max;
 	};
 
@@ -49,7 +50,7 @@ export default function CounterInput(input) {
 		plusButton.addEventListener('click', this.increment);
 		minusButton.addEventListener('click', this.decrement);
 
-		this.input.addEventListener('keyup', this.reset);
+		this.input.addEventListener('blur', this.reset);
 	};
 
 	this.init();

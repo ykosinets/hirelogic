@@ -50,6 +50,7 @@
     "gulp-file-include": "^2.1.1",
     "gulp-flatten": "^0.4.0",
     "gulp-image": "^5.1.0",
+    "gulp-livereload": "^4.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",

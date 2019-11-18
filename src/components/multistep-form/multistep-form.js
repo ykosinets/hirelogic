@@ -2,9 +2,11 @@ export default function multistepForm(element) {
 	if (!element) return;
 
 
-	let currentTab = 0;
+	this.currentTab = 0;
 	const prevBtn = element.querySelector('.btn-prev');
 	const nextBtn = element.querySelector('.btn-next');
+	console.log(prevBtn);
+	console.log(nextBtn);
 	const inputs = element.querySelectorAll('input');
 
 
@@ -23,24 +25,24 @@ export default function multistepForm(element) {
 		// Exit the function if any field in the current tab is invalid:
 		if (n === 1 && !this.validateForm()) return false;
 		// Hide the current tab:
-		step[currentTab].style.display = "none";
+		step[this.currentTab].style.display = "none";
 		// Increase or decrease the current tab by 1:
-		currentTab = currentTab + n;
+		this.currentTab = this.currentTab + n;
 		// if you have reached the end of the form... :
-		if (currentTab >= step.length) {
+		if (this.currentTab >= step.length) {
 			//...the form gets submitted:
 			element.submit();
 			return false;
 		}
 		// Otherwise, display the correct tab:
-		this.showTab(currentTab);
+		this.showTab(this.currentTab);
 	};
 
 	this.validateForm = () => {
 		// This function deals with validation of the form fields
 		let tabs, currentTabInputs, i, valid = true;
 		tabs = element.querySelectorAll(".tab");
-		currentTabInputs = tabs[currentTab].querySelectorAll("input, textarea");
+		currentTabInputs = tabs[this.currentTab].querySelectorAll("input");
 		// A loop that checks every input field in the current tab:
 		for (i = 0; i < currentTabInputs.length; i++) {
 			// If a field is empty...
@@ -53,7 +55,7 @@ export default function multistepForm(element) {
 		}
 		// If the valid status is true, mark the step as finished and valid:
 		if (valid) {
-			element.querySelectorAll(".step")[currentTab].classList.add("finish");
+			element.querySelectorAll(".step")[this.currentTab].classList.add("finish");
 		}
 		return valid; // return the valid status
 	};
@@ -77,14 +79,18 @@ export default function multistepForm(element) {
 		steps[n].classList.add("active");
 	};
 
-	this.showTab(currentTab);
+	this.showTab(this.currentTab);
 
 	prevBtn.addEventListener('click', () => {
+		if (this.currentTab === 0) return;
 		this.nextPrev(-1)
 	});
+
 	nextBtn.addEventListener('click', () => {
+		console.log('asd2');
 		this.nextPrev(1)
 	});
+
 	inputs.forEach((el) => {
 		el.addEventListener('input', function () {
 			this.classList.remove('is-invalid');

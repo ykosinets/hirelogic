@@ -5,13 +5,16 @@ import 'bootstrap';
 //pages
 
 import "./pages/home/home";
-//custom
+//custom components
 import CounterInput from "./components/number-input/number-input";
 import FileUpload from "./components/file-upload/file-upload";
 import RangeDatepicker from "./components/datepicker/datepicker";
 import FileInput from "./components/file-input/file-input";
 import Rating from "./components/rating/rating";
 import multistepForm from "./components/multistep-form/multistep-form";
+
+//charts
+import donutChart from "./components/charts/donut/donut";
 
 window.$ = window.jQuery = $;
 
@@ -54,6 +57,12 @@ $(function () {
 let multistepForms = document.querySelectorAll(".multistep-form");
 multistepForms.forEach((el) => {
 	new multistepForm(el);
+});
+
+//init multistep form
+let donutCharts = document.querySelectorAll(".chart-donut .chart");
+donutCharts.forEach((el) => {
+	new donutChart(el);
 });
 
 

@@ -25,7 +25,7 @@ export default function CounterInput(element) {
 		let val = getVal();
 		let min = getMin();
 		let max = getMax();
-		if (val < min || val === '') this.input.value = min;
+		if (val < min || (val !== 0 && !val)) this.input.value = min;
 		if (val > max) this.input.value = max;
 	};
 
@@ -50,7 +50,7 @@ export default function CounterInput(element) {
 		plusButton.addEventListener('click', this.increment);
 		minusButton.addEventListener('click', this.decrement);
 
-		this.input.addEventListener('keyup', this.reset);
+		this.input.addEventListener('blur', this.reset);
 	};
 
 	this.init();

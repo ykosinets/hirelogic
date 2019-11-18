@@ -87,7 +87,7 @@ export default function multistepForm(element) {
 	});
 	inputs.forEach((el) => {
 		el.addEventListener('input', function () {
-			this.classList.remove('invalid');
+			this.classList.remove('is-invalid');
 		});
 	});
 }

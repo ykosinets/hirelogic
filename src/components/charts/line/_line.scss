@@ -1,0 +1,53 @@
+.chart-line {
+  .chart {
+    svg {
+      .area {
+        fill: url(#area-gradient);
+        stroke-width: 0;
+      }
+
+      .xAxis .tick line{
+        visibility: hidden;
+      }
+
+      .xAxis .tick {
+        &:first-child text {
+          font-weight: 500;
+        }
+      }
+
+      .yAxis .tick {
+        &:first-child text {
+          visibility: hidden;
+        }
+      }
+
+      .xAxis .tick text,
+      .yAxis .tick text{
+        fill: #8c8ca2;
+        font-size: 12px;
+        font-family: $roboto;
+      }
+
+      .tick line {
+        display: block;
+        opacity: .2;
+        stroke-dasharray: 3 6;
+      }
+
+      .line {
+        fill: none;
+        stroke: $primary;
+        stroke-width: 4px;
+      }
+
+      .grid{
+        g:first-child{
+          line {
+            stroke-dasharray: none;
+          }
+        }
+      }
+    }
+  }
+}

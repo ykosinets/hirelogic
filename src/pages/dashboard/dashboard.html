@@ -1,7 +1,15 @@
 @@include('views/head.html', {"title" : "home"})
 <body>
-<div class="container">
-  @@include('components/charts/donut/donut.html')
+<div>
+  <div class="container">
+    <div class="mt-2">
+      @@include('components/charts/donut/donut.html')
+    </div>
+
+    <div class="mt-5">
+      @@include('components/charts/line/line.html')
+    </div>
+  </div>
 </div>
 
 @@include('views/scripts.html')

@@ -15,6 +15,7 @@ import multistepForm from "./components/multistep-form/multistep-form";
 
 //charts
 import donutChart from "./components/charts/donut/donut";
+import lineChart from "./components/charts/line/line";
 
 window.$ = window.jQuery = $;
 
@@ -59,10 +60,16 @@ multistepForms.forEach((el) => {
 	new multistepForm(el);
 });
 
-//init multistep form
+//init chart(donut)
 let donutCharts = document.querySelectorAll(".chart-donut .chart");
 donutCharts.forEach((el) => {
 	new donutChart(el);
+});
+
+//init chart(line)
+let lineCharts = document.querySelectorAll(".chart-line .chart");
+lineCharts.forEach((el) => {
+	new lineChart(el);
 });
 
 

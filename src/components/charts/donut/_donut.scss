@@ -1,0 +1,49 @@
+.chart-donut {
+  .chart {
+    position: relative;
+    display: inline-block;
+    background: $secondary;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 100%;
+    border: 1px dashed #ddd;
+
+    [class^="icon"] {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      color: $primary;
+      background: $white;
+      border-radius: 100%;
+      border: 1px dotted #ccc;
+      box-shadow: 0 0 0 10px $secondary inset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+    }
+
+    svg {
+      overflow: visible;
+
+      path.slice {
+        stroke-width: 2px;
+      }
+
+      polyline {
+        opacity: .3;
+        stroke: black;
+        stroke-width: 1px;
+        fill: none;
+      }
+
+      .labels text {
+        font-size: 12px;
+      }
+    }
+  }
+}

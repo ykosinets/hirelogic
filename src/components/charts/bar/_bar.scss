@@ -1,0 +1,49 @@
+.chart-bar {
+  .chart {
+    svg {
+      .xAxis .tick line {
+        visibility: hidden;
+      }
+
+      .xAxisIcon {
+        font-family: icomoon;
+        fill: $primary !important;
+      }
+
+      .yAxis .tick {
+        &:first-child text {
+          visibility: hidden;
+        }
+      }
+
+      .grid .tick text,
+      .xAxisTitle{
+        fill: $text;
+        font-size: 12px;
+        font-family: $roboto;
+        font-weight: 500;
+      }
+
+      .xAxis .tick text{
+        fill: $controls;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: $roboto;
+      }
+
+      .tick line {
+        display: block;
+        opacity: .2;
+        stroke-dasharray: 3 6;
+      }
+
+      .grid {
+        g:first-child {
+          line {
+            stroke-dasharray: none;
+          }
+        }
+      }
+    }
+  }
+}

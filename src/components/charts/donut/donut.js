@@ -1,14 +1,7 @@
-export default function donutChart(element) {
-	if (!element) return;
+export default function donutChart(element, data) {
+	if (!element || !data) return;
 
-	let data = [
-		{name: "Week", value: 9, color: '#ef4b00'},
-		{name: "Average", value: 16, color: '#efcc00'},
-		{name: "Good", value: 49, color: '#063dc7'},
-		{name: "Great", value: 26, color: '#90c706'},
-	];
 	let text = "";
-
 	let gap = 20;
 	let width = 200 + gap * 2;
 	let height = 200 + gap * 2;
@@ -21,7 +14,7 @@ export default function donutChart(element) {
 		.attr('class', 'pie')
 		.attr('width', width)
 		.attr('height', height)
-		.attr('cornerRadius', 3)
+		.attr('cornerRadius', 3);
 
 	let arc = d3.arc()
 		.innerRadius(radius - thickness)
@@ -32,7 +25,7 @@ export default function donutChart(element) {
 		.outerRadius(radius + gap);
 
 	let g = svg.append('g')
-		.attr('transform', 'translate(' + ((width) / 2) + ',' + ((height) / 2) + ')')
+		.attr('transform', 'translate(' + ((width) / 2) + ',' + ((height) / 2) + ')');
 
 	let pie = d3.pie()
 		.value(function (d) {
@@ -40,7 +33,7 @@ export default function donutChart(element) {
 		})
 		.sort(null);
 
-	pie.padAngle(.1)(data);
+	pie.padAngle(.05)(data);
 	let arcs = pie(data);
 
 	let path = g.selectAll('path')

@@ -16,6 +16,11 @@ import multistepForm from "./components/multistep-form/multistep-form";
 //charts
 import donutChart from "./components/charts/donut/donut";
 import lineChart from "./components/charts/line/line";
+import barChart from "./components/charts/bar/bar";
+//data
+import barData from "./assets/data/bar-data"
+import lineData from "./assets/data/line-data"
+import donutData from "./assets/data/donut-data"
 
 window.$ = window.jQuery = $;
 
@@ -63,13 +68,20 @@ multistepForms.forEach((el) => {
 //init chart(donut)
 let donutCharts = document.querySelectorAll(".chart-donut .chart");
 donutCharts.forEach((el) => {
-	new donutChart(el);
+	new donutChart(el, donutData);
 });
 
 //init chart(line)
+let colors = ['#063dc7', '#90c706'];
 let lineCharts = document.querySelectorAll(".chart-line .chart");
-lineCharts.forEach((el) => {
-	new lineChart(el);
+lineCharts.forEach((el, i) => {
+	new lineChart(el, lineData, colors[i]);
+});
+
+//init chart(bar)
+let barCharts = document.querySelectorAll(".chart-bar .chart");
+barCharts.forEach((el) => {
+	new barChart(el, barData);
 });
 
 

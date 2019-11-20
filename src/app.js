@@ -2,6 +2,7 @@
 import $ from "jquery";
 
 import 'bootstrap';
+
 //pages
 
 import "./pages/home/home";
@@ -17,10 +18,12 @@ import multistepForm from "./components/multistep-form/multistep-form";
 import donutChart from "./components/charts/donut/donut";
 import lineChart from "./components/charts/line/line";
 import barChart from "./components/charts/bar/bar";
+import spiderChart from "./components/charts/spider/spider";
 //data
 import barData from "./assets/data/bar-data"
 import lineData from "./assets/data/line-data"
 import donutData from "./assets/data/donut-data"
+import spiderData from "./assets/data/spider-data"
 
 window.$ = window.jQuery = $;
 
@@ -82,6 +85,12 @@ lineCharts.forEach((el, i) => {
 let barCharts = document.querySelectorAll(".chart-bar .chart");
 barCharts.forEach((el) => {
 	new barChart(el, barData);
+});
+
+//init chart(spider)
+let spiderCharts = document.querySelectorAll(".chart-spider .chart");
+spiderCharts.forEach((el) => {
+	new spiderChart(el, spiderData);
 });
 
 

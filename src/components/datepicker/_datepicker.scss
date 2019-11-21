@@ -3,9 +3,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: stretch;
+  @extend .icon-calendar;
+
+  &:before{
+    font-family: icomoon;
+    position: absolute;
+    top: 17px;
+    right: 35px;
+    color: $primary;
+    pointer-events: none;
+  }
 
   .form-control {
-    max-width: 250px;
+    width: 250px;
+    padding-right: 55px;
 
     &,
     &:last-child,

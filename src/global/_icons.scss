@@ -55,6 +55,13 @@
 .icon-arrow-down:before {
   content: "\e909";
 }
+.icon-arrow-up {
+  &:before {
+    content: "\e909";
+    display: inline-block;
+    transform: scale(-1);
+  }
+}
 .icon-gear:before {
   content: "\e90a";
 }

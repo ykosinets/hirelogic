@@ -6,6 +6,25 @@ $roboto: "Roboto", sans-serif;
 
 
 //main
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1470px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1440px
+);
+$grid-columns: 10;
+
+
 //$enable-responsive-font-sizes: true;
 $enable-shadows: false;
 $font-size-base: 16;
@@ -17,11 +36,12 @@ $success: #90c706;
 $warning: #daba00;
 $info: #17a2b8;
 $light: #f9f9fd;
-$dark: #343a40;
+$dark: #474750;
 $white: #fff;
 $controls: #011c62;
 $text: #8c8ca2;
 $color: $primary;
+$body-color: $controls;
 
 $input-placeholder-color: $text;
 $border-radius: 8px;
@@ -165,3 +185,23 @@ $pagination-active-bg: $primary;
 //$pagination-active-color;
 //$pagination-focus-box-shadow;
 //$pagination-focus-outline;
+
+//card
+$card-bg: $white;
+$card-border-color: transparent;
+$card-border-radius: $border-radius;
+$card-border-width: 0;
+$card-columns-count: 1;
+$card-columns-gap: 30px;
+$card-columns-margin: 50px;
+$card-spacer-x: 30px;
+$card-spacer-y: 40px;
+$card-color: $controls;
+
+//list group
+$list-group-border-width: 0;
+$list-group-border-radius: 0;
+$list-group-action-active-bg: lighten($primary, 49%);
+$list-group-action-active-color: $white;
+$list-group-item-padding-x: 30px;
+$list-group-item-padding-y: 15px;

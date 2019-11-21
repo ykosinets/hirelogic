@@ -1,0 +1,19 @@
+.filter-bar {
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  height: auto;
+
+  .dropdown-link {
+    color: $controls;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none !important;
+
+
+    .icon-arrow-down{
+      color: $primary;
+      margin-left: 10px;
+      font-size: 12px;
+    }
+  }
+}

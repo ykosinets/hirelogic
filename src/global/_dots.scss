@@ -1,0 +1,71 @@
+.dot{
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    margin-top: -2px;
+    border: 2px solid;
+    border-radius: 100%;
+  }
+
+  &-after{
+    padding-right: 15px;
+
+    &:after{
+      right: 3px;
+    }
+  }
+
+  &-before{
+    padding-left: 15px;
+
+    &:after{
+      left: 3px;
+    }
+  }
+
+  &-success{
+    &:after {
+      @extend .text-success
+    }
+  }
+  &-info{
+    &:after {
+      @extend .text-info
+    }
+  }
+  &-warning{
+    &:after {
+      @extend .text-warning
+    }
+  }
+  &-danger{
+    &:after {
+      @extend .text-danger
+    }
+  }
+  &-primary{
+    &:after {
+      @extend .text-primary
+    }
+  }
+  &-scondary{
+    &:after {
+      @extend .text-secondary
+    }
+  }
+  &-light{
+    &:after {
+      @extend .text-light
+    }
+  }
+  &-dark{
+    &:after {
+      @extend .text-dark
+    }
+  }
+}

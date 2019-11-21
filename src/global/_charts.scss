@@ -1,0 +1,99 @@
+.chart{
+  &-donut,
+  &-line,
+  &-bar{
+    position: relative;
+    vertical-align: middle;
+
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+    }
+
+    .chart-wrapper {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+
+      svg {
+        .xAxis .tick line{
+          visibility: hidden;
+        }
+
+        .yAxis .tick {
+          &:first-child {
+            line {
+              stroke-dasharray: none;
+            }
+
+            text {
+              visibility: hidden;
+            }
+          }
+        }
+
+        .xAxis .tick text,
+        .yAxis .tick text{
+          fill: #8c8ca2;
+          font-size: 12px;
+          font-family: $roboto;
+        }
+
+        .xAxisTitle{
+          fill: $text;
+          font-size: 12px;
+          font-family: $roboto;
+          font-weight: 500;
+        }
+
+        .tick line {
+          display: block;
+          opacity: .2;
+          stroke-dasharray: 3 6;
+        }
+      }
+    }
+  }
+
+  &-donut{
+    &:after {
+      padding-bottom: 100%;
+    }
+  }
+
+  &-line{
+    &:after {
+      padding-bottom: 640 / 910 * 100%;
+    }
+  }
+
+  &-bar{
+    &:after {
+      padding-bottom: 480 / 910 * 100%;
+    }
+  }
+
+  svg{
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+}
+
+.chart-legends{
+  font-size: .8125rem;
+  font-weight: 500;
+  color: $controls;
+  margin: 0;
+  padding: 0;
+
+  span{
+    margin: 0 5px;
+  }
+}

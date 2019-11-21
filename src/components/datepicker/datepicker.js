@@ -59,7 +59,6 @@ export default function RangeDatepicker(element) {
 				let isLast = datesArray[datesArray.length - 1].getTime() === date.getTime();
 				let isFirst = datesArray[0].getTime() === date.getTime();
 				let isWeekDelta = (datesArray[0].addDays(7).getTime() === datesArray[datesArray.length - 1].getTime());
-				console.log(isWeekDelta);
 				let isTop = isWeekDelta && isFirst;
 				let isBottom = isWeekDelta && isLast;
 
@@ -108,7 +107,7 @@ export default function RangeDatepicker(element) {
 					e.preventDefault();
 					e.stopPropagation();
 					dp.datepicker('hide');
-				})
+				});
 		});
 
 	function clearClose() {

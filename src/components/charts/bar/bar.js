@@ -12,8 +12,8 @@ export default function lineChart(element, data) {
 	const svg = d3
 		.select(element)
 		.append('svg')
-		.attr('width', svgWidth)
-		.attr('height', svgHeight);
+		.attr('preserveAspectRatio', 'xMinYMin meet')
+		.attr('viewBox', '0 0 ' + width + ' ' + svgHeight);
 
 	const graphArea = svg
 		.append('g')
@@ -32,11 +32,8 @@ export default function lineChart(element, data) {
 		])
 		.nice();
 
-	const xAxis = d3.axisBottom(x)
-		.tickSize(0);
-	const yAxis = d3.axisLeft(y)
-		.ticks(5)
-		.tickSize(0);
+	const xAxis = d3.axisBottom(x);
+	const yAxis = d3.axisLeft(y);
 
 	svg
 		.append('g')
@@ -70,40 +67,18 @@ export default function lineChart(element, data) {
 			this.innerHTML = icons[i];
 		});
 
-	// svg
-	// 	.append('g')
-	// 	.attr('class', 'xAxisIcon')
-	// 	.attr("transform", `translate(0, ${height - 20})`)
-	// 	.attr('width', 20)
-	// 	.attr('height', 20)
-	// 	.call(xAxis
-	// 		.tickSize(0)
-	// 		.tickFormat(''))
-	// 	.call(g => g.select(".domain").remove())
-
 	svg
 		.append('g')
 		.attr('class', 'yAxis')
 		.call(yAxis
-			.tickSize(0))
-		.call(g => g.select(".domain").remove());
-
-
-	// add the Y gridlines
-	svg.append("g")
-		.attr("transform", `translate(${margin.left}, ${margin.top})`)
-		.attr("class", "grid")
-		.call(d3.axisLeft(y)
+			.tickSize(0)
 			.ticks(5)
 			.tickSize(-width)
 			.tickPadding(10)
-		)
+			.tickFormat((d) => d))
 		.call(g => g.select(".domain").remove());
 
-
-
-
-	const w = 8;
+	const w = 16;
 	const rx = w / 2;
 	const ry = w / 2;
 

@@ -21,7 +21,7 @@
 @import "bootstrap/scss/card";
 @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/pagination";
-//@import "bootstrap/scss/badge";
+@import "bootstrap/scss/badge";
 //@import "bootstrap/scss/jumbotron";
 //@import "bootstrap/scss/alert";
 //@import "bootstrap/scss/progress";
@@ -44,6 +44,7 @@
 @import "global/development";
 @import "global/layuot";
 @import "global/icons";
+@import "global/inputs";
 @import "global/logo";
 @import "global/buttons";
 @import "global/selects";
@@ -57,6 +58,7 @@
 @import "global/list-group";
 @import "global/charts";
 @import "global/dots";
+@import "global/badges";
 
 //components
 @import "components/number-input/number-input";
@@ -83,4 +85,4 @@
 
 //pages
 @import "pages/dashboard/dashboard";
-
+@import "pages/candidates/candidates";

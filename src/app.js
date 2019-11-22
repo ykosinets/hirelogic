@@ -130,21 +130,6 @@ function chartSizing() {
 				_el.setAttribute('style', '')
 			});
 		}
-
-		let lineChartTexts = el.querySelectorAll('.chart-line .xAxis .tick text');
-		const weekDay = ["Days", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-
-		if (isMobileView) {
-			lineChartTexts.forEach((_el, i) => {
-				_el.innerHTML = weekDay[i].substring(0, 3);
-			});
-		}else{
-			lineChartTexts.forEach((_el, i) => {
-				_el.innerHTML = weekDay[i];
-			});
-		}
-
-		// el.attr('viewBox', '0 0 ' + el.innerWidth + ' ' + el.innerHeight);
 	})
 
 }
@@ -155,3 +140,6 @@ $(document).ready(function () {
 	window.addEventListener('resize', chartSizing);
 });
 
+$(document).on('click', 'body .dropdown-menu', function (e) {
+	e.stopPropagation();
+});

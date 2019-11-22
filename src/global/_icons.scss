@@ -150,6 +150,33 @@
 .icon-plus-circle:before {
   content: "\e923";
 }
+.icon-dots {
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: relative;
+  border: 2px solid;
+  border-radius: 100%;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -2px;
+    border: 2px solid;
+    border-radius: 100%;
+  }
+
+  &:before {
+    top: -9px;
+  }
+  &:after {
+    bottom: -9px;
+  }
+}
 
 .icon-gray-circle,
 .icon-white-circle{

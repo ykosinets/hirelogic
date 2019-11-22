@@ -11,7 +11,7 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 .btn-outline-secondary,
 .btn-outline-light,
 .btn-outline-link,
-.btn-none{
+.btn-none {
   #{$btn-state-all} {
     color: $primary;
   }
@@ -32,4 +32,125 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
   @include button-variant(transparent, transparent, transparent, transparent, transparent, transparent);
   padding: 0;
   border: none !important;
+}
+
+.btn-circle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none !important;
+
+  [class^="icon"] {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+}
+
+.btn-raised {
+  box-shadow: 1px 1px 5px 0 rgb(233, 233, 238);
+  transition: .2s box-shadow ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 3px 0 rgb(233, 233, 238);
+  }
+}
+
+
+.btn-group-sm {
+  & > .btn + .dropdown-toggle-split {
+    @extend .icon-arrow-down;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    border-left: 1px solid rgba(0, 0, 0, .05);
+
+    &:before {
+      font-family: icomoon;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    &.btn-secondary {
+      border-left-color: $white;
+    }
+
+    &.btn-outline-primary {
+      color: $primary;
+    }
+
+    &.btn-outline-primary:not(:disabled):not(.disabled):active,
+    &.btn-outline-primary:not(:disabled):not(.disabled).active,
+    .show > &.btn-outline-primary.dropdown-toggle {
+      color: $white;
+    }
+  }
+
+  .btn {
+    box-shadow: none !important;
+
+    &:not(.dropdown-toggle) {
+      pointer-events: none;
+    }
+  }
+
+  .btn.btn-outline-primary {
+    border-color: #e9e9ee;
+    background: $white;
+    color: $controls;
+  }
+
+  .btn.btn-secondary {
+    border-color: $secondary;
+    background: $secondary;
+    color: $primary;
+  }
+
+  .btn.btn-success {
+    border-color: rgba($success, .05);
+    background: rgba($success, .05);
+    color: $success;
+  }
+
+  .btn.btn-danger {
+    border-color: rgba($danger, .05);
+    background: rgba($danger, .05);
+    color: $danger;
+  }
+
+  .btn.btn-warning {
+    border-color: rgba($warning, .05);
+    background: rgba($warning, .05);
+    color: $warning;
+  }
+}
+
+.btn-circle.btn-filter {
+  border: 1px solid;
+  background: $primary;
+  color: $white;
+
+  &[aria-expanded="true"],
+  &:hover {
+    background: $white;
+    border-color: $success;
+    color: $success;
+  }
+}
+
+.btn-dots{
+  color: $primary;
+
+  &:hover{
+    color: $success;
+  }
 }

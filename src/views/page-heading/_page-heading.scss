@@ -7,6 +7,10 @@
       li{
         margin-left: 55px;
 
+        @include media-breakpoint-down(md){
+          margin-left: 15px;
+        }
+
         &:first-child{
           margin-left: 0;
         }
@@ -54,4 +58,8 @@
 .page-title {
   margin: 10px 0 0 0;
   font-weight: 500;
+
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
 }

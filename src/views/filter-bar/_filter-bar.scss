@@ -3,17 +3,22 @@
   margin-bottom: 30px;
   height: auto;
 
-  .dropdown-link {
-    color: $controls;
-    font-size: 1.125rem;
-    font-weight: 500;
-    text-decoration: none !important;
+  @include media-breakpoint-down(sm){
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+.dropdown-link {
+  color: $controls;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: none !important;
 
 
-    .icon-arrow-down{
-      color: $primary;
-      margin-left: 10px;
-      font-size: 12px;
-    }
+  .icon-arrow-down{
+    color: $primary;
+    margin-left: 10px;
+    font-size: 12px;
   }
 }

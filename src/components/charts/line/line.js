@@ -3,9 +3,9 @@ export default function lineChart(element, data, color) {
 
 	color = color || '#063dc7';
 
-	const weekDay = ["Days", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	const weekDay = ["Days", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
 	const getDay = (n) => {
-		let weekDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+		let weekDay = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
 		return weekDay.indexOf(weekDay[n - 1]) >= 0 ? weekDay[n - 1] : "Days";
 	};
 

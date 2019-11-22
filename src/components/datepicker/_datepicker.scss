@@ -33,6 +33,8 @@
 }
 
 .datepicker {
+  margin-top: 10px;
+
   & table tr td {
     transition: .2s background ease-in-out;
 
@@ -111,17 +113,17 @@
     }
   }
 
-  td, th {
-    padding: 4px 5px;
-    min-width: 30px;
-    font-size: 12px;
-    height: 30px;
+  .dropdown-menu {
+    td, th {
+      padding: 4px 0;
+      min-width: 30px;
+      font-size: 12px;
+      height: 30px;
 
-    @include media-breakpoint-down(sm){
-      padding: 9px 10px;
-      min-width: 40px;
-      font-size: 14px;
-      height: 40px;
+      @include media-breakpoint-down(sm) {
+        padding: 9px 0;
+        font-size: 14px;
+      }
     }
   }
 
@@ -209,4 +211,3 @@
   position: relative;
   z-index: 20;
 }
-

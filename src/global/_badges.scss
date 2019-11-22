@@ -1,0 +1,57 @@
+.badge{
+  &-primary{
+    color: $primary;
+    background: rgba($secondary, .54);
+  }
+
+  &-secondary{
+    color: $secondary;
+    background: rgba($secondary, .05);
+  }
+
+  &-success{
+    color: $success;
+    background: rgba($success, .05);
+  }
+
+  &-danger{
+    color: $danger;
+    background: rgba($danger, .05);
+  }
+
+  &-warning{
+    color: $warning;
+    background: rgba(#efcc00, .1);
+  }
+
+  &-info{
+    color: $info;
+    background: rgba($info, .05);
+  }
+
+  &-light{
+    color: $light;
+    background: rgba($light, .05);
+  }
+
+  &-dark{
+    color: $dark;
+    background: rgba($dark, .05);
+  }
+
+  &.dot-before{
+    padding-left: 27px;
+
+    &:after{
+      left: 18px;
+    }
+  }
+
+  &.dot-after{
+    padding-right: 27px;
+
+    &:after{
+      right: 18px;
+    }
+  }
+}

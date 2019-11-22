@@ -3,14 +3,16 @@ export default function donutChart(element, data) {
 
 	let text = "";
 	let gap = 20;
-	let width = 200 + gap * 2;
-	let height = 200 + gap * 2;
+	let width = 150 + gap * 2;
+	let height = 150 + gap * 2;
 	let thickness = 5;
 
 	let radius = Math.min(width, height) / 2;
 
 	let svg = d3.select(element)
 		.append('svg')
+		.attr('preserveAspectRatio', 'xMinYMin meet')
+		.attr('viewBox', '0 0 ' + width + ' ' + height)
 		.attr('class', 'pie')
 		.attr('width', width)
 		.attr('height', height)

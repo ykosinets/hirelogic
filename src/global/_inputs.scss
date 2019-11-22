@@ -1,0 +1,18 @@
+.input-search{
+  position: relative;
+  @extend .icon-search;
+
+  .form-control {
+    padding-right: 35px;
+  }
+
+  &:before{
+    position: absolute;
+    font-family: icomoon;
+    font-size: .8125rem;
+    pointer-events: none;
+    top: 10px;
+    right: 15px;
+    color: $text;
+  }
+}

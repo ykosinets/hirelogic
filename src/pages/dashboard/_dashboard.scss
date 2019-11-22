@@ -1,0 +1,18 @@
+.tile-list [class*="col-"]{
+  margin-bottom: 30px;
+}
+
+.card-donut{
+  .chart-legends{
+    @include media-breakpoint-down(md){
+      height: 240px;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+    @include media-breakpoint-down(sm){
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.page-heading {
+  margin-bottom: 30px;
+  color: $controls;
+
+  .info-wrapper {
+    .info {
+      li{
+        margin-left: 55px;
+
+        @include media-breakpoint-down(md){
+          margin-left: 15px;
+        }
+
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+
+      .name {
+        font-size: .8125rem;
+      }
+
+      .count {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        .number {
+          font-weight: 500;
+          font-size: 1.125rem;
+        }
+
+        .update {
+          font-size: 10px;
+          font-weight: 500;
+          color: $text;
+          margin-left: 10px;
+
+          [class^="icon"] {
+            font-size: 7px;
+            color: $text;
+
+            &.text-success {
+              color: #1ccd5f !important;
+            }
+
+            &.text-danger {
+              color: #e32230 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-title {
+  margin: 10px 0 0 0;
+  font-weight: 500;
+
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+}

@@ -21,7 +21,7 @@
 @import "bootstrap/scss/card";
 @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/pagination";
-//@import "bootstrap/scss/badge";
+@import "bootstrap/scss/badge";
 //@import "bootstrap/scss/jumbotron";
 //@import "bootstrap/scss/alert";
 //@import "bootstrap/scss/progress";
@@ -37,11 +37,14 @@
 @import "bootstrap/scss/utilities";
 //@import "bootstrap/scss/print";
 
+//datepicker
 @import "bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min";
 
-
+//globals
 @import "global/development";
+@import "global/layuot";
 @import "global/icons";
+@import "global/inputs";
 @import "global/logo";
 @import "global/buttons";
 @import "global/selects";
@@ -51,7 +54,13 @@
 @import "global/checkboxes";
 @import "global/input-groups";
 @import "global/tooltips";
+@import "global/card";
+@import "global/list-group";
+@import "global/charts";
+@import "global/dots";
+@import "global/badges";
 
+//components
 @import "components/number-input/number-input";
 @import "components/file-upload/file-uplaod";
 @import "components/file-input/file-input";
@@ -64,9 +73,17 @@
 @import "components/pagination/pagination";
 @import "components/multistep-form/multistep-form";
 
-
+//charts
 @import "components/charts/donut/donut";
 @import "components/charts/line/line";
 @import "components/charts/bar/bar";
 @import "components/charts/spider/spider";
 
+//views
+@import "views/header/header";
+@import "views/page-heading/page-heading";
+@import "views/filter-bar/filter-bar";
+
+//pages
+@import "pages/dashboard/dashboard";
+@import "pages/candidates/candidates";

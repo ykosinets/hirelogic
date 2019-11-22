@@ -3,23 +3,23 @@ export default function lineChart(element, data, color) {
 
 	color = color || '#063dc7';
 
-	const weekDay = ["Days", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	const weekDay = ["Days", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
 	const getDay = (n) => {
-		let weekDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+		let weekDay = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
 		return weekDay.indexOf(weekDay[n - 1]) >= 0 ? weekDay[n - 1] : "Days";
 	};
 
 // set the dimensions and margins of the graph
-	let margin = {top: 20, right: 20, bottom: 30, left: 30},
-		width = 960 - margin.left - margin.right,
-		height = 500 - margin.top - margin.bottom;
+	let margin = {top: 50, right: 0, bottom: 50, left: 50},
+		width = 910 - margin.left - margin.right,
+		height = 640 - margin.top - margin.bottom;
 
 	// set the ranges
 	let x = d3.scaleLinear().range([0, width]);
 	let y = d3.scaleLinear().range([height, 0]);
 
 	// define the area
-	let area = d3.area()
+	let valueArea = d3.area()
 		.curve(d3.curveCardinal)
 		.x(function (d, i) {
 			return x(i);
@@ -29,7 +29,7 @@ export default function lineChart(element, data, color) {
 			return y(d.value);
 		});
 
-	let valueline = d3.line()
+	let valueLine = d3.line()
 		.curve(d3.curveCardinal)
 		.x(function (d, i) {
 			return x(i);
@@ -38,26 +38,10 @@ export default function lineChart(element, data, color) {
 			return y(d.value);
 		});
 
-	// gridlines in x axis function
-	function make_x_gridlines() {
-		return d3.axisBottom(x)
-			.ticks(5)
-	}
-
-	// gridlines in y axis function
-	function make_y_gridlines() {
-		return d3.axisLeft(y)
-			.ticks(5)
-	}
-
-
-// append the svg obgect to the body of the page
-// appends a 'group' element to 'svg'
-// moves the 'group' element to the top left margin
 	let svg = d3.select(element)
 		.append("svg")
-		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom)
+		.attr('preserveAspectRatio', 'xMinYMin meet')
+		.attr('viewBox', '0 0 ' +  (width + margin.left + margin.right) + ' ' + (height + margin.top + margin.bottom))
 		.append("g")
 		.attr("transform",
 			"translate(" + margin.left + "," + margin.top + ")");
@@ -77,7 +61,7 @@ export default function lineChart(element, data, color) {
 		.attr("id", gradientId)
 		.attr("gradientUnits", "userSpaceOnUse")
 		.attr("x1", 0).attr("y1", y(0))
-		.attr("x2", 0).attr("y2", y(1000))
+		.attr("x2", 0).attr("y2", y(height))
 		.selectAll("stop")
 		.data([
 			{offset: "0%", color: color, opacity: 0},
@@ -99,37 +83,27 @@ export default function lineChart(element, data, color) {
 		.domain(weekDay)
 		.range([0, width]);
 
+	const xAxis = d3.axisBottom(xLabels);
+	const yAxis = d3.axisLeft(y);
+
 	// Add the X Axis
 	svg.append("g")
 		.attr("transform", "translate(0," + height + ")")
-		.call(d3.axisBottom(xLabels))
+		.call(xAxis
+			.tickSize(0)
+			.tickPadding(30)
+			.tickFormat((d) => d))
 		.attr("class", "xAxis")
 		.call(g => g.select(".domain").remove());
 
 	// Add the Y Axis
 	svg.append("g")
 		.attr("class", "yAxis")
-		.call(d3.axisLeft(y))
-		.call(g => g.select(".domain").remove());
-
-	// add the X gridlines
-	svg.append("g")
-		.attr("class", "grid")
-		.attr("transform", "translate(0," + height + ")")
-		.call(make_x_gridlines()
-			.tickSize(0)
-			.tickPadding(100)
-			.tickFormat("")
-		)
-		.call(g => g.select(".domain").remove());
-
-	// add the Y gridlines
-	svg.append("g")
-		.attr("class", "grid")
-		.call(make_y_gridlines()
+		.call(yAxis
+			.ticks(5)
+			.tickPadding(30)
 			.tickSize(-width)
-			.tickFormat("")
-		)
+			.tickFormat((d) => d))
 		.call(g => g.select(".domain").remove());
 
 	// Add the line
@@ -137,13 +111,19 @@ export default function lineChart(element, data, color) {
 		.data([data])
 		.attr("class", "line")
 		.attr("stroke", color)
-		.attr("d", valueline);
+		.attr("d", valueLine);
 
 	// Add the area.
 	svg.append("path")
 		.data([data])
 		.attr("class", "area")
 		.attr("fill", "url(#" + gradientId + ")")
-		.attr("d", area);
+		.attr("d", valueArea);
 
+
+	svg.selectAll('.xAxis')
+		.append('text')
+		.attr('class', 'xAxisTitle')
+		.attr("transform", `translate(0, 45)`)
+		.text('Days');
 }

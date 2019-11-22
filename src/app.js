@@ -94,4 +94,61 @@ spiderCharts.forEach((el) => {
 });
 
 
+//charts (responsive)
+function chartSizing() {
+	let svgs = document.querySelectorAll('.chart svg');
 
+	svgs.forEach((el) => {
+		// console.log(el, el.getAttribute('viewBox'), '0 0 ' + el.getBoundingClientRect().width + ' ' + el.getBoundingClientRect().height);
+		let texts = el.querySelectorAll('.xAxis .tick text, .yAxis .tick text, .xAxisTitle');
+		let xTexts = el.querySelectorAll('.xAxis .tick text:not(.xAxisIcon)');
+		let factor = 960 / el.getBoundingClientRect().width;
+		let fontSize = 'font-size:' + (factor * 12) + 'px;';
+		let isMobileView = ((window.innerWidth < 1470 && window.innerWidth > 991) || window.innerWidth < 768);
+
+		texts.forEach((_el) => {
+			_el.setAttribute('style', fontSize);
+		});
+
+		xTexts.forEach((_el) => {
+			_el.setAttribute('style', fontSize);
+		});
+
+		let barChartTexts = el.querySelectorAll('.chart-bar .xAxis .tick text:not(.xAxisIcon)');
+		let barChartIconText = el.querySelectorAll('.chart-bar .xAxis .tick .xAxisIcon');
+		let barChartIconCircle = el.querySelectorAll('.chart-bar .xAxis .tick circle');
+
+		if (isMobileView) {
+			barChartTexts.forEach((_el) => {
+				_el.setAttribute('visibility', 'hidden')
+			});
+			barChartIconText.forEach((_el) => {
+				_el.setAttribute('style', 'font-size:' + (factor * 20) + 'px;transform: translate(0, 10px);')
+			});
+			barChartIconCircle.forEach((_el) => {
+				_el.setAttribute('style', 'transform: translate(0, -6px);r: 25;')
+			});
+		} else {
+			barChartTexts.forEach((_el) => {
+				_el.setAttribute('visibility', 'visible')
+			});
+			barChartIconText.forEach((_el) => {
+				_el.setAttribute('style', fontSize)
+			});
+			barChartIconCircle.forEach((_el) => {
+				_el.setAttribute('style', '')
+			});
+		}
+	})
+
+}
+
+$(document).ready(function () {
+	chartSizing();
+
+	window.addEventListener('resize', chartSizing);
+});
+
+$(document).on('click', 'body .dropdown-menu', function (e) {
+	e.stopPropagation();
+});

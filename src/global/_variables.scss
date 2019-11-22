@@ -6,6 +6,25 @@ $roboto: "Roboto", sans-serif;
 
 
 //main
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1340px
+);
+$grid-columns: 10;
+
+
 //$enable-responsive-font-sizes: true;
 $enable-shadows: false;
 $font-size-base: 16;
@@ -17,11 +36,12 @@ $success: #90c706;
 $warning: #daba00;
 $info: #17a2b8;
 $light: #f9f9fd;
-$dark: #343a40;
+$dark: #474750;
 $white: #fff;
 $controls: #011c62;
 $text: #8c8ca2;
 $color: $primary;
+$body-color: $controls;
 
 $input-placeholder-color: $text;
 $border-radius: 8px;
@@ -98,22 +118,22 @@ $custom-select-border-radius: $input-border-radius;
 $custom-select-border-radius-lg: $input-border-radius-lg;
 
 //dropdown
-$dropdown-box-shadow: 1px 1px 35px 0 #e9e9ee;
+$dropdown-box-shadow: 1px 1px 35px 0 rgba(0,0,0,.08);
 $dropdown-bg: $white;
 $dropdown-color: $controls;
 $dropdown-min-width: 240px;
-$dropdown-font-size: .75rem;
+$dropdown-font-size: .8125rem;
 //$dropdown-divider-bg;
 //$dropdown-divider-margin-y;
 //$dropdown-header-color;
 //$dropdown-spacer;
-$dropdown-padding-y: 1.25rem;
+$dropdown-padding-y: .5rem;
 $dropdown-border-width: 0;
 //$dropdown-border-color;
 $dropdown-border-radius: $input-border-radius;
 $dropdown-inner-border-radius: $input-border-radius;
 $dropdown-item-padding-x: 1rem;
-$dropdown-item-padding-y: .25rem;
+$dropdown-item-padding-y: .5rem;
 //$dropdown-link-color: $controls;
 //$dropdown-link-disabled-color: $text;
 //$dropdown-link-active-bg;
@@ -144,10 +164,12 @@ $tooltip-padding-y: 10px;
 //tables
 $table-bg: $white;
 $table-color: $controls;
-$table-accent-bg: darken($secondary, .5%);
+$table-accent-bg: #fafafc;
 $table-head-bg: darken($secondary, 2%);
 $table-active-bg: darken($secondary, 1%);
 $table-hover-bg: darken($secondary, 2%);
+$table-cell-padding: .25rem;
+$table-striped-order: even;
 
 //pagination
 $pagination-bg: transparent;
@@ -165,3 +187,31 @@ $pagination-active-bg: $primary;
 //$pagination-active-color;
 //$pagination-focus-box-shadow;
 //$pagination-focus-outline;
+
+//card
+$card-bg: $white;
+$card-border-color: transparent;
+$card-border-radius: $border-radius;
+$card-border-width: 0;
+$card-columns-count: 1;
+$card-columns-gap: 30px;
+$card-columns-margin: 50px;
+$card-spacer-x: 30px;
+$card-spacer-y: 40px;
+$card-color: $controls;
+
+//list group
+$list-group-border-width: 0;
+$list-group-border-radius: 0;
+$list-group-action-active-bg: lighten($primary, 49%);
+$list-group-action-active-color: $white;
+$list-group-item-padding-x: 30px;
+$list-group-item-padding-y: 15px;
+
+
+//badges
+$badge-border-radius: 20px;
+$badge-padding-x: 18px;
+$badge-padding-y: 5px;
+$badge-font-size: .8125rem;
+$badge-font-weight: 500;

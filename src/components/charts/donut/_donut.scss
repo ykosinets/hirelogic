@@ -1,12 +1,18 @@
 .chart-donut {
+  position: relative;
+  display: block;
+  background: $secondary;
+  border-radius: 100%;
+  border: 1px dashed #ddd;
+  margin: 0 auto;
+  max-width: 240px;
+  max-height: 240px;
+
   .chart {
-    position: relative;
-    display: inline-block;
-    background: $secondary;
     padding: 15px;
-    margin: 10px;
-    border-radius: 100%;
-    border: 1px dashed #ddd;
+
+    &-wrapper{
+    }
 
     [class^="icon"] {
       position: absolute;

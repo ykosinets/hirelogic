@@ -64,9 +64,9 @@
     </svg>
         </a>
 
-        <nav class="page-navigation">
+        <nav class="page-navigation d-none d-lg-block">
           <ul class="list-unstyled d-flex flex-row align-items-center justify-content-between m-0">
-            <li>
+            <li class="active">
               <a href="dashboard.html">
                 <span class="icon-speedometer"></span>
                 Dashboard
@@ -105,23 +105,30 @@
           </a>
         </div>
 
-        <a href="#" class="profile d-flex flex-row align-items-center justify-content-between">
+        <a href="#" type="button" id="dropdownUserButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="profile d-flex flex-row align-items-center justify-content-between">
           <img class="avatar" src="images/avatar-1.jpg" alt="avatar">
 
-          <div class="d-flex flex-column align-items-start justify-content-center">
-            <span class="name">Dawid Tkocz</span>
+          <div class="flex-column align-items-start justify-content-center d-none d-lg-flex">
+            <span class="name text-nowrap">Dawid Tkocz</span>
             <span class="position">Administrator</span>
           </div>
 
           <span class="icon-arrow-down"></span>
         </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownUserButton">
+          <a class="dropdown-item" href="#"><span class="icon-profile-outline"></span>View profile</a>
+          <a class="dropdown-item" href="#"><span class="icon-plus-rounded-square"></span>Invite to the test</a>
+          <a class="dropdown-item" href="#"><span class="icon-edit-square"></span>Edit</a>
+          <a class="dropdown-item" href="#"><span class="icon-trash-bucket"></span>Remove</a>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="shortcuts bg-primary text-white">
     <div class="container">
-      <ul class="list-unstyled d-flex flex-row align-items-center justify-content-start m-0">
+      <ul class="list-unstyled d-none d-lg-flex flex-row align-items-center justify-content-start m-0">
         <li>
           Shortcuts:
         </li>
@@ -146,6 +153,53 @@
           </a>
         </li>
       </ul>
+
+      <div class="page-navigation-sm">
+        <a class="btn-toggle collapsed  d-block d-lg-none" data-toggle="collapse" href="#collapseMenu" aria-expanded="false"
+           aria-controls="collapseExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div id="collapseMenu" class="collapse collapse-menu">
+          <ul class="list-unstyled d-flex flex-column align-items-stretch justify-content-between m-0">
+            <li class="has-child">
+              <a href="dashboard.html">
+                <span class="icon-speedometer"></span>
+                Dashboard
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="jobs.html">
+                <span class="icon-case"></span>
+                Jobs
+              </a>
+            </li>
+            <li class="has-child">
+              <a href="candidates.html">
+                <span class="icon-profile-outline"></span>
+                Candidates
+              </a>
+            </li>
+            <li class="has-child active">
+              <a href="#collapseSubmenu_1" data-toggle="collapse" aria-expanded="false" aria-controls="collapseSubmenu_1">
+                <span class="icon-question"></span>
+                Tests
+              </a>
+
+              <ul id="collapseSubmenu_1" class="collapse">
+                <li>
+                  <a href="#">Test Created</a>
+                </li>
+                <li>
+                  <a href="#"> Create New Test</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -155,44 +209,55 @@
   <div class="page-heading d-flex flex-row align-items-end justify-content-between">
     <h3 class="page-title">Dashboard</h3>
 
-    <div class="info-wrapper">
-      <ul class="info list-unstyled m-0 d-flex flex-row align-items-start justify-content-between">
-        <li>
-          <div class="name">Candidates</div>
-          <div class="count">
-            <div class="number">253</div>
-            <div class="update">
-              <span class="icon-arrow-up text-success"></span>
-              9
+    <div class="d-flex flex-row flex-md-row-reverse">
+      <div class="filter-actions d-flex flex-row justify-content-between align-items-center d-lg-none ml-3">
+        <a href="#" class="btn-circle bg-primary rounded-circle mr-3">
+          <div class="icon-filter text-white"></div>
+        </a>
+        <a href="#" class="btn-circle btn-raised bg-white rounded-circle">
+          <span class="icon-plus-rounded text-primary"></span>
+        </a>
+      </div>
+
+      <div class="info-wrapper">
+        <ul class="info list-unstyled m-0 d-flex flex-row align-items-start justify-content-between">
+          <li>
+            <div class="name">Candidates</div>
+            <div class="count">
+              <div class="number">253</div>
+              <div class="update">
+                <span class="icon-arrow-up text-success"></span>
+                9
+              </div>
             </div>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <div class="name">Pending</div>
-          <div class="count">
-            <div class="number">236</div>
-          </div>
-        </li>
-
-        <li>
-          <div class="name">Tested</div>
-          <div class="count">
-            <div class="number">14</div>
-            <div class="update">
-              <span class="icon-arrow-up text-success"></span>
-              9
+          <li>
+            <div class="name">Pending</div>
+            <div class="count">
+              <div class="number">236</div>
             </div>
-          </div>
-        </li>
+          </li>
 
-        <li>
-          <div class="name">Approved</div>
-          <div class="count">
-            <div class="number">3</div>
-          </div>
-        </li>
-      </ul>
+          <li>
+            <div class="name">Tested</div>
+            <div class="count">
+              <div class="number">14</div>
+              <div class="update">
+                <span class="icon-arrow-up text-success"></span>
+                9
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="name">Approved</div>
+            <div class="count">
+              <div class="number">3</div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -200,26 +265,35 @@
 
   <div class="container">
   <div class="filter-bar card d-flex flex-row align-items-center justify-content-between">
-    <a class="dropdown-link" href="#">Ruby Developer<span class="icon-arrow-down"></span></a>
+    <a class="dropdown-link" href="#" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ruby Developer<span class="icon-arrow-down"></span></a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
 
-    <div class="input-daterange">
+    <div class="d-none d-md-block">
+      <div class="input-daterange">
   <label for="date">Date range:</label>
   <input id="date" type="text" class="form-control" autocomplete="off" value="11/01/2019 - 11/30/2019">
 </div>
 
 
+    </div>
   </div>
 </div>
 
 
   <div class="container tile-list">
     <div class="row">
-      <div class="col-sm-10 col-lg-3">
-        <div class="card">
-          <div class="card-body">
+      <div class="col-sm-10 col-lg-3 d-block d-md-none d-lg-block">
+        <div class="card card-fluid">
+          <div class="card-header">
             <h5 class="card-title">TOP5 Candidates <a href="#" class="icon-external-link"></a></h5>
             <h6 class="card-subtitle text-muted">from <strong>Ruby Developer</strong> job.</h6>
+          </div>
 
+          <div class="card-body">
             <div class="list-group list-group-colored">
               <a href="#" class="list-group-item list-group-item-action">
                 <span class="user d-flex flex-row align-items-justify justify-content-start">
@@ -281,14 +355,16 @@
       </div>
 
       <div class="col-sm-10 col-lg-3">
-        <div class="card">
-          <div class="card-body">
+        <div class="card card-donut">
+          <div class="card-header">
             <h5 class="card-title">Overall Score <a href="#" class="icon-external-link"></a></h5>
             <h6 class="card-subtitle text-muted">Based on <strong>253 candidates</strong> from <strong>Ruby
               Developer job.</strong></h6>
+          </div>
 
-
-            <span class="chart-legends mb-4 d-flex flex-row justify-content-around align-items-center flex-wrap">
+          <div class="card-body">
+            <span
+                class="chart-legends mb-4 d-flex flex-row flex-md-column flex-lg-row justify-content-around align-items-start float-none float-md-left float-lg-none align-items-lg-center flex-wrap">
                 <span class="dot dot-before dot-danger">Weak</span>
                 <span class="dot dot-before dot-warning">Average</span>
                 <span class="dot dot-before dot-primary">Good</span>
@@ -309,9 +385,11 @@
 
       <div class="col-sm-10 col-lg-4">
         <div class="card">
-          <div class="card-body">
+          <div class="card-header">
             <h5 class="card-title">Invited Candidates <a href="#" class="icon-external-link"></a></h5>
+          </div>
 
+          <div class="card-body">
             <div class="chart-line">
   <div class="chart-wrapper">
     <div class="chart"></div>
@@ -326,13 +404,17 @@
     <div class="row">
       <div class="order-md-1 order-2 col-sm-10 col-lg-6">
         <div class="card">
-          <div class="card-body">
+          <div class="card-header">
             <h5 class="card-title">Strongest Personality Traits <a href="#" class="icon-external-link"></a>
-              <span class="chart-legends float-right mt-1 d-inline-flex flex-row justify-content-between align-items-center">
+              <span
+                  class="chart-legends float-right mt-1 d-inline-flex flex-row justify-content-between align-items-center">
                 <span class="dot dot-before dot-success">Female</span>
                 <span class="dot dot-before dot-primary">Male</span>
               </span>
             </h5>
+          </div>
+
+          <div class="card-body">
             <div class="chart-bar">
   <div class="chart-wrapper">
     <div class="chart"></div>
@@ -345,8 +427,11 @@
 
       <div class="order-md-2 order-1 col-sm-10 col-lg-4">
         <div class="card">
-          <div class="card-body">
+          <div class="card-header">
             <h5 class="card-title">Tested Candidates <a href="#" class="icon-external-link"></a></h5>
+          </div>
+
+          <div class="card-body">
             <div class="chart-line">
   <div class="chart-wrapper">
     <div class="chart"></div>

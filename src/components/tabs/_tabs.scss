@@ -1,6 +1,7 @@
 .nav-tabs{
   box-shadow: 1px 1px 5px 0 #e9e9ee;
   border: none;
+  border-radius: $border-radius;
   margin-bottom: 15px;
   padding: 0 5px;
 
@@ -11,7 +12,7 @@
   .nav-link{
     font-size: .875rem;
     font-weight: 500;
-    padding: 23px 0;
+    padding: 24px 0;
     line-height: 1;
     border: none !important;
     margin-right: 30px;

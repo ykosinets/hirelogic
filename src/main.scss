@@ -77,6 +77,7 @@
 @import "components/charts/donut/donut";
 @import "components/charts/line/line";
 @import "components/charts/bar/bar";
+@import "components/charts/spider/spider";
 
 //views
 @import "views/header/header";
@@ -86,3 +87,4 @@
 //pages
 @import "pages/dashboard/dashboard";
 @import "pages/candidates/candidates";
+@import "pages/profile/profile";

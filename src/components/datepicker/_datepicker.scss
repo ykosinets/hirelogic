@@ -35,8 +35,13 @@
 .datepicker {
   margin-top: 10px;
 
+  & table tr th{
+    font-size: .8125rem;
+  }
+
   & table tr td {
     transition: .2s background ease-in-out;
+    font-size: .75rem;
 
     span {
       &.active {
@@ -199,6 +204,14 @@
   &.datepicker-orient {
     &-left:after {
       left: 20px;
+    }
+
+    &-right:after {
+      right: 20px;
+    }
+
+    &-top{
+      margin-top: -10px;
     }
 
     &-right:after {

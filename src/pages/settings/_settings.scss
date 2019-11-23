@@ -1,0 +1,10 @@
+.page-settings{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: stretch;
+
+  .form-group{
+    margin-bottom: 30px;
+  }
+}

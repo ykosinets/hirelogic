@@ -1,5 +1,9 @@
 .custom-checkbox {
+  min-height: 1em;
+
   .custom-control-label {
+    cursor: pointer;
+
     &:before,
     &:after {
       top: -2px;

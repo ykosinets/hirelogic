@@ -1,9 +1,10 @@
 textarea.form-control{
   line-height: 1.4;
-  min-height: 100px;
+  min-height: 150px;
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   border-radius: 18px;
+  margin-bottom: 30px;
 
   &::-webkit-scrollbar-track {
     box-shadow: none;

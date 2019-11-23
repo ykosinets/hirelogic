@@ -287,7 +287,7 @@
     &:nth-child(3) {
       display: block;
       width: 22px;
-      height: 3.5px;
+      height: 2px;
       border-radius: 2px;
       background: $white;
       position: absolute;
@@ -313,7 +313,7 @@
   &.collapsed {
     span {
       &:nth-child(1) {
-        transform: translate(-50%, calc(-50% - 7px)) rotate(0);
+        transform: translate(-50%, calc(-50% - 6px)) rotate(0);
       }
 
       &:nth-child(2) {
@@ -322,7 +322,7 @@
       }
 
       &:nth-child(3) {
-        transform: translate(-50%, calc(-50% + 7px)) rotate(0);
+        transform: translate(-50%, calc(-50% + 6px)) rotate(0);
       }
     }
   }

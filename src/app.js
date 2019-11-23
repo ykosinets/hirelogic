@@ -5,7 +5,7 @@ import 'bootstrap';
 
 //pages
 
-import "./pages/home/home";
+// import "./pages/home/home";
 //custom components
 import CounterInput from "./components/number-input/number-input";
 import FileUpload from "./components/file-upload/file-upload";

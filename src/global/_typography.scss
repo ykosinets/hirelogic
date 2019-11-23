@@ -5,3 +5,7 @@ small{
     margin-top: 1rem;
   }
 }
+
+.label{
+  @extend label;
+}

@@ -4,15 +4,6 @@
     margin-bottom: 42px;
   }
 
-  .page-side-title {
-    .page {
-      &-subtitle {
-        color: $text;
-        font-size: .8125rem;
-      }
-    }
-  }
-
   .nav-tabs {
     background: $white;
   }
@@ -117,6 +108,13 @@
         order: 4;
       }
     }
+  }
+}
+
+.page {
+  &-subtitle {
+    color: $text;
+    font-size: .8125rem;
   }
 }
 

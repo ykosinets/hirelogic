@@ -1,7 +1,8 @@
 .chart{
   &-donut,
   &-line,
-  &-bar{
+  &-bar,
+  &-spider{
     position: relative;
     vertical-align: middle;
 
@@ -77,6 +78,11 @@
     &:after {
       padding-bottom: 480 / 910 * 100%;
     }
+  }
+
+  &-spider{
+    width: 500px;
+    height: 400px;
   }
 
   svg{

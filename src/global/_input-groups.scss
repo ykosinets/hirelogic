@@ -13,3 +13,38 @@
     padding-right: $input-border-radius * 2;
   }
 }
+
+.list-rounded{
+  li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    margin-bottom: 10px;
+    font-size: .8125rem;
+    line-height: 1;
+    border-radius: 20px;
+    background: #f9f9fd;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    .name{
+      a{
+        color: $primary;
+        font-weight: 500;
+        text-decoration: none !important;
+
+        &:hover{
+          color: $controls;
+        }
+      }
+
+      strong{
+        font-weight: 500;
+      }
+    }
+  }
+}

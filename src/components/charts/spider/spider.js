@@ -11,8 +11,8 @@ var RadarChart = {
 			radians: 2 * Math.PI,
 			opacityArea: 1,
 			ToRight: 5,
-			TranslateX: 100,
-			TranslateY: 100,
+			TranslateX: 0,
+			TranslateY: 0,
 			ExtraWidthX: 0,
 			ExtraWidthY: 0,
 			color: d3.scaleOrdinal().range(["#063dc7", "#90c706"])
@@ -34,19 +34,17 @@ var RadarChart = {
 		}));
 		var total = allAxis.length;
 		var radius = cfg.factor * Math.min(cfg.w / 2, cfg.h / 2);
-		var Format = d3.format('%');
 		var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 		var series = 0;
 		d3.select(id).select("svg").remove();
 
 		var svg = d3.select(id)
-			.append("svg");
+			.append("svg")
+			.attr('preserveAspectRatio', 'xMinYMin meet');
 
 		var g = svg
-			.attr("width", cfg.w + cfg.ExtraWidthX)
-			.attr("height", cfg.h + cfg.ExtraWidthY)
 			.append("g")
-			.attr("transform", "translate(" + ((cfg.w + cfg.ExtraWidthX)/2) + "," + (cfg.TranslateY + cfg.ExtraWidthY)/2 + ")")
+			.attr("transform", "translate(0, 10)");
 
 		var axisWrapper = g
 			.append("g")
@@ -95,7 +93,6 @@ var RadarChart = {
 				.attr("transform", "translate(" + (cfg.w / 2 - levelFactor) + ", " + (cfg.h / 2 - levelFactor) + ")");
 		}
 
-
 		var axis = axisDirections.selectAll(".axis")
 			.data(allAxis)
 			.enter()
@@ -111,55 +108,7 @@ var RadarChart = {
 			.attr("y2", function (d, i) {
 				return cfg.h / 2 * (1 - cfg.factor * Math.cos(i * cfg.radians / total));
 			})
-			.attr("class", "line")
-
-
-		// labels
-		axis.append("text")
-			.attr("class", "legend")
-			.text(function (d) {
-				return d
-			})
-			.attr("text-anchor", "middle")
-			.attr("dy", "1.5em")
-			.attr("transform", function (d, i) {
-				return "translate(0, -10)"
-			})
-			.attr("x", function (d, i) {
-				return cfg.w / 2 * (1 - cfg.factorLegend * Math.sin(i * cfg.radians / total)) - 60 * Math.sin(i * cfg.radians / total);
-			})
-			.attr("y", function (d, i) {
-				return cfg.h / 2 * (1 - Math.cos(i * cfg.radians / total)) - 20 * Math.cos(i * cfg.radians / total);
-			});
-
-		// labels info
-		axis.append("rect")
-			.style("width", "60px")
-			.style("height", "30px")
-			.style("fill", "f00")
-			.attr("class", "legend-info")
-			.attr("x", function (d, i) {
-				return cfg.w / 2 * (1 - cfg.factorLegend * Math.sin(i * cfg.radians / total)) - 60 * Math.sin(i * cfg.radians / total);
-			})
-			.attr("y", function (d, i) {
-				return cfg.h / 2 * (1 - Math.cos(i * cfg.radians / total)) - 20 * Math.cos(i * cfg.radians / total);
-			});
-
-		g.selectAll('.circles-wrapper ').each(function(){
-
-		});
-
-		axis.append("circle")
-			.attr('r', 12)
-			.style("fill", "url(#avatar-" + series + ")")
-			.attr("class", "legend-info")
-			.attr("cx", function (d, i) {
-				return cfg.w / 2 * (1 - cfg.factorLegend * Math.sin(i * cfg.radians / total)) - 60 * Math.sin(i * cfg.radians / total);
-			})
-			.attr("cy", function (d, i) {
-				return cfg.h / 2 * (1 - Math.cos(i * cfg.radians / total)) - 20 * Math.cos(i * cfg.radians / total);
-			});
-
+			.attr("class", "line");
 
 		// gradients and polygons
 		d.forEach(function (y, x) {
@@ -189,7 +138,7 @@ var RadarChart = {
 				.selectAll("stop")
 				.data([
 					{offset: "0%", color: cfg.color(series), opacity: .4},
-					{offset: "100%", color: cfg.color(series), opacity: 1}
+					{offset: "100%", color: cfg.color(series), opacity: .7}
 				])
 				.enter().append("stop")
 				.attr("offset", function (d) {
@@ -226,7 +175,7 @@ var RadarChart = {
 					var z = "polygon." + d3.select(this).attr("class");
 					g.selectAll("polygon")
 						.transition(200)
-						.style("fill-opacity", 0.5);
+						.style("fill-opacity", 0.3);
 					g.selectAll(z)
 						.transition(200)
 						.style("fill-opacity", 1);
@@ -239,27 +188,6 @@ var RadarChart = {
 			series++;
 		});
 		series = 0;
-
-		// patterns
-		d.forEach(function(y, x){
-			var pattern = svg.select('defs')
-				.append('pattern')
-				.attr('x', 0)
-				.attr('y', 0)
-				.attr('width', 24)
-				.attr('height', 24)
-				.attr('id', 'avatar-' + series);
-
-			pattern.append('image')
-				.attr('x', 0)
-				.attr('y', 0)
-				.attr('width', 24)
-				.attr('height', 24)
-				.attr('href', './images/avatar-' + series + '.jpg');
-			series++;
-		});
-		series = 0;
-
 
 		// dots
 		d.forEach(function (y, x) {
@@ -332,8 +260,8 @@ export default function spiderChart(element, data) {
 		h: height,
 		maxValue: 100,
 		levels: 3,
-		ExtraWidthX: 300,
-		ExtraWidthY: 300
+		ExtraWidthX: 0,
+		ExtraWidthY: 0
 	};
 
 	//Call function to draw the Radar chart

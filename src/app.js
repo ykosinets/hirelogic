@@ -147,8 +147,30 @@ $(document).ready(function () {
 	chartSizing();
 
 	window.addEventListener('resize', chartSizing);
+
+	$('.chart-spider .legend .plus').on('click', function() {
+		let childPos = $(this).offset();
+		let parentPos = $($(this).parents('.chart-wrapper')[0]).offset();
+
+		let childOffset = {
+			top: childPos.top - parentPos.top + 10,
+			left: childPos.left - parentPos.left + 50
+		};
+
+		$('[aria-labelledby="spiderCompare"]')
+			.dropdown('show')
+			.css(childOffset);
+	});
+
+	$(document).on('click', '.page-wrapper', function(e) {
+		let obj = e.target;
+		if(!(obj.classList.contains('icon-plus-rounded') || obj.classList.contains('plus'))) {
+			$('[aria-labelledby="spiderCompare"]').dropdown('hide')
+		}
+	});
+
+	$(document).on('click', 'body .dropdown-menu', function (e) {
+		e.stopPropagation();
+	});
 });
 
-$(document).on('click', 'body .dropdown-menu', function (e) {
-	e.stopPropagation();
-});

@@ -1,0 +1,17 @@
+.add-another{
+  display: inline-block;
+  color: $primary;
+  font-size: .8125rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  .icon-plus-rounded-circle{
+    margin-right: 7px;
+    margin-top: 3px;
+    display: inline-block;
+  }
+
+  &:hover{
+    color: $controls;
+  }
+}

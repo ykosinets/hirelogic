@@ -13,6 +13,7 @@ import RangeDatepicker from "./components/datepicker/datepicker";
 import FileInput from "./components/file-input/file-input";
 import Rating from "./components/rating/rating";
 import multistepForm from "./components/multistep-form/multistep-form";
+import addEnother from "./components/add-another/add-another";
 
 //charts
 import donutChart from "./components/charts/donut/donut";
@@ -143,11 +144,19 @@ function chartSizing() {
 
 }
 
-$(document).ready(function () {
-	chartSizing();
+//add another button init
+let btns = document.querySelectorAll('.add-another');
+btns.forEach((el) => {
+	new addEnother(el);
+});
 
+
+$(document).ready(function () {
+	//charts responsive init
+	chartSizing();
 	window.addEventListener('resize', chartSizing);
 
+	//chart dropdown call
 	$('.chart-spider .legend .plus').on('click', function() {
 		let childPos = $(this).offset();
 		let parentPos = $($(this).parents('.chart-wrapper')[0]).offset();
@@ -169,6 +178,7 @@ $(document).ready(function () {
 		}
 	});
 
+	//keep dropdown open while clicking inside
 	$(document).on('click', 'body .dropdown-menu', function (e) {
 		e.stopPropagation();
 	});

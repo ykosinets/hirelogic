@@ -3,6 +3,14 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 .btn {
   letter-spacing: 2px;
   text-transform: uppercase;
+
+  &.text-muted{
+    color: $text;
+
+    &:hover{
+      color: $controls !important;
+    }
+  }
 }
 
 .btn-secondary,

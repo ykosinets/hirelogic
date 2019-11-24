@@ -12,7 +12,6 @@ import FileUpload from "./components/file-upload/file-upload";
 import RangeDatepicker from "./components/datepicker/datepicker";
 import FileInput from "./components/file-input/file-input";
 import Rating from "./components/rating/rating";
-import multistepForm from "./components/multistep-form/multistep-form";
 import addEnother from "./components/add-another/add-another";
 
 //charts
@@ -61,12 +60,6 @@ ratings.forEach((el) => {
 //init tooltips
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
-});
-
-//init multistep form
-let multistepForms = document.querySelectorAll(".multistep-form");
-multistepForms.forEach((el) => {
-	new multistepForm(el);
 });
 
 //init chart(donut)

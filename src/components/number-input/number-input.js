@@ -5,15 +5,17 @@ export default function CounterInput(element) {
 	this.increment = () => {
 		let val = getVal();
 		let max = getMax();
+		let step = getStep();
 		if (val === max) return;
-		this.input.value = val + 1;
+		this.input.value = val + step;
 	};
 
 	this.decrement = () => {
 		let val = getVal();
 		let min = getMin();
+		let step = getStep();
 		if (val === min) return;
-		this.input.value = val - 1;
+		this.input.value = val - step;
 	};
 
 	this.getParent = (el, sel) => {
@@ -39,6 +41,10 @@ export default function CounterInput(element) {
 
 	const getVal = () => {
 		return parseInt(this.input.value);
+	};
+
+	const getStep = () => {
+		return parseInt(this.input.getAttribute('step')) || 1;
 	};
 
 

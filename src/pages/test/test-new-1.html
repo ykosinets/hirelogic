@@ -1,0 +1,72 @@
+@@include('views/head.html', {"title" : "New Test"})
+<body>
+<div class="page-wrapper page-form page-new-test">
+
+  @@include('views/header/header.html')
+
+  <div class="card-form-wrapper">
+    <div class="card card-form">
+      <div class="card-header">
+        <h3 class="page-title">New test</h3>
+      </div>
+
+      <div class="card-body">
+        <form class="multistep-form" id="regForm" action="">
+          <div class="form-group">
+            <label for="exampleInputName1">Test name</label>
+            <input type="email" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5 mb-4 mb-sm-0">
+              <div class="form-group">
+                <span class="label">Number of Questions</span>
+                <div class="input-number">
+                  <button type="button" class="btn btn-none btn-left btn-minus">
+                    <span class="icon-minus-rounded-circle"></span>
+                  </button>
+                  <input type="tel" class="form-control" aria-label="Number picker" value="5" min="0" max="10">
+                  <button type="button" class="btn btn-none btn-right btn-plus">
+                    <span class="icon-plus-rounded-circle"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5 mb-4 mb-sm-0">
+              <div class="form-group">
+                <span class="label d-block w-100">Time Limit</span>
+                <div class="input-number mr-2 d-inline-block">
+                  <button type="button" class="btn btn-none btn-left btn-minus">
+                    <span class="icon-minus-rounded-circle"></span>
+                  </button>
+                  <input type="tel" class="form-control" aria-label="Number picker" value="15" min="0" max="60" step="5">
+                  <button type="button" class="btn btn-none btn-right btn-plus">
+                    <span class="icon-plus-rounded-circle"></span>
+                  </button>
+                </div>
+
+                <span class="label">minutes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <small>Number of qustions might be modified later.</small>
+          </div>
+
+          <div class="button-set justify-content-start">
+            <button class="btn btn-primary">Save and continue</button>
+            <button class="btn btn-light">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>

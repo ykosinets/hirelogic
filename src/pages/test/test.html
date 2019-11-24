@@ -1,0 +1,177 @@
+@@include('views/head.html', {"title" : "Test"})
+<body>
+<div class="page-wrapper">
+
+  @@include('views/header/header.html')
+
+  @@include('views/page-heading/page-heading.html')
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <div class="card card-fluid">
+          <div class="card-header">
+            <div class="d-flex flex-row align-items-center justify-content-between">
+              <div class="d-flex flex-row align-items-center">
+                <h3 class="page-title">Created Test</h3>
+
+                <div class="divider ml-4 mr-4"></div>
+
+                <div class="form-group input-search m-0">
+                  <input type="search" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search">
+                </div>
+              </div>
+
+              <div class="d-flex flex-row">
+                <a href="#" class="btn-circle rounded-circle btn-filter mr-3" id="filterButton" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                  <div class="icon-filter"></div>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterButton">
+                  <form>
+                    <h4 class="form-title">Filter by</h4>
+
+                    <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                      <label for="sort">Sort by</label>
+                      <input type="email" class="form-control form-control-sm" id="sort" placeholder="email@example.com">
+                    </div>
+
+                    <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                      <label for="age-min">Age:</label>
+                      <div class="d-flex flex-row justify-content-between align-items-center">
+                        <input type="email" class="form-control form-control-sm form-control-2" id="age-min" placeholder="email@example.com">
+                        <span class="form-divider">-</span>
+                        <input type="email" class="form-control form-control-sm form-control-2" id="age-max" placeholder="email@example.com">
+                      </div>
+                    </div>
+
+                    <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                      <label for="ethnicity">Ethnicity</label>
+                      <div class="d-flex flex-row">
+                        <select type="email" class="form-control form-control-sm" id="ethnicity"></select>
+                      </div>
+                    </div>
+
+                    <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                      <label for="gender">Gender</label>
+                      <div class="d-flex flex-row">
+                        <select type="email" class="form-control form-control-sm" id="gender"></select>
+                      </div>
+                    </div>
+
+                    <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                      <label for="location">Location</label>
+                      <div class="d-flex flex-row">
+                        <select type="email" class="form-control form-control-sm" id="location"></select>
+                      </div>
+                    </div>
+
+                    <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                      <label for="deadline">Deadline</label>
+                      <div class="d-flex flex-row">
+                        <select type="email" class="form-control form-control-sm" id="deadline"></select>
+                      </div>
+                    </div>
+
+                    <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                      <label for="shortlisted">Shortlisted</label>
+                      <div class="d-flex flex-row">
+                        <select type="email" class="form-control form-control-sm" id="shortlisted"></select>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover table-borderless">
+                <thead>
+                <tr>
+                  <th scope="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1"></label>
+                    </div>
+                  </th>
+                  <th scope="col">Test name</th>
+                  <th scope="col" class="text-center">Date Created</th>
+                  <th scope="col" class="text-center">Number of Questions</th>
+                  <th scope="col" class="text-center">Candidates Invited</th>
+                  <th scope="col" class="text-center">Candidates Tested</th>
+                  <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck2">
+                      <label class="custom-control-label" for="customCheck2"></label>
+                    </div>
+                  </th>
+
+                  <td>Ruby and Rails Test #1</td>
+                  <td class="text-center">03/10/2019</td>
+                  <td class="text-center"><div class="badge badge-primary">23</div></td>
+                  <td class="text-center"><div class="badge badge-primary">8</div></td>
+                  <td class="text-center"><div class="badge badge-primary">3</div></td>
+                  <td>
+                    <a class="btn-dots p-2" href="#" id="dropdownTableButton1" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false"><span class="icon-dots"></span></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownTableButton1">
+                      <a class="dropdown-item" href="#"><span class="icon-profile-outline"></span>View profile</a>
+                      <a class="dropdown-item" href="#"><span class="icon-plus-rounded-square"></span>Invite to the test</a>
+                      <a class="dropdown-item" href="#"><span class="icon-edit-square"></span>Edit</a>
+                      <a class="dropdown-item" href="#"><span class="icon-trash-bucket"></span>Remove</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck3">
+                      <label class="custom-control-label" for="customCheck3"></label>
+                    </div>
+                  </th>
+
+                  <td>Custom Text by Volvo</td>
+                  <td class="text-center">10/10/2019</td>
+
+                  <td class="text-center"><div class="badge badge-primary">23</div></td>
+                  <td class="text-center"><div class="badge badge-primary">8</div></td>
+                  <td class="text-center"><div class="badge badge-primary">3</div></td>
+
+                  <td>
+                    <a class="btn-dots p-2" href="#" id="dropdownTableButton2" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false"><span class="icon-dots"></span></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownTableButton2">
+                      <a class="dropdown-item" href="#"><span class="icon-profile-outline"></span>View profile</a>
+                      <a class="dropdown-item" href="#"><span class="icon-plus-rounded-square"></span>Invite to the test</a>
+                      <a class="dropdown-item" href="#"><span class="icon-edit-square"></span>Edit</a>
+                      <a class="dropdown-item" href="#"><span class="icon-trash-bucket"></span>Remove</a>
+                    </div>
+                  </td>
+                </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            @@include('components/pagination/pagination.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>

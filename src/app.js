@@ -64,10 +64,10 @@ $(function () {
 });
 
 //init multistep form
-let multistepForms = document.querySelectorAll(".multistep-form");
-multistepForms.forEach((el) => {
-	new multistepForm(el);
-});
+// let multistepForms = document.querySelectorAll(".multistep-form");
+// multistepForms.forEach((el) => {
+// 	new multistepForm(el);
+// });
 
 //init chart(donut)
 let donutCharts = document.querySelectorAll(".chart-donut .chart");

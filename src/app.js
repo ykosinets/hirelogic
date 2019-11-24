@@ -4,8 +4,8 @@ import $ from "jquery";
 import 'bootstrap';
 
 //pages
-
 // import "./pages/home/home";
+
 //custom components
 import CounterInput from "./components/number-input/number-input";
 import FileUpload from "./components/file-upload/file-upload";
@@ -175,5 +175,13 @@ $(document).ready(function () {
 	$(document).on('click', 'body .dropdown-menu', function (e) {
 		e.stopPropagation();
 	});
+
+	//dropdown links fix
+	let dpLinks = document.querySelectorAll('.dropdown-menu a:not([href="#"]):not([href="javascript:void(0)"])');
+	dpLinks.forEach(el => {
+		el.addEventListener('click', ()=>{
+			window.location = el.getAttribute('href');
+		})
+	})
 });
 

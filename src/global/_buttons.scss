@@ -57,10 +57,6 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
   [class^="icon"] {
     font-size: 1rem;
   }
-
-  &:hover {
-    opacity: .9;
-  }
 }
 
 .btn-raised {
@@ -143,7 +139,7 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 }
 
 .btn-circle.btn-filter {
-  border: 1px solid;
+  border: 1px solid $primary;
   background: $primary;
   color: $white;
 

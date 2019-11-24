@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Invite candidates</title>
+  <title>New Test</title>
 
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport"
@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<div class="page-wrapper page-form page-invite">
+<div class="page-wrapper page-form page-new-test">
 
   <header class="page-header">
   <div class="container">
@@ -100,7 +100,7 @@
             <span class="icon-bell"></span>
           </a>
 
-          <a href="#" class="settings">
+          <a href="settings.html" class="settings">
             <span class="icon-gear"></span>
           </a>
         </div>
@@ -117,9 +117,9 @@
         </a>
 
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownUserButton">
-          <a class="dropdown-item" href="#"><span class="icon-profile-outline"></span>View profile</a>
-          <a class="dropdown-item" href="#"><span class="icon-plus-rounded-square"></span>Invite to the test</a>
-          <a class="dropdown-item" href="#"><span class="icon-edit-square"></span>Edit</a>
+          <a class="dropdown-item" href="profile.html"><span class="icon-profile-outline"></span>View profile</a>
+          <a class="dropdown-item" href="invite-candidate.html"><span class="icon-plus-rounded-square"></span>Invite to the test</a>
+          <a class="dropdown-item" href="settings.html"><span class="icon-edit-square"></span>Edit</a>
           <a class="dropdown-item" href="#"><span class="icon-trash-bucket"></span>Remove</a>
         </div>
       </div>
@@ -133,22 +133,22 @@
           Shortcuts:
         </li>
         <li>
-          <a href="#">
+          <a href="test-new-1.html">
             Create a test
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="invite-candidate.html">
             Add new user
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="new-job.html">
             Add new job
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="settings.html">
             Notification preferences
           </a>
         </li>
@@ -190,10 +190,10 @@
 
               <ul id="collapseSubmenu_1" class="collapse">
                 <li>
-                  <a href="#">Test Created</a>
+                  <a href="tests.html">Test Created</a>
                 </li>
                 <li>
-                  <a href="#"> Create New Test</a>
+                  <a href="test-new-1.html">Create New Test</a>
                 </li>
               </ul>
             </li>
@@ -208,69 +208,58 @@
   <div class="card-form-wrapper">
     <div class="card card-form">
       <div class="card-header">
-        <h3 class="page-title">Invite candidates</h3>
+        <h3 class="page-title">New test</h3>
       </div>
 
       <div class="card-body">
-        <form class="settings-form" id="regForm" action="">
-          <div id="template" class="form-group">
-            <div class="row">
-              <div class="col-sm-5 mb-4 mb-sm-0">
-                <label for="exampleInputName1">Full Name</label>
-                <input type="email" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
-                       placeholder="Enter email">
-              </div>
+        <form class="multistep-form" id="regForm" action="">
+          <div class="form-group">
+            <label for="exampleInputName1">Test name</label>
+            <input type="email" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
 
-              <div class="col-sm-5 mb-4 mb-sm-0">
-                <label for="exampleInputEmail11">E-mail Address</label>
-                <input type="email" class="form-control" id="exampleInputEmail11" aria-describedby="emailHelp"
-                       placeholder="Enter email">
+          <div class="row">
+            <div class="col-sm-5 mb-4 mb-sm-0">
+              <div class="form-group">
+                <span class="label">Number of Questions</span>
+                <div class="input-number">
+                  <button type="button" class="btn btn-none btn-left btn-minus">
+                    <span class="icon-minus-rounded-circle"></span>
+                  </button>
+                  <input type="tel" class="form-control" aria-label="Number picker" value="5" min="0" max="10">
+                  <button type="button" class="btn btn-none btn-right btn-plus">
+                    <span class="icon-plus-rounded-circle"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5 mb-4 mb-sm-0">
+              <div class="form-group">
+                <span class="label d-block w-100">Time Limit</span>
+                <div class="input-number mr-2 d-inline-block">
+                  <button type="button" class="btn btn-none btn-left btn-minus">
+                    <span class="icon-minus-rounded-circle"></span>
+                  </button>
+                  <input type="tel" class="form-control" aria-label="Number picker" value="15" min="0" max="60" step="5">
+                  <button type="button" class="btn btn-none btn-right btn-plus">
+                    <span class="icon-plus-rounded-circle"></span>
+                  </button>
+                </div>
+
+                <span class="label">minutes</span>
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <div class="row">
-              <div class="col-sm-5 mb-4 mb-sm-0">
-                <label for="exampleInputName2">Full Name</label>
-                <input type="email" class="form-control" id="exampleInputName2" aria-describedby="emailHelp"
-                       placeholder="Enter email">
-              </div>
-
-              <div class="col-sm-5 mb-4 mb-sm-0">
-                <label for="exampleInputEmail12">E-mail Address</label>
-                <input type="email" class="form-control" id="exampleInputEmail12" aria-describedby="emailHelp"
-                       placeholder="Enter email">
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="row">
-              <div class="col-sm-5 mb-4 mb-sm-0">
-                <label for="exampleInputName3">Full Name</label>
-                <input type="email" class="form-control" id="exampleInputName3" aria-describedby="emailHelp"
-                       placeholder="Enter email">
-              </div>
-
-              <div class="col-sm-5 mb-4 mb-sm-0">
-                <label for="exampleInputEmail13">E-mail Address</label>
-                <input type="email" class="form-control" id="exampleInputEmail13" aria-describedby="emailHelp"
-                       placeholder="Enter email">
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="add-another" data-target="template">
-  <span class="icon-plus-rounded-circle"></span>Add another
-</div>
-
+            <small>Number of qustions might be modified later.</small>
           </div>
 
           <div class="button-set justify-content-start">
-            <button class="btn btn-primary">Send invitations</button>
-            <button class="btn btn-light">Cancel</button>
+            <a href="test-new-2.html" class="btn btn-primary">Save and continue</a>
+            <a href="tests.html" class="btn btn-light">Cancel</a>
           </div>
         </form>
       </div>

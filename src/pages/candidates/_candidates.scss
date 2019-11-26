@@ -1,0 +1,18 @@
+.card-header{
+  .divider{
+    color: #e9e9ee;
+    height: 40px;
+    border-right: 1px solid;
+    width: 0;
+  }
+}
+
+.table-responsive{
+  scroll-snap-type: mandatory;
+  //scroll-snap-points-x: repeat(100vw);
+  scroll-snap-type: x mandatory;
+
+  th{
+    scroll-snap-align: start;
+  }
+}

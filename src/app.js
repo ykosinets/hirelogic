@@ -2,25 +2,28 @@
 import $ from "jquery";
 
 import 'bootstrap';
-//pages
 
-import "./pages/home/home";
+//pages
+// import "./pages/home/home";
+
 //custom components
 import CounterInput from "./components/number-input/number-input";
 import FileUpload from "./components/file-upload/file-upload";
 import RangeDatepicker from "./components/datepicker/datepicker";
 import FileInput from "./components/file-input/file-input";
 import Rating from "./components/rating/rating";
-import multistepForm from "./components/multistep-form/multistep-form";
+import addEnother from "./components/add-another/add-another";
 
 //charts
 import donutChart from "./components/charts/donut/donut";
 import lineChart from "./components/charts/line/line";
 import barChart from "./components/charts/bar/bar";
+import spiderChart from "./components/charts/spider/spider";
 //data
 import barData from "./assets/data/bar-data"
 import lineData from "./assets/data/line-data"
 import donutData from "./assets/data/donut-data"
+import spiderData from "./assets/data/spider-data"
 
 window.$ = window.jQuery = $;
 
@@ -59,12 +62,6 @@ $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 });
 
-//init multistep form
-let multistepForms = document.querySelectorAll(".multistep-form");
-multistepForms.forEach((el) => {
-	new multistepForm(el);
-});
-
 //init chart(donut)
 let donutCharts = document.querySelectorAll(".chart-donut .chart");
 donutCharts.forEach((el) => {
@@ -82,6 +79,12 @@ lineCharts.forEach((el, i) => {
 let barCharts = document.querySelectorAll(".chart-bar .chart");
 barCharts.forEach((el) => {
 	new barChart(el, barData);
+});
+
+//init chart(spider)
+let spiderCharts = document.querySelectorAll(".chart-spider .chart");
+spiderCharts.forEach((el) => {
+	new spiderChart(el, spiderData);
 });
 
 
@@ -130,28 +133,55 @@ function chartSizing() {
 				_el.setAttribute('style', '')
 			});
 		}
-
-		let lineChartTexts = el.querySelectorAll('.chart-line .xAxis .tick text');
-		const weekDay = ["Days", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-
-		if (isMobileView) {
-			lineChartTexts.forEach((_el, i) => {
-				_el.innerHTML = weekDay[i].substring(0, 3);
-			});
-		}else{
-			lineChartTexts.forEach((_el, i) => {
-				_el.innerHTML = weekDay[i];
-			});
-		}
-
-		// el.attr('viewBox', '0 0 ' + el.innerWidth + ' ' + el.innerHeight);
 	})
 
 }
 
-$(document).ready(function () {
-	chartSizing();
+//add another button init
+let btns = document.querySelectorAll('.add-another');
+btns.forEach((el) => {
+	new addEnother(el);
+});
 
+
+$(document).ready(function () {
+	//charts responsive init
+	chartSizing();
 	window.addEventListener('resize', chartSizing);
+
+	//chart dropdown call
+	$('.chart-spider .legend .plus').on('click', function() {
+		let childPos = $(this).offset();
+		let parentPos = $($(this).parents('.chart-wrapper')[0]).offset();
+
+		let childOffset = {
+			top: childPos.top - parentPos.top + 10,
+			left: childPos.left - parentPos.left + 50
+		};
+
+		$('[aria-labelledby="spiderCompare"]')
+			.dropdown('show')
+			.css(childOffset);
+	});
+
+	$(document).on('click', '.page-wrapper', function(e) {
+		let obj = e.target;
+		if(!(obj.classList.contains('icon-plus-rounded') || obj.classList.contains('plus'))) {
+			$('[aria-labelledby="spiderCompare"]').dropdown('hide')
+		}
+	});
+
+	//keep dropdown open while clicking inside
+	$(document).on('click', 'body .dropdown-menu', function (e) {
+		e.stopPropagation();
+	});
+
+	//dropdown links fix
+	let dpLinks = document.querySelectorAll('.dropdown-menu a:not([href="#"]):not([href="javascript:void(0)"])');
+	dpLinks.forEach(el => {
+		el.addEventListener('click', ()=>{
+			window.location = el.getAttribute('href');
+		})
+	})
 });
 

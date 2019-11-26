@@ -1,0 +1,129 @@
+.comparison-page {
+  .compare {
+    height: auto;
+
+    .user {
+      margin-bottom: 75px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .user-info {
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+
+      .avatar {
+        width: 60px;
+      }
+
+      .name {
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+
+      .card-inner-title {
+        font-size: .875rem;
+      }
+    }
+  }
+
+  &.card {
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .card-chart {
+    flex-grow: 1;
+    margin-bottom: 30px;
+
+    .chart-spider {
+      margin: 0 auto 30px;
+    }
+  }
+
+  .profile-sidebar {
+    margin-bottom: 30px;
+
+    &:last-of-type{
+      @include media-breakpoint-down(xl) {
+        margin-right: 0;
+      }
+    }
+
+    @include media-breakpoint-down(xl){
+      width: calc(50% - 15px);
+
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+  }
+
+  .card-fluid {
+    .card-body {
+      .table {
+        margin: 0;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+        tr:last-child {
+          td {
+            &:first-child {
+              border-bottom-left-radius: $border-radius;
+            }
+
+            &:last-child {
+              border-bottom-right-radius: $border-radius;
+            }
+          }
+        }
+
+        .avatar {
+          width: 20px;
+          margin-right: 10px;
+
+          @include media-breakpoint-down(sm) {
+            margin-right: -10px;
+          }
+        }
+
+        th, td {
+          padding: 3px 15px;
+          height: 30px;
+        }
+
+        thead {
+          th {
+            vertical-align: middle;
+            font-size: .875rem;
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+
+            @include media-breakpoint-down(sm) {
+              font-size: 0;
+            }
+          }
+        }
+
+        tbody {
+          th, td {
+            font-size: .8125rem;
+          }
+
+          th {
+            font-weight: 400;
+            text-align: left;
+          }
+
+          td {
+            font-weight: 500;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

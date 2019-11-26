@@ -1,7 +1,24 @@
 small{
-  color: #8c8ca2;
+  color: $text;
 
   .form-control + &{
     margin-top: 1rem;
   }
+}
+
+.label{
+  @extend label;
+}
+
+.text-btn{
+  font-size: .625rem;
+  font-weight: 500;
+  color: $text;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+a, .btn{
+  will-change: all;
+  transition: .2s all ease-in-out;
 }

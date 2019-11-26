@@ -1,4 +1,4 @@
-@@include('views/head.html', {"title" : "home"})
+@@include('views/head.html', {"title" : "Dashboard"})
 <body>
 <div class="page-wrapper">
 
@@ -10,12 +10,14 @@
 
   <div class="container tile-list">
     <div class="row">
-      <div class="col-sm-10 col-lg-3">
-        <div class="card">
-          <div class="card-body">
+      <div class="col-sm-10 col-lg-3 d-block d-md-none d-lg-block">
+        <div class="card card-fluid">
+          <div class="card-header">
             <h5 class="card-title">TOP5 Candidates <a href="#" class="icon-external-link"></a></h5>
-            <h6 class="card-subtitle text-muted">from <strong>Ruby Developer</strong> job.</h6>
+            <p class="card-subtitle text-muted">from <strong>Ruby Developer</strong> job.</p>
+          </div>
 
+          <div class="card-body">
             <div class="list-group list-group-colored">
               <a href="#" class="list-group-item list-group-item-action">
                 <span class="user d-flex flex-row align-items-justify justify-content-start">
@@ -77,14 +79,16 @@
       </div>
 
       <div class="col-sm-10 col-lg-3">
-        <div class="card">
-          <div class="card-body">
+        <div class="card card-donut">
+          <div class="card-header">
             <h5 class="card-title">Overall Score <a href="#" class="icon-external-link"></a></h5>
-            <h6 class="card-subtitle text-muted">Based on <strong>253 candidates</strong> from <strong>Ruby
-              Developer job.</strong></h6>
+            <p class="card-subtitle text-muted">Based on <strong>253 candidates</strong> from <strong>Ruby
+              Developer job.</strong></p>
+          </div>
 
-
-            <span class="chart-legends mb-4 d-flex flex-row justify-content-around align-items-center flex-wrap">
+          <div class="card-body">
+            <span
+                class="chart-legends mb-4 d-flex flex-row flex-md-column flex-lg-row justify-content-around align-items-start float-none float-md-left float-lg-none align-items-lg-center flex-wrap">
                 <span class="dot dot-before dot-danger">Weak</span>
                 <span class="dot dot-before dot-warning">Average</span>
                 <span class="dot dot-before dot-primary">Good</span>
@@ -98,9 +102,11 @@
 
       <div class="col-sm-10 col-lg-4">
         <div class="card">
-          <div class="card-body">
+          <div class="card-header">
             <h5 class="card-title">Invited Candidates <a href="#" class="icon-external-link"></a></h5>
+          </div>
 
+          <div class="card-body">
             @@include('components/charts/line/line.html')
           </div>
         </div>
@@ -110,13 +116,17 @@
     <div class="row">
       <div class="order-md-1 order-2 col-sm-10 col-lg-6">
         <div class="card">
-          <div class="card-body">
+          <div class="card-header">
             <h5 class="card-title">Strongest Personality Traits <a href="#" class="icon-external-link"></a>
-              <span class="chart-legends float-right mt-1 d-inline-flex flex-row justify-content-between align-items-center">
+              <span
+                  class="chart-legends float-right mt-1 d-inline-flex flex-row justify-content-between align-items-center">
                 <span class="dot dot-before dot-success">Female</span>
                 <span class="dot dot-before dot-primary">Male</span>
               </span>
             </h5>
+          </div>
+
+          <div class="card-body">
             @@include('components/charts/bar/bar.html')
           </div>
         </div>
@@ -124,8 +134,11 @@
 
       <div class="order-md-2 order-1 col-sm-10 col-lg-4">
         <div class="card">
-          <div class="card-body">
+          <div class="card-header">
             <h5 class="card-title">Tested Candidates <a href="#" class="icon-external-link"></a></h5>
+          </div>
+
+          <div class="card-body">
             @@include('components/charts/line/line.html')
           </div>
         </div>

@@ -1,0 +1,19 @@
+.page-new-job{
+  .checkboxes-group{
+    .label{
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(sm){
+        margin-bottom: 15px;
+      }
+    }
+
+    .custom-checkbox{
+      margin-bottom: 15px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

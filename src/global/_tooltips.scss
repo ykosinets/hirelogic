@@ -14,6 +14,11 @@
   .tooltip-inner {
     box-shadow: 1px 1px 35px 0 #e9e9ee;
     font-weight: 500;
+
+    small{
+      font-weight: 400;
+      color: $controls;
+    }
   }
 }
 
@@ -24,5 +29,11 @@
 
   &-bottom .arrow {
     margin-top: 10px;
+  }
+}
+
+.table, table{
+  .tooltip {
+    left: 8px !important;
   }
 }

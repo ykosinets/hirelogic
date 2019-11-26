@@ -1,0 +1,46 @@
+@@include('views/head.html', {"title" : "Settings"})
+<body>
+<div class="page-wrapper page-form page-settings">
+
+  @@include('views/header/header.html')
+
+  <div class="card-form-wrapper">
+    <div class="card card-form">
+      <div class="card-header">
+        <h3 class="page-title">Settings</h3>
+      </div>
+
+      <div class="card-body">
+        <form class="settings-form" id="regForm" action="">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
+
+          <div class="form-group">
+            <span class="label">Company Logo</span>
+            @@include('components/file-upload/file-upload.html')
+          </div>
+
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Display Branding on Test Pages</label>
+          </div>
+          </div>
+
+          <div class="button-set">
+            <button class="btn btn-primary">Save and continue</button>
+            <button class="btn btn-secondary">company culture questionnaire</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>

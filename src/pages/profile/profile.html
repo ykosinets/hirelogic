@@ -1,0 +1,535 @@
+@@include('views/head.html', {"title" : "Profile"})
+<body>
+<div class="page-wrapper profile-page">
+
+  @@include('views/header/header.html')
+
+  <div class="container">
+    <div class="d-flex flex-row">
+      <div class="page-side-title">
+        <h3 class="page-title">Ruby Developer</h3>
+        <span class="page-subtitle">Date Tested: 10/10/2019</span>
+      </div>
+
+      <ul class="nav nav-tabs" id="tabComponent" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+             aria-controls="profile"
+             aria-selected="true">Profile</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="test-tab" data-toggle="tab" href="#test" role="tab" aria-controls="test"
+             aria-selected="false">Detailed Test Results</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history"
+             aria-selected="false">History</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="d-flex flex-row align-items-start justify-content-start flex-nowrap">
+      <aside class="profile-sidebar">
+        <div class="card card-fluid">
+          <div class="card-header">
+            <div class="user d-flex flex-row align-items-center">
+              <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
+
+              <div class="d-flex flex-column align-items-start justify-content-between">
+                <h5 class="name">
+                  Zachary Ballard
+                </h5>
+                <div class="location">
+                  New York City, NY
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <section>
+              <div class="card-container">
+                <h6>Personal Information</h6>
+              </div>
+
+              <div class="list-group list-group-colored">
+                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                  <span class="name">Age</span>
+                  <span class="value">36 years old</span>
+                </div>
+                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                  <span class="name">Ethnicity</span>
+                  <span class="value">American</span>
+                </div>
+                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                  <span class="name">Gender</span>
+                  <span class="value">Male</span>
+                </div>
+                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                  <span class="name">Years of experience</span>
+                  <span class="value">3</span>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div class="card-container">
+                <h6>Tests Taken</h6>
+              </div>
+
+              <div class="list-group list-group-colored">
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Intelligent Quoficient
+                </div>
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Emotional Intellingence
+                </div>
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Personality
+                </div>
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Custom #1
+                </div>
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Custom #2
+                </div>
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Custom #3
+                </div>
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Custom #4
+                </div>
+                <div class="list-group-item">
+                  <span class="icon-check text-success"></span>Custom #5
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="card card-fluid">
+          <div class="card-header"></div>
+
+          <div class="card-body">
+            <section>
+              <div class="card-container">
+                <h6>Contact information</h6>
+              </div>
+
+              <div class="list-group list-group-colored contacts">
+                <a href="mailto:ronaldo@hotmail.com" class="list-group-item">
+                  <span class="icon-envelope text-success"></span>ronaldo@hotmail.com
+                </a>
+                <a href="tel:+1323942848" class="list-group-item">
+                  <span class="icon-phone text-success"></span>+1 323 942848
+                </a>
+              </div>
+
+              <div class="card-container downloads">
+                <a href="#" class="btn btn-primary btn-block">Download cv</a>
+                <a href="#" class="btn btn-secondary btn-block">Download report</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </aside>
+
+      <div class="tab-content user-info" id="tabComponentContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="card card-fluid">
+            <div class="card-body card-chart">
+
+              <div class="card-inner-sidebar">
+                <div class="card-heading d-flex flex-row align-items-center justify-content-between bg-primary">
+                  <h6 class="text-white m-0">Overall Rating</h6>
+                  <span class="badge text-white bg-warning">68</span>
+                </div>
+              </div>
+
+              <section>
+                <div class="card-container">
+                  <h6>Key Traits</h6>
+                </div>
+
+                <div class="list-group list-group-colored">
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>High Problem Solving Skills
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Team Player
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Leadership Abilities
+                  </div>
+                </div>
+              </section>
+
+              @@include('components/charts/spider/spider-single.html')
+
+
+              <div class="data-set">
+                <div class="data-box data-box-warning">
+                  <div class="icon-brain icon-white-circle"></div>
+                  <div>
+                    <div class="name">IQ</div>
+                    <div class="value">59</div>
+                  </div>
+                </div>
+
+                <div class="data-box data-box-success">
+                  <div class="icon-lamp icon-white-circle"></div>
+                  <div>
+                    <div class="name">Openness</div>
+                    <div class="value">95</div>
+                  </div>
+                </div>
+
+                <div class="data-box data-box-primary">
+                  <div class="icon-chart icon-white-circle"></div>
+                  <div>
+                    <div class="name">Conscientiousness</div>
+                    <div class="value">78</div>
+                  </div>
+                </div>
+
+                <div class="data-box data-box-primary">
+                  <div class="icon-star-outline icon-white-circle"></div>
+                  <div>
+                    <div class="name">Extraversion</div>
+                    <div class="value">84</div>
+                  </div>
+                </div>
+
+                <div class="data-box data-box-warning">
+                  <div class="icon-heart-outline icon-white-circle"></div>
+                  <div>
+                    <div class="name">Agreeableness</div>
+                    <div class="value">53</div>
+                  </div>
+                </div>
+
+                <div class="data-box data-box-danger">
+                  <div class="icon-smile-confused icon-white-circle"></div>
+                  <div>
+                    <div class="name">Neuroticism</div>
+                    <div class="value">11</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card card-grow">
+            <div class="card-header">
+              <h5 class="card-title">Key Insights</h5>
+              <p class="card-subtitle">A short description of this block importance.</p>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-5">
+                  <p class="card-inner-title">Key Insights</p>
+
+                  <div class="accordion" id="accordionComponentPositive">
+                    <div class="accordion-item">
+                      <h2 id="headingPositiveOne"
+                          class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapsePositiveOne"
+                          aria-expanded="false"
+                          aria-controls="collapsePositiveOne">
+                        <span class="state text-success">+</span>
+                        Lorem ipsum dolor sit amet enim.
+                        <span class="icon-arrow-right"></span>
+                      </h2>
+
+                      <div id="collapsePositiveOne"
+                           class="collapse"
+                           aria-labelledby="headingPositiveOne"
+                           data-parent="#accordionComponentPositive">
+                        <div class="accordion-body">
+                          <p>
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                            felis. Maecenas
+                            malesuada
+                            elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                            urna. Vestibulum
+                            commodo volutpat a, convallis ac, laoreet enim.
+                          </p>
+
+                          <p>
+                            Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                            Vestibulum dapibus,
+                            mauris.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 id="headingPositiveTwo"
+                          class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapsePositiveTwo"
+                          aria-expanded="false"
+                          aria-controls="collapsePositiveTwo">
+                        <span class="state text-success">+</span>
+                        Lorem ipsum dolor sit amet enim.
+                        <span class="icon-arrow-right"></span>
+                      </h2>
+
+                      <div id="collapsePositiveTwo"
+                           class="collapse"
+                           aria-labelledby="headingPositiveTwo"
+                           data-parent="#accordionComponentPositive">
+                        <div class="accordion-body">
+                          <p>
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                            felis. Maecenas
+                            malesuada
+                            elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                            urna. Vestibulum
+                            commodo volutpat a, convallis ac, laoreet enim.
+                          </p>
+
+                          <p>
+                            Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                            Vestibulum dapibus,
+                            mauris.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 id="headingPositiveThree"
+                          class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapsePositiveThree"
+                          aria-expanded="false"
+                          aria-controls="collapsePositiveThree">
+                        <span class="state text-success">+</span>
+                        Lorem ipsum dolor sit amet enim.
+                        <span class="icon-arrow-right"></span>
+                      </h2>
+
+                      <div id="collapsePositiveThree"
+                           class="collapse"
+                           aria-labelledby="headingPositiveThree"
+                           data-parent="#accordionComponentPositive">
+                        <div class="accordion-body">
+                          <p>
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                            felis. Maecenas
+                            malesuada
+                            elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                            urna. Vestibulum
+                            commodo volutpat a, convallis ac, laoreet enim.
+                          </p>
+
+                          <p>
+                            Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                            Vestibulum dapibus,
+                            mauris.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 id="headingPositiveFour"
+                          class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapsePositiveFour"
+                          aria-expanded="false"
+                          aria-controls="collapsePositiveFour">
+                        <span class="state text-success">+</span>
+                        Lorem ipsum dolor sit amet enim.
+                        <span class="icon-arrow-right"></span>
+                      </h2>
+
+                      <div id="collapsePositiveFour"
+                           class="collapse"
+                           aria-labelledby="headingPositiveFour"
+                           data-parent="#accordionComponentPositive">
+                        <div class="accordion-body">
+                          <p>
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                            felis. Maecenas
+                            malesuada
+                            elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                            urna. Vestibulum
+                            commodo volutpat a, convallis ac, laoreet enim.
+                          </p>
+
+                          <p>
+                            Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                            Vestibulum dapibus,
+                            mauris.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-5">
+                  <p class="card-inner-title">Red Flags</p>
+
+                  <div class="accordion" id="accordionComponentNegative">
+                    <div class="accordion-item">
+                      <h2 id="headingNegativeOne"
+                          class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapseNegativeOne"
+                          aria-expanded="false"
+                          aria-controls="collapseNegativeOne">
+                        <span class="state text-danger">—</span>
+                        Lorem ipsum dolor sit amet enim.
+                        <span class="icon-arrow-right"></span>
+                      </h2>
+
+                      <div id="collapseNegativeOne"
+                           class="collapse"
+                           aria-labelledby="headingNegativeOne"
+                           data-parent="#accordionComponentNegative">
+                        <div class="accordion-body">
+                          <p>
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                            felis. Maecenas
+                            malesuada
+                            elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                            urna. Vestibulum
+                            commodo volutpat a, convallis ac, laoreet enim.
+                          </p>
+
+                          <p>
+                            Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                            Vestibulum dapibus,
+                            mauris.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 id="headingNegativeTwo"
+                          class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapseNegativeTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseNegativeTwo">
+                        <span class="state text-danger">—</span>
+                        Lorem ipsum dolor sit amet enim.
+                        <span class="icon-arrow-right"></span>
+                      </h2>
+
+                      <div id="collapseNegativeTwo"
+                           class="collapse"
+                           aria-labelledby="headingNegativeTwo"
+                           data-parent="#accordionComponentNegative">
+                        <div class="accordion-body">
+                          <p>
+                            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                            felis. Maecenas
+                            malesuada
+                            elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
+                            urna. Vestibulum
+                            commodo volutpat a, convallis ac, laoreet enim.
+                          </p>
+
+                          <p>
+                            Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                            Vestibulum dapibus,
+                            mauris.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-grow">
+            <div class="card-header">
+              <div class="d-flex flex-row align-items-start justify-content-between">
+                <div>
+                  <h5 class="card-title">Interview Notes</h5>
+                  <p class="card-subtitle">Lorem ipsum dolor sit amet enim.</p>
+                </div>
+
+                <div class="d-flex flex-row align-items-end justify-content-center">
+                  <h6 class="my-0 mr-2">Interview Rating:</h6>
+                  @@include('components/rating/rating.html')
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Save a note</button>
+            </div>
+          </div>
+
+          <div class="card card-grow">
+            <div class="card-header">
+              <h5 class="card-title">Action History</h5>
+              <p class="card-subtitle">Lorem ipsum dolor sit amet enim.</p>
+            </div>
+
+            <div class="card-body">
+              <ul class="list-unstyled m-0 p-0 list-rounded">
+                <li>
+                  <span class="name">Signed up</span>
+                  <span class="date">October 15th, 2019 -  02:00 pm</span>
+                </li>
+                <li>
+                  <span class="name">Completed <a href="#">Custom Test #2</a></span>
+                  <span class="date">October 15th, 2019 -  01:00 pm</span>
+                </li>
+                <li>
+                  <span class="name">Archived by <strong>John Smith</strong></span>
+                  <span class="date">October 15th, 2019 -  12:00 pm</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="test" role="tabpanel" aria-labelledby="test-tab">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Detailed Test Results</h5>
+              <p class="card-subtitle">Lorem ipsum dolor sit amet enim.</p>
+            </div>
+
+            <div class="card-body"></div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">History</h5>
+              <p class="card-subtitle">Lorem ipsum dolor sit amet enim.</p>
+            </div>
+            <div class="card-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>
+

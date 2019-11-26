@@ -33,8 +33,15 @@
 }
 
 .datepicker {
+  margin-top: 10px;
+
+  & table tr th{
+    font-size: .8125rem;
+  }
+
   & table tr td {
     transition: .2s background ease-in-out;
+    font-size: .75rem;
 
     span {
       &.active {
@@ -111,17 +118,17 @@
     }
   }
 
-  td, th {
-    padding: 4px 5px;
-    min-width: 30px;
-    font-size: 12px;
-    height: 30px;
+  .dropdown-menu {
+    td, th {
+      padding: 4px 0;
+      min-width: 30px;
+      font-size: 12px;
+      height: 30px;
 
-    @include media-breakpoint-down(sm){
-      padding: 9px 10px;
-      min-width: 40px;
-      font-size: 14px;
-      height: 40px;
+      @include media-breakpoint-down(sm) {
+        padding: 9px 0;
+        font-size: 14px;
+      }
     }
   }
 
@@ -202,6 +209,14 @@
     &-right:after {
       right: 20px;
     }
+
+    &-top{
+      margin-top: -10px;
+    }
+
+    &-right:after {
+      right: 20px;
+    }
   }
 }
 
@@ -209,4 +224,3 @@
   position: relative;
   z-index: 20;
 }
-

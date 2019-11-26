@@ -1,0 +1,135 @@
+@@include('views/head.html', {"title" : "New Job"})
+<body>
+<div class="page-wrapper page-form page-new-job">
+
+  @@include('views/header/header.html')
+
+  <div class="card-form-wrapper">
+    <div class="card card-form">
+      <div class="card-header">
+        <h3 class="page-title">New job</h3>
+      </div>
+
+      <div class="card-body">
+        <form class="settings-form" id="regForm" action="">
+          <div class="form-group">
+            <label for="exampleInputName1">Job Position</label>
+            <input type="email" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
+          </div>
+
+          <div class="form-group checkboxes-group">
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="row">
+                  <div class="col-sm-5 mb-4 mb-sm-0">
+                    <span class="label">Select Tests</span>
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckTest1">
+                      <label class="custom-control-label" for="customCheckTest1">Personality</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckTest2">
+                      <label class="custom-control-label" for="customCheckTest2">IQ Test</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckTest3">
+                      <label class="custom-control-label" for="customCheckTest3">EQ Test</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckTest4">
+                      <label class="custom-control-label" for="customCheckTest4">Custom</label>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-5 mb-4 mb-sm-0">
+                    <span class="label">Social Links</span>
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckSocial1">
+                      <label class="custom-control-label" for="customCheckSocial1">Off</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckSocial2">
+                      <label class="custom-control-label" for="customCheckSocial2">Optional</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckSocial3">
+                      <label class="custom-control-label" for="customCheckSocial3">Required</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-5">
+                <div class="row">
+                  <div class="col-sm-5 mb-4 mb-sm-0">
+                    <span class="label">Gender</span>
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckGender1">
+                      <label class="custom-control-label" for="customCheckGender1">Off</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckGender2">
+                      <label class="custom-control-label" for="customCheckGender2">Optional</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckGender3">
+                      <label class="custom-control-label" for="customCheckGender3">Required</label>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-5 mb-4 mb-sm-0">
+                    <span class="label">Ethnicity</span>
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckEthnicity1">
+                      <label class="custom-control-label" for="customCheckEthnicity1">Off</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckEthnicity2">
+                      <label class="custom-control-label" for="customCheckEthnicity2">Optional</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheckEthnicity3">
+                      <label class="custom-control-label" for="customCheckEthnicity3">Required</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="custom-select-wrapper">
+              <label for="wrapped">Choose a custom test:</label>
+              <select id="wrapped" class="custom-select custom-select-sm">
+                <option selected>Ruby and Rails Test #1</option>
+                <option value="1">Ruby and Rails Test #2</option>
+                <option value="2">Ruby and Rails Test #3</option>
+                <option value="3">Ruby and Rails Test #4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="button-set justify-content-start">
+            <button class="btn btn-primary">Next step</button>
+            <button class="btn btn-light">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>

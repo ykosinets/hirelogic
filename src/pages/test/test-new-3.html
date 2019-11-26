@@ -1,0 +1,118 @@
+@@include('views/head.html', {"title" : "Volvo Test"})
+<body>
+<div class="page-wrapper page-form page-new-job">
+
+  @@include('views/header/header.html')
+
+  <div class="card-form-wrapper">
+    <div class="card card-form">
+      <div class="card-header">
+        <h3 class="page-title d-flex flex-row align-items-center justify-content-between">Volvo Test
+          <span class="text-btn">Question 1/10</span>
+        </h3>
+      </div>
+
+      <div class="card-body">
+        <form class="multistep-form" id="regForm" action="">
+          <div class="form-group">
+            <div class="multistep-form-header">
+              <div class="multistep-form-header-title">Questions</div>
+              <div class="multistep-form-header-controls">
+                <span class="icon-arrow-left"></span>
+                <div class="step-indicator">
+                  <span class="step past"></span>
+                  <span class="step past"></span>
+                  <span class="step past" data-toggle="tooltip" data-placement="top" data-html="true" title="<small>Step 3:</small> #SectionName"></span>
+                  <span class="step active"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                </div>
+                <span class="icon-arrow-right"></span>
+                <button type="button" class="btn btn-secondary">Add Question</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <hr>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputName1">Section name
+              <span class="icon-question ml-2 text-muted" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></span>
+            </label>
+            <input type="email" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
+
+          <div class="form-group checkboxes-group">
+            <span class="label">Answer Type</span>
+
+            <div class="d-flex flex-column flex-md-row align-items-start justify-content-between">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheckTest1">
+                <label class="custom-control-label" for="customCheckTest1">Multiple Choice</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheckTest2">
+                <label class="custom-control-label" for="customCheckTest2">Single choice</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheckTest3">
+                <label class="custom-control-label" for="customCheckTest3">1 to 5</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheckTest4">
+                <label class="custom-control-label" for="customCheckTest4">Open Question</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="exampleInputName2">Question #1</label>
+            <input type="email" class="form-control" id="exampleInputName2" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5">
+
+              <div class="form-group">
+                <label for="exampleInputName3">1: Label</label>
+                <input type="email" class="form-control" id="exampleInputName3" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+            </div>
+
+            <div class="col-sm-5">
+              <div class="form-group">
+                <label for="exampleInputName4">5: Label</label>
+                <input type="email" class="form-control" id="exampleInputName4" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+            </div>
+          </div>
+
+          <div class="button-set justify-content-start">
+            <a href="tests.html" class="btn btn-primary">Next question</a>
+            <a href="test-new-2.html" class="btn btn-light">Previous question</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <a href="test-new-2.html" class="btn btn-light text-muted mt-4">Previous step</a>
+
+  </div>
+
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>

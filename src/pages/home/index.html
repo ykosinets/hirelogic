@@ -1,4 +1,4 @@
-@@include('views/head.html', {"title" : "home"})
+@@include('views/head.html', {"title" : "Overview"})
 <body>
 <div class="container">
   <div class="list-group mt-5 mr-auto ml-auto ">
@@ -11,44 +11,50 @@
        aria-disabled="true">
       Components
     </a>
-    <a href='@@if (env === "live"){dashboard.html}'
-       class="list-group-item list-group-item-action"
+    <a href='dashboard.html'
+       class="list-group-item list-group-item-action text-warning"
        tabindex="-1"
        aria-disabled="true">
       Dashboard
     </a>
-    <a href='@@if (env === "live"){candidates.html}'
-       class="list-group-item list-group-item-action"
+    <a href='candidates.html'
+       class="list-group-item list-group-item-action text-warning"
        tabindex="-1"
        aria-disabled="true">
       Candidates
     </a>
-    <a href='@@if (env === "live"){test.html}'
-       class="list-group-item list-group-item-action"
+    <a href='tests.html'
+       class="list-group-item list-group-item-action text-success"
        tabindex="-1"
        aria-disabled="true">
-      Test
+      Tests
     </a>
-    <a href='@@if (env === "live"){new-job.html}'
-       class="list-group-item list-group-item-action"
+    <a href='new-job.html'
+       class="list-group-item list-group-item-action text-success"
        tabindex="-1"
        aria-disabled="true">
       New job
     </a>
-    <a href='@@if (env === "live"){invite-candidates.html}'
-       class="list-group-item list-group-item-action"
+    <a href='invite-candidates.html'
+       class="list-group-item list-group-item-action text-success"
        tabindex="-1"
        aria-disabled="true">
       Invite candidates
     </a>
-    <a href='@@if (env === "live"){profile-and-comparison.html}'
-       class="list-group-item list-group-item-action"
+    <a href='profile.html'
+       class="list-group-item list-group-item-action text-warning"
        tabindex="-1"
        aria-disabled="true">
-      Profile and comparison
+      Profile
     </a>
-    <a href='@@if (env === "live"){settings.html}'
-       class="list-group-item list-group-item-action"
+    <a href='comparison.html'
+       class="list-group-item list-group-item-action text-warning"
+       tabindex="-1"
+       aria-disabled="true">
+      Profile Comparison
+    </a>
+    <a href='settings.html'
+       class="list-group-item list-group-item-action text-success"
        tabindex="-1"
        aria-disabled="true">
       Settings

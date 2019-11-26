@@ -1,4 +1,56 @@
 .table{
   font-size: .8125rem;
   font-weight: 500;
+
+  tr{
+    th,td{
+      vertical-align: middle;
+      height: 60px;
+
+      &:last-child{
+        .dropdown-menu-right{
+          left: 30px !important;
+        }
+      }
+
+      .custom-checkbox{
+        min-height: 14px;
+      }
+
+      .user{
+        .avatar{
+          width: 30px;
+        }
+
+        .name{
+          font-size: .875rem;
+        }
+
+        ul{
+          margin: 6px 0 0 0;
+
+          li{
+            margin: 0 10px 0 0;
+
+            &:last-child{
+              margin-right: 0;
+            }
+
+            [class^="icon"]{
+              font-size: .875rem;
+              color: $primary;
+              cursor: default;
+              width: 15px;
+              height: 15px;
+              display: block;
+
+              &:hover{
+                color: $success;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,80 @@
+@@include('views/head.html', {"title" : "Invite Candidate"})
+<body>
+<div class="page-wrapper page-form page-invite">
+
+  @@include('views/header/header.html')
+
+  <div class="card-form-wrapper">
+    <div class="card card-form">
+      <div class="card-header">
+        <h3 class="page-title">Invite candidates</h3>
+      </div>
+
+      <div class="card-body">
+        <form class="settings-form" id="regForm" action="">
+          <div id="template" class="form-group">
+            <div class="row">
+              <div class="col-sm-5 mb-4 mb-sm-0">
+                <label for="exampleInputName1">Full Name</label>
+                <input type="email" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+
+              <div class="col-sm-5 mb-4 mb-sm-0">
+                <label for="exampleInputEmail11">E-mail Address</label>
+                <input type="email" class="form-control" id="exampleInputEmail11" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-5 mb-4 mb-sm-0">
+                <label for="exampleInputName2">Full Name</label>
+                <input type="email" class="form-control" id="exampleInputName2" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+
+              <div class="col-sm-5 mb-4 mb-sm-0">
+                <label for="exampleInputEmail12">E-mail Address</label>
+                <input type="email" class="form-control" id="exampleInputEmail12" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-5 mb-4 mb-sm-0">
+                <label for="exampleInputName3">Full Name</label>
+                <input type="email" class="form-control" id="exampleInputName3" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+
+              <div class="col-sm-5 mb-4 mb-sm-0">
+                <label for="exampleInputEmail13">E-mail Address</label>
+                <input type="email" class="form-control" id="exampleInputEmail13" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            @@include('components/add-another/add-another.html')
+          </div>
+
+          <div class="button-set justify-content-start">
+            <button class="btn btn-primary">Send invitations</button>
+            <button class="btn btn-light">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>

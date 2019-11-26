@@ -153,6 +153,10 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 
 .btn-dots{
   color: $primary;
+  display: inline-block;
+  padding: 20px 24px 20px 20px;
+  margin: 0 auto;
+  width: 0;
 
   &:hover{
     color: $success;

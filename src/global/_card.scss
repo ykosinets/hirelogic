@@ -8,8 +8,18 @@
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
 
+    @include media-breakpoint-down(sm) {
+      padding: 20px 20px 0 20px;
+    }
+
     & + .card-body {
       padding-top: 0;
+    }
+  }
+
+  &-body{
+    @include media-breakpoint-down(sm){
+      padding: 20px;
     }
   }
 
@@ -47,22 +57,30 @@
     width: 100%;
     height: auto;
 
-    &-wrapper{
+    &-wrapper {
       padding: 0 15px;
     }
 
     .card-header {
       padding: 30px 50px 0 50px;
 
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         padding: 30px 30px 0 30px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 20px 20px 0 20px;
       }
 
       + .card-body {
         padding-top: 50px;
 
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
           padding-top: 30px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding-top: 20px;
         }
       }
     }
@@ -70,8 +88,12 @@
     .card-body {
       padding: 30px 50px;
 
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         padding: 30px 15px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 20px 15px;
       }
     }
 

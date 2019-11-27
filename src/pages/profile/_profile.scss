@@ -1,11 +1,40 @@
 .profile-page {
+  .btn-group.btn-block {
+    margin-bottom: 30px;
+    max-width: 270px;
+  }
+
+  .page-heading {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
   .page-side-title,
   .nav-tabs {
     margin-bottom: 42px;
   }
 
+  .page-side-title {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 15px;
+    }
+  }
+
   .nav-tabs {
     background: $white;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .accordion-heading{
+    padding: 7px 30px 7px 20px;
   }
 
   .user-info {
@@ -56,6 +85,10 @@
       max-width: 100%;
       float: none;
       order: 1;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 25px;
     }
 
     .card-heading {
@@ -111,6 +144,27 @@
   }
 }
 
+.heading-user {
+  .user {
+    margin-bottom: 35px;
+
+    .avatar {
+      margin-right: 15px;
+      width: 60px;
+    }
+
+    .name {
+      font-size: 1.125rem;
+      margin: 0 0 3px 0;
+    }
+
+    .location {
+      color: $text;
+      font-size: .75rem;
+    }
+  }
+}
+
 .page {
   &-subtitle {
     color: $text;
@@ -136,6 +190,11 @@
 .card-container {
   padding-left: 30px;
   padding-right: 30px;
+
+  @include media-breakpoint-down(sm){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .profile-sidebar,
@@ -151,50 +210,16 @@
 }
 
 .profile-sidebar {
-  .user {
-    margin-bottom: 35px;
-
-    .avatar {
-      margin-right: 15px;
-      width: 60px;
-    }
-
-    .name {
-      font-size: 1.125rem;
-      margin: 0 0 3px 0;
-    }
-
-    .location {
-      color: $text;
-      font-size: .75rem;
-    }
-  }
-
   .card-fluid {
     margin-bottom: 30px;
 
     &:last-child {
       margin-bottom: 0;
     }
-
-    .contacts {
-      .list-group-item {
-        font-size: .875rem;
-      }
-    }
-
-    .downloads {
-      margin-top: 20px;
-      margin-bottom: 30px;
-
-      .btn {
-        margin-bottom: 15px;
-      }
-    }
   }
 
   .card,
-  .card-chart{
+  .card-chart {
     h6 {
       margin: 0 0 20px 0;
     }
@@ -223,13 +248,34 @@
   }
 }
 
-.card-grow{
-  @include media-breakpoint-down(xl) {
-    margin-left: -330px;
+.contacts {
+  .list-group-item {
+    font-size: .875rem;
   }
 }
 
-.data-set{
+.downloads {
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  .btn {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 240px;
+  }
+}
+
+.card-grow {
+  @include media-breakpoint-down(xl) {
+    margin-left: -330px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+  }
+}
+
+.data-set {
   border-top: solid 1px #e9e9ee;
   padding: 20px 30px 10px 30px;
   display: flex;
@@ -241,18 +287,18 @@
   float: left;
   width: 100%;
 
-  @include media-breakpoint-down(xl){
+  @include media-breakpoint-down(xl) {
     float: none;
     flex-direction: column;
     text-align: left;
     order: 3;
   }
 
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     border: none;
   }
 
-  .data-box{
+  .data-box {
     border-radius: $border-radius;
     padding: 15px 30px;
     margin-right: 10px;
@@ -262,48 +308,48 @@
     justify-content: space-between;
     margin-bottom: 10px;
 
-    @include media-breakpoint-down(xl){
+    @include media-breakpoint-down(xl) {
       padding: 10px 22px;
       margin-right: 0;
       flex-direction: row;
       justify-content: flex-start;
     }
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
 
-    [class^="icon"]{
+    [class^="icon"] {
       font-size: 2.5rem;
       margin-bottom: 15px;
 
-      @include media-breakpoint-down(xl){
+      @include media-breakpoint-down(xl) {
         margin-bottom: 0;
         margin-right: 14px;
       }
     }
 
-    .name{
+    .name {
       font-size: .875rem;
       margin-bottom: 5px;
       line-height: 1;
     }
 
-    .value{
+    .value {
       font-size: 1rem;
       font-weight: 500;
       line-height: 1;
     }
 
-    &-primary{
+    &-primary {
       background: #f9f9fd;
 
-      .name{
+      .name {
         color: $controls;
       }
 
       [class^="icon"],
-      .value{
+      .value {
         color: $primary;
       }
     }
@@ -318,7 +364,7 @@
       }
     }
 
-    &-danger{
+    &-danger {
       background: rgba($danger, .05);
 
       .name,
@@ -328,7 +374,7 @@
       }
     }
 
-    &-warning{
+    &-warning {
       background: rgba(#efcc00, .1);
 
       .name,
@@ -340,10 +386,10 @@
   }
 }
 
-.line-after{
+.line-after {
   position: relative;
 
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     left: 100%;

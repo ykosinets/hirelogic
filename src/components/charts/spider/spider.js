@@ -40,7 +40,8 @@ var RadarChart = {
 
 		var svg = d3.select(id)
 			.append("svg")
-			.attr('preserveAspectRatio', 'xMinYMin meet');
+			.attr('preserveAspectRatio', 'xMinYMin meet')
+			.attr('viewBox', '0 0 200 200');
 
 		var g = svg
 			.append("g")

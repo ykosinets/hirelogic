@@ -1,8 +1,21 @@
 .page-heading {
   margin-bottom: 30px;
   color: $controls;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(md){
+    align-items: flex-start;
+  }
 
   .info-wrapper {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
     .info {
       li{
         margin-left: 55px;
@@ -13,6 +26,13 @@
 
         &:first-child{
           margin-left: 0;
+
+          @include media-breakpoint-down(md) {
+            margin-left: auto;
+          }
+        }
+
+        &:last-child{
         }
       }
 
@@ -51,6 +71,19 @@
           }
         }
       }
+    }
+  }
+
+  .filter-actions{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    display: none;
+
+    @include media-breakpoint-down(md){
+      margin-bottom: 15px;
+      display: flex;
     }
   }
 }

@@ -75,6 +75,7 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
     padding-left: .75rem;
     padding-right: .75rem;
     border-left: 1px solid rgba(0, 0, 0, .05);
+    max-width: 40px;
 
     &:before {
       font-family: icomoon;

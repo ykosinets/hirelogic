@@ -1,4 +1,9 @@
 .comparison-page {
+  .btn-group.btn-block {
+    margin-bottom: 30px;
+    max-width: 270px;
+  }
+
   .compare {
     height: auto;
 
@@ -40,6 +45,18 @@
 
     .chart-spider {
       margin: 0 auto 30px;
+
+      .chart-legends .legend-top-right {
+        @include media-breakpoint-down(md) {
+          margin-left: 135px;
+        }
+      }
+
+      .chart-legends .legend-top-left {
+        @include media-breakpoint-down(md) {
+          margin-left: -135px;
+        }
+      }
     }
   }
 

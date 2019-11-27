@@ -83,6 +83,14 @@
   &-spider{
     width: 500px;
     height: 400px;
+
+    @include media-breakpoint-down(md) {
+      height: 340px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 400px;
+    }
   }
 
   svg{

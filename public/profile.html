@@ -206,7 +206,7 @@
 
 
   <div class="container">
-    <div class="d-flex flex-row">
+    <div class="page-heading">
       <div class="page-side-title">
         <h3 class="page-title">Ruby Developer</h3>
         <span class="page-subtitle">Date Tested: 10/10/2019</span>
@@ -232,9 +232,9 @@
     </div>
 
     <div class="d-flex flex-row align-items-start justify-content-start flex-nowrap">
-      <aside class="profile-sidebar">
+      <aside class="profile-sidebar d-none d-md-block">
         <div class="card card-fluid">
-          <div class="card-header">
+          <div class="card-header heading-user">
             <div class="user d-flex flex-row align-items-center">
               <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
 
@@ -251,6 +251,23 @@
 
           <div class="card-body">
             <section>
+              <div class="card-container text-center">
+                <div class="btn-group btn-group-sm btn-block">
+                  <button type="button" class="btn btn-secondary">Pending</button>
+                  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </div>
+
               <div class="card-container">
                 <h6>Personal Information</h6>
               </div>
@@ -363,6 +380,42 @@
                   </div>
                   <div class="list-group-item">
                     <span class="icon-check text-success"></span>Leadership Abilities
+                  </div>
+                </div>
+              </section>
+
+              <section class="order-1 d-block d-md-none mb-0">
+                <div class="card-container heading-user">
+                  <div class="user d-flex flex-row align-items-center">
+                    <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
+
+                    <div class="d-flex flex-column align-items-start justify-content-between">
+                      <h5 class="name">
+                        Zachary Ballard
+                      </h5>
+                      <div class="location">
+                        New York City, NY
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-container">
+                  <div class="text-center">
+                    <div class="btn-group btn-group-sm btn-block">
+                      <button type="button" class="btn btn-secondary">Pending</button>
+                      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -554,6 +607,89 @@
                 </div>
               </div>
 
+              <section class="order-6 d-block d-md-none">
+                <div class="card-container">
+                  <h6>Personal Information</h6>
+                </div>
+
+                <div class="list-group list-group-colored">
+                  <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                    <span class="name">Age</span>
+                    <span class="value">36 years old</span>
+                  </div>
+                  <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                    <span class="name">Ethnicity</span>
+                    <span class="value">American</span>
+                  </div>
+                  <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                    <span class="name">Gender</span>
+                    <span class="value">Male</span>
+                  </div>
+                  <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                    <span class="name">Years of experience</span>
+                    <span class="value">3</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="order-7 d-block d-md-none">
+                <div class="card-container">
+                  <h6>Tests Taken</h6>
+                </div>
+
+                <div class="list-group list-group-colored">
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Intelligent Quoficient
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Emotional Intellingence
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Personality
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Custom #1
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Custom #2
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Custom #3
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Custom #4
+                  </div>
+                  <div class="list-group-item">
+                    <span class="icon-check text-success"></span>Custom #5
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card card-fluid d-flex d-md-none">
+            <div class="card-header"></div>
+
+            <div class="card-body">
+              <section>
+                <div class="card-container">
+                  <h6>Contact information</h6>
+                </div>
+
+                <div class="list-group list-group-colored contacts">
+                  <a href="mailto:ronaldo@hotmail.com" class="list-group-item">
+                    <span class="icon-envelope text-success"></span>ronaldo@hotmail.com
+                  </a>
+                  <a href="tel:+1323942848" class="list-group-item">
+                    <span class="icon-phone text-success"></span>+1 323 942848
+                  </a>
+                </div>
+
+                <div class="card-container downloads">
+                  <a href="#" class="btn btn-primary btn-block">Download cv</a>
+                  <a href="#" class="btn btn-secondary btn-block">Download report</a>
+                </div>
+              </section>
             </div>
           </div>
 
@@ -565,7 +701,7 @@
 
             <div class="card-body">
               <div class="row">
-                <div class="col-5">
+                <div class="col-10 col-lg-5 mb-5 mb-lg-0">
                   <p class="card-inner-title">Key Insights</p>
 
                   <div class="accordion" id="accordionComponentPositive">
@@ -711,7 +847,7 @@
                   </div>
                 </div>
 
-                <div class="col-5">
+                <div class="col-10 col-lg-5">
                   <p class="card-inner-title">Red Flags</p>
 
                   <div class="accordion" id="accordionComponentNegative">
@@ -792,14 +928,14 @@
 
           <div class="card card-grow">
             <div class="card-header">
-              <div class="d-flex flex-row align-items-start justify-content-between">
+              <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between mb-4 mb-lg-0">
                 <div>
                   <h5 class="card-title">Interview Notes</h5>
                   <p class="card-subtitle">Lorem ipsum dolor sit amet enim.</p>
                 </div>
 
-                <div class="d-flex flex-row align-items-end justify-content-center">
-                  <h6 class="my-0 mr-2">Interview Rating:</h6>
+                <div class="d-flex flex-row align-items-center justify-content-center">
+                  <h6 class="my-0 mr-2 rating-stars-title">Interview Rating:</h6>
                   <div class="rating">
   <ul class="rating-stars p-0 m-0 list-unstyled">
     <li class="star">

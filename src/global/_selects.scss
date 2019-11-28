@@ -7,6 +7,7 @@ select {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCA5IDYiPgogICAgPHBhdGggZmlsbD0iIzA2M0RDNyIgZmlsbC1ydWxlPSJldmVub2RkIgogICAgICAgICAgZD0iTTEuNDQ1LjA2OGEuMjIuMjIgMCAwIDAtLjMxNiAwTC4wNjUgMS4xNzJhLjIzNy4yMzcgMCAwIDAgMCAuMzI1bDQuMjc3IDQuNDM1YS4yMTkuMjE5IDAgMCAwIC4zMTYgMEw4LjkzNSAxLjVhLjIzNy4yMzcgMCAwIDAgMC0uMzI2TDcuODcxLjA2OWEuMjIuMjIgMCAwIDAtLjMxNiAwTDQuNSAzLjIzIDEuNDQ1LjA2OHoiLz4KPC9zdmc+Cg==");
   background-position: calc(100% - 1rem) center;
   background-repeat: no-repeat;
+  cursor: pointer;
 
   &::-ms-expand {
     display: none;

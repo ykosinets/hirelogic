@@ -2,6 +2,14 @@
   display: block;
   direction: rtl;
   width: auto;
+  white-space: nowrap;
+
+  &-title{
+    @include media-breakpoint-down(sm){
+      color: $controls;
+      font-size: .875rem;
+    }
+  }
 
   li{
     padding: 0 2.5px;

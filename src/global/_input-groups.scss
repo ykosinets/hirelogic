@@ -1,21 +1,21 @@
-.input-group{
-  & > .input-group-append{
+.input-group {
+  & > .input-group-append {
     margin-left: -30px;
     background: $white;
 
-    & > .btn{
+    & > .btn {
       border-radius: $btn-border-radius;
     }
   }
 
-  & > .form-control:not(:last-child){
+  & > .form-control:not(:last-child) {
     border-radius: $input-border-radius;
     padding-right: $input-border-radius * 2;
   }
 }
 
-.list-rounded{
-  li{
+.list-rounded {
+  li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,23 +27,38 @@
     border-radius: 20px;
     background: #f9f9fd;
 
-    &:last-child{
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &:last-child {
       margin-bottom: 0;
     }
 
-    .name{
-      a{
+    .name {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 5px;
+      }
+
+      a {
         color: $primary;
         font-weight: 500;
         text-decoration: none !important;
 
-        &:hover{
+        &:hover {
           color: $controls;
         }
       }
 
-      strong{
+      strong {
         font-weight: 500;
+      }
+    }
+
+    .date{
+      @include media-breakpoint-down(md) {
+        color: $text;
       }
     }
   }

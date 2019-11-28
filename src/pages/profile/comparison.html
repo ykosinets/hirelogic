@@ -10,696 +10,898 @@
         <h3 class="page-title">Candidates Comparison</h3>
         <span class="page-subtitle">Zachary Ballard vs. John Smith</span>
       </div>
+
+      <div class="compare-form d-none d-xl-flex flex-row align-items-center justify-content-end">
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option selected disabled>Zachary Ballard</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <p class="text-muted">vs.</p>
+        <select class="form-control" id="exampleFormControlSelect2">
+          <option selected disabled>John Smith</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+
+        <button class="btn btn-primary" type="submit">COMPARE</button>
+        <button class="btn btn-secondary" type="button">Clear</button>
+      </div>
+
+      <button class="btn btn-primary d-flex d-xl-none"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
+        MODIFY
+      </button>
+
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+        <form class="compare-form">
+          <p class="form-title"><span class="icon icon-profile-outline"></span> Compare with:</p>
+
+          <div class="form-group d-flex flex-column justify-content-between align-items-center">
+            <select class="form-control" id="exampleFormControlSelect3">
+              <option selected disabled>Zachary Ballard</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+
+            <p class="text-muted">vs.</p>
+
+            <select class="form-control" id="exampleFormControlSelect4">
+              <option selected disabled>John Smith</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <div>
+              <button class="btn btn-primary" type="submit">COMPARE</button>
+              <button class="btn btn-secondary" type="button">Clear</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+
+    <ul class="nav nav-tabs d-xl-none" id="tabComponent" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+           aria-controls="profile"
+           aria-selected="true">Profile</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" id="test-tab" data-toggle="tab" href="#test" role="tab" aria-controls="test"
+           aria-selected="false">Detailed Test Results</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history"
+           aria-selected="false">History</a>
+      </li>
+    </ul>
   </div>
 
   <div class="container">
-    <div class="d-flex flex-row align-items-stretch justify-content-start flex-wrap">
-      <aside class="profile-sidebar">
-        <div class="card card-fluid">
-          <div class="card-header">
-            <div class="user d-flex flex-row align-items-center">
-              <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
+    <div class="tab-content user-info" id="tabComponentContent">
+      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="d-flex flex-row align-items-stretch justify-content-start flex-wrap">
+          <aside class="profile-sidebar">
+            <div class="card card-fluid">
+              <div class="card-header heading-user">
+                <div class="user d-flex flex-row align-items-center">
+                  <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
 
-              <div class="d-flex flex-column align-items-start justify-content-between">
-                <h5 class="name">
-                  Zachary Ballard
-                </h5>
-                <div class="location">
-                  New York City, NY
+                  <div class="d-flex flex-column align-items-start justify-content-between">
+                    <h5 class="name">
+                      Zachary Ballard
+                    </h5>
+                    <div class="location">
+                      New York City, NY
+                    </div>
+
+                    <div class="badge text-white bg-primary mt-1">68</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <section>
+                  <div class="card-container text-center">
+                    <div class="btn-group btn-group-sm btn-block">
+                      <button type="button" class="btn btn-secondary">Pending</button>
+                      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-container">
+                    <h6>Personal Information</h6>
+                  </div>
+
+                  <div class="list-group list-group-colored">
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Age</span>
+                      <span class="value">36 years old</span>
+                    </div>
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Ethnicity</span>
+                      <span class="value">American</span>
+                    </div>
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Gender</span>
+                      <span class="value">Male</span>
+                    </div>
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Years of experience</span>
+                      <span class="value">3</span>
+                    </div>
+                  </div>
+                </section>
+
+                <section>
+                  <div class="card-container">
+                    <h6>Tests Taken</h6>
+                  </div>
+
+                  <div class="list-group list-group-colored">
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Intelligent Quoficient
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Emotional Intellingence
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Personality
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Custom #1
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Custom #2
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Custom #3
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Custom #4
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Custom #5
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </aside>
+
+          <aside class="profile-sidebar">
+            <div class="card card-fluid">
+              <div class="card-header heading-user">
+                <div class="user d-flex flex-row align-items-center">
+                  <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
+
+                  <div class="d-flex flex-column align-items-start justify-content-between">
+                    <h5 class="name">
+                      John Smith
+                    </h5>
+                    <div class="location">
+                      New York City, NY
+                    </div>
+
+                    <div class="badge text-white bg-warning mt-1">42</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <section>
+                  <div class="card-container text-center">
+                    <div class="btn-group btn-group-sm btn-block">
+                      <button type="button" class="btn btn-secondary">Pending</button>
+                      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-container">
+                    <h6>Personal Information</h6>
+                  </div>
+
+                  <div class="list-group list-group-colored">
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Age</span>
+                      <span class="value">36 years old</span>
+                    </div>
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Ethnicity</span>
+                      <span class="value">American</span>
+                    </div>
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Gender</span>
+                      <span class="value">Male</span>
+                    </div>
+                    <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
+                      <span class="name">Years of experience</span>
+                      <span class="value">3</span>
+                    </div>
+                  </div>
+                </section>
+
+                <section>
+                  <div class="card-container">
+                    <h6>Tests Taken</h6>
+                  </div>
+
+                  <div class="list-group list-group-colored">
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Intelligent Quoficient
+                    </div>
+                    <div class="list-group-item">
+                      <span class="icon-check text-success"></span>Emotional Intellingence
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </aside>
+
+          <div class="card card-fluid card-chart">
+            <div class="card-inner-sidebar">
+              <div class="card-heading d-flex flex-row align-items-center justify-content-between bg-primary">
+                <h6 class="text-white m-0">Overall Rating</h6>
+              </div>
+            </div>
+
+            <div class="card-header heading-user d-block d-md-none">
+              <div class="d-flex flex-row align-items-center justify-content-center">
+                <div class="user d-flex flex-column align-items-center">
+                  <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
+
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <h5 class="name">
+                      Zachary Ballard
+                    </h5>
+                    <div class="location">
+                      New York City, NY
+                    </div>
+                    <span class="badge text-white bg-warning">68</span>
+                  </div>
+                </div>
+                <p class="user-divider">vs.</p>
+                <div class="user d-flex flex-column align-items-center text-center">
+                  <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
+
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <h5 class="name">
+                      Zachary Ballard
+                    </h5>
+                    <div class="location">
+                      New York City, NY
+                    </div>
+                    <span class="badge text-white bg-warning">54</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+
+              @@include('components/charts/spider/spider.html')
+
+              <table class="table table-striped table-hover table-borderless">
+                <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle">Zachary Ballard
+                  </th>
+                  <th>
+                    <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle">John Smith
+                  </th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                  <th>IQ</th>
+                  <td><span class="dot dot-before dot-success">132</span></td>
+                  <td><span class="dot dot-before dot-success">132</span></td>
+                </tr>
+
+                <tr>
+                  <th>EQ</th>
+                  <td><span class="dot dot-before dot-danger">31</span></td>
+                  <td><span class="dot dot-before dot-danger">31</span></td>
+                </tr>
+
+                <tr>
+                  <th>Openness</th>
+                  <td><span class="dot dot-before dot-success">73</span></td>
+                  <td><span class="dot dot-before dot-success">73</span></td>
+                </tr>
+
+                <tr>
+                  <th>Conscientiousness</th>
+                  <td><span class="dot dot-before dot-warning">64</span></td>
+                  <td><span class="dot dot-before dot-warning">64</span></td>
+                </tr>
+
+                <tr>
+                  <th>Agreeableness</th>
+                  <td><span class="dot dot-before dot-danger">23</span></td>
+                  <td><span class="dot dot-before dot-danger">23</span></td>
+                </tr>
+
+                <tr>
+                  <th>Extraversion</th>
+                  <td><span class="dot dot-before dot-warning">52</span></td>
+                  <td><span class="dot dot-before dot-warning">52</span></td>
+                </tr>
+
+                <tr>
+                  <th>Neuroticism</th>
+                  <td><span class="dot dot-before dot-success">86</span></td>
+                  <td><span class="dot dot-before dot-success">86</span></td>
+                </tr>
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-block d-md-none">
+          <h5 class="m-0">Detailed comparison</h5>
+          <p class="page-subtitle">Swipe to compare each other.</p>
+        </div>
+
+        <div class="card compare">
+          <div class="card-body">
+
+            <div class="user-wrapper">
+              <div class="user">
+                <div class="user-info d-flex flex-row">
+                  <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle mr-2">
+
+                  <div class="d-flex flex-column align-items-start justify-content-center">
+                    <span class="name">Zachary Bellard</span>
+                    <span class="badge text-white bg-primary line-after">68</span>
+                  </div>
                 </div>
 
-                <div class="badge text-white bg-primary mt-1">68</div>
+                <div class="row">
+                  <div class="col-10 col-md-5 mb-5 mb-md-0">
+                    <p class="card-inner-title">Pluses</p>
+
+                    <div class="accordion" id="firstAccordionComponentPositive">
+                      <div class="accordion-item">
+                        <h2 id="firstHeadingPositiveOne"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#firstCollapsePositiveOne"
+                            aria-expanded="false"
+                            aria-controls="firstCollapsePositiveOne">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="firstCollapsePositiveOne"
+                             class="collapse"
+                             aria-labelledby="firstHeadingPositiveOne"
+                             data-parent="#firstAccordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="firstHeadingPositiveTwo"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#firstCollapsePositiveTwo"
+                            aria-expanded="false"
+                            aria-controls="firstCollapsePositiveTwo">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="firstCollapsePositiveTwo"
+                             class="collapse"
+                             aria-labelledby="firstHeadingPositiveTwo"
+                             data-parent="#firstAccordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="firstHeadingPositiveThree"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#firstCollapsePositiveThree"
+                            aria-expanded="false"
+                            aria-controls="firstCollapsePositiveThree">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="firstCollapsePositiveThree"
+                             class="collapse"
+                             aria-labelledby="firstHeadingPositiveThree"
+                             data-parent="#firstAccordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="firstHeadingPositiveFour"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#firstCollapsePositiveFour"
+                            aria-expanded="false"
+                            aria-controls="firstCollapsePositiveFour">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="firstCollapsePositiveFour"
+                             class="collapse"
+                             aria-labelledby="firstHeadingPositiveFour"
+                             data-parent="#firstAccordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-10 col-md-5">
+                    <p class="card-inner-title">Red Flags</p>
+
+                    <div class="accordion" id="firstAccordionComponentNegative">
+                      <div class="accordion-item">
+                        <h2 id="firstHeadingNegativeOne"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#firstCollapseNegativeOne"
+                            aria-expanded="false"
+                            aria-controls="firstCollapseNegativeOne">
+                          <span class="state text-danger">—</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="firstCollapseNegativeOne"
+                             class="collapse"
+                             aria-labelledby="firstHeadingNegativeOne"
+                             data-parent="#firstAccordionComponentNegative">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="firstHeadingNegativeTwo"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#firstCollapseNegativeTwo"
+                            aria-expanded="false"
+                            aria-controls="firstCollapseNegativeTwo">
+                          <span class="state text-danger">—</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="firstCollapseNegativeTwo"
+                             class="collapse"
+                             aria-labelledby="firstHeadingNegativeTwo"
+                             data-parent="#firstAccordionComponentNegative">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="user-wrapper">
+              <div class="user">
+                <div class="user-info d-flex flex-row">
+                  <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle mr-2">
+
+                  <div class="d-flex flex-column align-items-start justify-content-center">
+                    <span class="name">John Smith</span>
+                    <span class="badge text-white bg-warning line-after">42</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-10 col-md-5 mb-5 mb-md-0">
+                    <p class="card-inner-title">Pluses</p>
+
+                    <div class="accordion" id="accordionComponentPositive">
+                      <div class="accordion-item">
+                        <h2 id="secondHeadingPositiveOne"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#secondCollapsePositiveOne"
+                            aria-expanded="false"
+                            aria-controls="secondCollapsePositiveOne">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="secondCollapsePositiveOne"
+                             class="collapse"
+                             aria-labelledby="secondHeadingPositiveOne"
+                             data-parent="#accordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="secondHeadingPositiveTwo"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#secondCollapsePositiveTwo"
+                            aria-expanded="false"
+                            aria-controls="secondCollapsePositiveTwo">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="secondCollapsePositiveTwo"
+                             class="collapse"
+                             aria-labelledby="secondHeadingPositiveTwo"
+                             data-parent="#accordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="secondHeadingPositiveThree"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#secondCollapsePositiveThree"
+                            aria-expanded="false"
+                            aria-controls="secondCollapsePositiveThree">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="secondCollapsePositiveThree"
+                             class="collapse"
+                             aria-labelledby="secondHeadingPositiveThree"
+                             data-parent="#accordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="secondHeadingPositiveFour"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#secondCollapsePositiveFour"
+                            aria-expanded="false"
+                            aria-controls="secondCollapsePositiveFour">
+                          <span class="state text-success">+</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="secondCollapsePositiveFour"
+                             class="collapse"
+                             aria-labelledby="secondHeadingPositiveFour"
+                             data-parent="#accordionComponentPositive">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-10 col-md-5">
+                    <p class="card-inner-title">Red Flags</p>
+
+                    <div class="accordion" id="secondAccordionComponentNegative">
+                      <div class="accordion-item">
+                        <h2 id="headingNegativeOne"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#secondCollapseNegativeOne"
+                            aria-expanded="false"
+                            aria-controls="secondCollapseNegativeOne">
+                          <span class="state text-danger">—</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="secondCollapseNegativeOne"
+                             class="collapse"
+                             aria-labelledby="headingNegativeOne"
+                             data-parent="#secondAccordionComponentNegative">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 id="headingNegativeTwo"
+                            class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
+                            data-toggle="collapse"
+                            data-target="#secondCollapseNegativeTwo"
+                            aria-expanded="false"
+                            aria-controls="secondCollapseNegativeTwo">
+                          <span class="state text-danger">—</span>
+                          Lorem ipsum dolor sit amet enim.
+                          <span class="icon-arrow-right"></span>
+                        </h2>
+
+                        <div id="secondCollapseNegativeTwo"
+                             class="collapse"
+                             aria-labelledby="headingNegativeTwo"
+                             data-parent="#secondAccordionComponentNegative">
+                          <div class="accordion-body">
+                            <p>
+                              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                              felis. Maecenas
+                              malesuada
+                              elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies
+                              porta
+                              urna. Vestibulum
+                              commodo volutpat a, convallis ac, laoreet enim.
+                            </p>
+
+                            <p>
+                              Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
+                              Vestibulum dapibus,
+                              mauris.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="card-body">
-            <section>
-              <div class="card-container">
-                <h6>Personal Information</h6>
-              </div>
-
-              <div class="list-group list-group-colored">
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Age</span>
-                  <span class="value">36 years old</span>
-                </div>
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Ethnicity</span>
-                  <span class="value">American</span>
-                </div>
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Gender</span>
-                  <span class="value">Male</span>
-                </div>
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Years of experience</span>
-                  <span class="value">3</span>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <div class="card-container">
-                <h6>Tests Taken</h6>
-              </div>
-
-              <div class="list-group list-group-colored">
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Intelligent Quoficient
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Emotional Intellingence
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Personality
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Custom #1
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Custom #2
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Custom #3
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Custom #4
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Custom #5
-                </div>
-              </div>
-            </section>
-          </div>
         </div>
-      </aside>
+      </div>
 
-      <aside class="profile-sidebar">
-        <div class="card card-fluid">
+      <div class="tab-pane fade" id="test" role="tabpanel" aria-labelledby="test-tab">
+        <div class="card">
           <div class="card-header">
-            <div class="user d-flex flex-row align-items-center">
-              <img class="avatar rounded-circle img" src="images/avatar-1.jpg" alt="avatar">
-
-              <div class="d-flex flex-column align-items-start justify-content-between">
-                <h5 class="name">
-                  John Smith
-                </h5>
-                <div class="location">
-                  New York City, NY
-                </div>
-
-                <div class="badge text-white bg-warning mt-1">42</div>
-              </div>
-            </div>
+            <h5 class="card-title">Detailed Test Results</h5>
+            <p class="card-subtitle">Lorem ipsum dolor sit amet enim.</p>
           </div>
 
-          <div class="card-body">
-            <section>
-              <div class="card-container">
-                <h6>Personal Information</h6>
-              </div>
-
-              <div class="list-group list-group-colored">
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Age</span>
-                  <span class="value">36 years old</span>
-                </div>
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Ethnicity</span>
-                  <span class="value">American</span>
-                </div>
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Gender</span>
-                  <span class="value">Male</span>
-                </div>
-                <div class="list-group-item d-flex flex-row align-items-center justify-content-between">
-                  <span class="name">Years of experience</span>
-                  <span class="value">3</span>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <div class="card-container">
-                <h6>Tests Taken</h6>
-              </div>
-
-              <div class="list-group list-group-colored">
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Intelligent Quoficient
-                </div>
-                <div class="list-group-item">
-                  <span class="icon-check text-success"></span>Emotional Intellingence
-                </div>
-              </div>
-            </section>
-          </div>
+          <div class="card-body"></div>
         </div>
-      </aside>
+      </div>
 
-      <div class="card card-fluid card-chart">
-        <div class="card-body">
-          @@include('components/charts/spider/spider.html')
-
-          <table class="table table-striped table-hover table-borderless">
-            <thead>
-            <tr>
-              <th></th>
-              <th>
-                <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle">Zachary Ballard
-              </th>
-              <th>
-                <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle">John Smith
-              </th>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr>
-              <th>IQ</th>
-              <td><span class="dot dot-before dot-success">132</span></td>
-              <td><span class="dot dot-before dot-success">132</span></td>
-            </tr>
-
-            <tr>
-              <th>EQ</th>
-              <td><span class="dot dot-before dot-danger">31</span></td>
-              <td><span class="dot dot-before dot-danger">31</span></td>
-            </tr>
-
-            <tr>
-              <th>Openness</th>
-              <td><span class="dot dot-before dot-success">73</span></td>
-              <td><span class="dot dot-before dot-success">73</span></td>
-            </tr>
-
-            <tr>
-              <th>Conscientiousness</th>
-              <td><span class="dot dot-before dot-warning">64</span></td>
-              <td><span class="dot dot-before dot-warning">64</span></td>
-            </tr>
-
-            <tr>
-              <th>Agreeableness</th>
-              <td><span class="dot dot-before dot-danger">23</span></td>
-              <td><span class="dot dot-before dot-danger">23</span></td>
-            </tr>
-
-            <tr>
-              <th>Extraversion</th>
-              <td><span class="dot dot-before dot-warning">52</span></td>
-              <td><span class="dot dot-before dot-warning">52</span></td>
-            </tr>
-
-            <tr>
-              <th>Neuroticism</th>
-              <td><span class="dot dot-before dot-success">86</span></td>
-              <td><span class="dot dot-before dot-success">86</span></td>
-            </tr>
-            </tbody>
-
-          </table>
+      <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">History</h5>
+          <p class="card-subtitle">Lorem ipsum dolor sit amet enim.</p>
         </div>
+        <div class="card-body"></div>
       </div>
     </div>
-
-    <div class="card compare">
-      <div class="card-body">
-
-        <div class="user">
-          <div class="user-info d-flex flex-row">
-            <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle mr-2">
-
-            <div class="d-flex flex-column align-items-start justify-content-center">
-              <span class="name">Zachary Bellard</span>
-              <span class="badge text-white bg-primary line-after">68</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-5">
-              <p class="card-inner-title">Pluses</p>
-
-              <div class="accordion" id="firstAccordionComponentPositive">
-                <div class="accordion-item">
-                  <h2 id="firstHeadingPositiveOne"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#firstCollapsePositiveOne"
-                      aria-expanded="false"
-                      aria-controls="firstCollapsePositiveOne">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="firstCollapsePositiveOne"
-                       class="collapse"
-                       aria-labelledby="firstHeadingPositiveOne"
-                       data-parent="#firstAccordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="firstHeadingPositiveTwo"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#firstCollapsePositiveTwo"
-                      aria-expanded="false"
-                      aria-controls="firstCollapsePositiveTwo">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="firstCollapsePositiveTwo"
-                       class="collapse"
-                       aria-labelledby="firstHeadingPositiveTwo"
-                       data-parent="#firstAccordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="firstHeadingPositiveThree"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#firstCollapsePositiveThree"
-                      aria-expanded="false"
-                      aria-controls="firstCollapsePositiveThree">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="firstCollapsePositiveThree"
-                       class="collapse"
-                       aria-labelledby="firstHeadingPositiveThree"
-                       data-parent="#firstAccordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="firstHeadingPositiveFour"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#firstCollapsePositiveFour"
-                      aria-expanded="false"
-                      aria-controls="firstCollapsePositiveFour">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="firstCollapsePositiveFour"
-                       class="collapse"
-                       aria-labelledby="firstHeadingPositiveFour"
-                       data-parent="#firstAccordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-5">
-              <p class="card-inner-title">Red Flags</p>
-
-              <div class="accordion" id="firstAccordionComponentNegative">
-                <div class="accordion-item">
-                  <h2 id="firstHeadingNegativeOne"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#firstCollapseNegativeOne"
-                      aria-expanded="false"
-                      aria-controls="firstCollapseNegativeOne">
-                    <span class="state text-danger">—</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="firstCollapseNegativeOne"
-                       class="collapse"
-                       aria-labelledby="firstHeadingNegativeOne"
-                       data-parent="#firstAccordionComponentNegative">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="firstHeadingNegativeTwo"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#firstCollapseNegativeTwo"
-                      aria-expanded="false"
-                      aria-controls="firstCollapseNegativeTwo">
-                    <span class="state text-danger">—</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="firstCollapseNegativeTwo"
-                       class="collapse"
-                       aria-labelledby="firstHeadingNegativeTwo"
-                       data-parent="#firstAccordionComponentNegative">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="user">
-          <div class="user-info d-flex flex-row">
-            <img src="images/avatar-1.jpg" alt="avatar" class="avatar rounded-circle mr-2">
-
-            <div class="d-flex flex-column align-items-start justify-content-center">
-              <span class="name">John Smith</span>
-              <span class="badge text-white bg-warning line-after">42</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-5">
-              <p class="card-inner-title">Pluses</p>
-
-              <div class="accordion" id="accordionComponentPositive">
-                <div class="accordion-item">
-                  <h2 id="secondHeadingPositiveOne"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#secondCollapsePositiveOne"
-                      aria-expanded="false"
-                      aria-controls="secondCollapsePositiveOne">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="secondCollapsePositiveOne"
-                       class="collapse"
-                       aria-labelledby="secondHeadingPositiveOne"
-                       data-parent="#accordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="secondHeadingPositiveTwo"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#secondCollapsePositiveTwo"
-                      aria-expanded="false"
-                      aria-controls="secondCollapsePositiveTwo">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="secondCollapsePositiveTwo"
-                       class="collapse"
-                       aria-labelledby="secondHeadingPositiveTwo"
-                       data-parent="#accordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="secondHeadingPositiveThree"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#secondCollapsePositiveThree"
-                      aria-expanded="false"
-                      aria-controls="secondCollapsePositiveThree">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="secondCollapsePositiveThree"
-                       class="collapse"
-                       aria-labelledby="secondHeadingPositiveThree"
-                       data-parent="#accordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="secondHeadingPositiveFour"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#secondCollapsePositiveFour"
-                      aria-expanded="false"
-                      aria-controls="secondCollapsePositiveFour">
-                    <span class="state text-success">+</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="secondCollapsePositiveFour"
-                       class="collapse"
-                       aria-labelledby="secondHeadingPositiveFour"
-                       data-parent="#accordionComponentPositive">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-5">
-              <p class="card-inner-title">Red Flags</p>
-
-              <div class="accordion" id="secondAccordionComponentNegative">
-                <div class="accordion-item">
-                  <h2 id="headingNegativeOne"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#secondCollapseNegativeOne"
-                      aria-expanded="false"
-                      aria-controls="secondCollapseNegativeOne">
-                    <span class="state text-danger">—</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="secondCollapseNegativeOne"
-                       class="collapse"
-                       aria-labelledby="headingNegativeOne"
-                       data-parent="#secondAccordionComponentNegative">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h2 id="headingNegativeTwo"
-                      class="accordion-heading m-0 btn btn-secondary btn-block text-left collapsed"
-                      data-toggle="collapse"
-                      data-target="#secondCollapseNegativeTwo"
-                      aria-expanded="false"
-                      aria-controls="secondCollapseNegativeTwo">
-                    <span class="state text-danger">—</span>
-                    Lorem ipsum dolor sit amet enim.
-                    <span class="icon-arrow-right"></span>
-                  </h2>
-
-                  <div id="secondCollapseNegativeTwo"
-                       class="collapse"
-                       aria-labelledby="headingNegativeTwo"
-                       data-parent="#secondAccordionComponentNegative">
-                    <div class="accordion-body">
-                      <p>
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                        felis. Maecenas
-                        malesuada
-                        elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta
-                        urna. Vestibulum
-                        commodo volutpat a, convallis ac, laoreet enim.
-                      </p>
-
-                      <p>
-                        Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                        Vestibulum dapibus,
-                        mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+
+
 </div>
 
 @@include('views/scripts.html')

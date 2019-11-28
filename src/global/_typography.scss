@@ -17,3 +17,7 @@ small{
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+a, .btn{
+  transition: .2s all ease-in-out;
+}

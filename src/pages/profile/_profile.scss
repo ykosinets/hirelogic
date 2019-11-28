@@ -37,15 +37,6 @@
     padding: 7px 30px 7px 20px;
   }
 
-  .user-info {
-    padding: 0;
-
-    .card {
-      height: auto;
-      margin-bottom: 30px;
-    }
-  }
-
   .card {
     h6 {
       margin: 0 0 20px 0;
@@ -73,74 +64,83 @@
       }
     }
   }
+}
 
-  .card-inner-sidebar {
+.card-inner-sidebar {
+  max-width: 300px;
+  width: 100%;
+  float: left;
+  z-index: 1;
+  position: relative;
+
+  @include media-breakpoint-down(xl) {
+    max-width: 100%;
+    float: none;
+    order: 1;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 25px;
+  }
+
+  .card-heading {
+    padding: 22px 30px;
+    margin: 0 0 25px 0;
+    border-top-left-radius: $border-radius;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 0;
+      border-top-right-radius: $border-radius;
+    }
+  }
+
+  & ~ .chart-spider {
+    float: right;
+    width: calc(100% - 300px);
+
+    @include media-breakpoint-down(xl) {
+      float: none;
+      order: 2;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 0;
+      width: 0;
+      height: 100%;
+      border-left: solid 1px #e9e9ee;
+
+      @include media-breakpoint-down(xl) {
+        display: none;
+      }
+    }
+  }
+
+  & + section {
     max-width: 300px;
     width: 100%;
     float: left;
-    z-index: 1;
-    position: relative;
+    margin-left: -300px;
+    margin-top: 90px;
 
     @include media-breakpoint-down(xl) {
-      max-width: 100%;
       float: none;
-      order: 1;
+      margin-left: 0;
+      margin-top: 20px;
+      max-width: 100%;
+      order: 4;
     }
+  }
+}
 
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 25px;
-    }
+.user-info {
+  padding: 0;
 
-    .card-heading {
-      padding: 22px 30px;
-      margin: 0 0 25px 0;
-      border-top-left-radius: $border-radius;
-
-      @include media-breakpoint-down(xl) {
-        margin-bottom: 0;
-        border-top-right-radius: $border-radius;
-      }
-    }
-
-    & ~ .chart-spider {
-      float: right;
-      width: calc(100% - 300px);
-
-      @include media-breakpoint-down(xl) {
-        float: none;
-        order: 2;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        left: -1px;
-        top: 0;
-        width: 0;
-        height: 100%;
-        border-left: solid 1px #e9e9ee;
-
-        @include media-breakpoint-down(xl) {
-          display: none;
-        }
-      }
-    }
-
-    & + section {
-      max-width: 300px;
-      width: 100%;
-      float: left;
-      margin-left: -300px;
-      margin-top: 90px;
-
-      @include media-breakpoint-down(xl) {
-        float: none;
-        margin-left: 0;
-        margin-top: 20px;
-        max-width: 100%;
-        order: 4;
-      }
-    }
+  .card {
+    height: auto;
+    margin-bottom: 30px;
   }
 }
 
@@ -156,6 +156,7 @@
     .name {
       font-size: 1.125rem;
       margin: 0 0 3px 0;
+      color: $controls;
     }
 
     .location {
@@ -210,6 +211,13 @@
 }
 
 .profile-sidebar {
+  @include media-breakpoint-down(sm){
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    min-width: 100% !important;
+  }
+
   .card-fluid {
     margin-bottom: 30px;
 

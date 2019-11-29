@@ -57,8 +57,12 @@
     width: 100%;
     height: auto;
 
-    &-wrapper {
-      padding: 0 15px;
+    &-sm{
+      max-width: 450px;
+    }
+
+    &-lg{
+      max-width: 1280px;
     }
 
     .card-header {
@@ -98,10 +102,11 @@
     }
 
     &-wrapper {
+      padding: 50px 15px 0;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       width: 100%;
     }

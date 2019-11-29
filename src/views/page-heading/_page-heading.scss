@@ -12,16 +12,27 @@
   }
 
   .info-wrapper {
+    margin-right: 0;
+    margin-left: auto;
+
     @include media-breakpoint-down(md) {
       width: 100%;
     }
 
     .info {
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
+
       li{
         margin-left: 55px;
 
         @include media-breakpoint-down(md){
-          margin-left: 15px;
+          margin-left: 45px;
+        }
+
+        @include media-breakpoint-down(sm){
+          margin-left: 10px;
         }
 
         &:first-child{
@@ -30,14 +41,26 @@
           @include media-breakpoint-down(md) {
             margin-left: auto;
           }
+
+          @include media-breakpoint-down(sm){
+            margin-left: 0;
+          }
         }
 
         &:last-child{
+          @include media-breakpoint-down(sm){
+            margin-right: 0;
+          }
         }
       }
 
       .name {
         font-size: .8125rem;
+
+        @include media-breakpoint-down(lg) {
+          font-weight: 500;
+          color: $text;
+        }
       }
 
       .count {
@@ -75,11 +98,12 @@
   }
 
   .filter-actions{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: center;
     margin-left: 15px;
-    display: none;
 
     @include media-breakpoint-down(md){
       margin-bottom: 15px;

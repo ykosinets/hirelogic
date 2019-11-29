@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$path-font}/icons/icomoon.eot?jsvk5g');
-  src:  url('#{$path-font}/icons/icomoon.eot?jsvk5g#iefix') format('embedded-opentype'),
-        url('#{$path-font}/icons/icomoon.ttf?jsvk5g') format('truetype'),
-        url('#{$path-font}/icons/icomoon.woff?jsvk5g') format('woff'),
-        url('#{$path-font}/icons/icomoon.svg?jsvk5g#icomoon') format('svg');
+  src: url('#{$path-font}/icons/icomoon.eot?jsvk5g');
+  src: url('#{$path-font}/icons/icomoon.eot?jsvk5g#iefix') format('embedded-opentype'),
+  url('#{$path-font}/icons/icomoon.ttf?jsvk5g') format('truetype'),
+  url('#{$path-font}/icons/icomoon.woff?jsvk5g') format('woff'),
+  url('#{$path-font}/icons/icomoon.svg?jsvk5g#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -28,33 +28,43 @@
 .icon-checkmark:before {
   content: "\e900";
 }
+
 .icon-stones:before {
   content: "\e901";
 }
+
 .icon-clock:before {
   content: "\e902";
 }
+
 .icon-search:before {
   content: "\e903";
 }
+
 .icon-speedometer:before {
   content: "\e904";
 }
+
 .icon-case:before {
   content: "\e905";
 }
+
 .icon-profile:before {
   content: "\e906";
 }
+
 .icon-question:before {
   content: "\e907";
 }
+
 .icon-bell:before {
   content: "\e908";
 }
+
 .icon-arrow-down:before {
   content: "\e909";
 }
+
 .icon-arrow-up {
   &:before {
     content: "\e909";
@@ -62,94 +72,141 @@
     transform: scale(-1);
   }
 }
+
 .icon-gear:before {
   content: "\e90a";
 }
+
 .icon-lamp:before {
   content: "\e90b";
 }
+
 .icon-lamp-circle {
   &:before {
     content: "\e90b";
   }
-  &:after{
+
+  &:after {
     content: "\e924";
     margin-left: -1em;
     color: #fff;
   }
 }
+
 .icon-chart:before {
   content: "\e90c";
 }
+
 .icon-star-outline:before {
   content: "\e90d";
 }
+
 .icon-heart-outline:before {
   content: "\e90e";
 }
+
 .icon-gallery:before {
   content: "\e90f";
 }
+
 .icon-filter:before {
   content: "\e910";
 }
+
 .icon-plus-rounded:before {
   content: "\e911";
 }
+
 .icon-external-link:before {
   content: "\e912";
 }
+
 .icon-arrow-left:before {
   content: "\e913";
 }
+
 .icon-arrow-right:before {
   content: "\e914";
 }
+
 .icon-calendar:before {
   content: "\e915";
 }
+
 .icon-envelope:before {
   content: "\e916";
 }
+
 .icon-phone:before {
   content: "\e917";
 }
+
 .icon-plus-rounded-circle:before {
   content: "\e918";
 }
+
 .icon-minus-rounded-circle:before {
   content: "\e919";
 }
+
 .icon-check:before {
   content: "\e91a";
 }
+
 .icon-star-solid:before {
   content: "\e91b";
 }
+
 .icon-profile-outline:before {
   content: "\e91c";
 }
+
 .icon-plus-rounded-square:before {
   content: "\e91d";
 }
+
 .icon-edit-square:before {
   content: "\e91e";
 }
+
 .icon-trash-bucket:before {
   content: "\e91f";
 }
+
 .icon-brain:before {
   content: "\e920";
 }
+
 .icon-smile-sfwse:before {
   content: "\e921";
 }
+
 .icon-smile-confused:before {
   content: "\e922";
 }
+
 .icon-plus-circle:before {
   content: "\e923";
 }
+
+.icon-github:before {
+  content: "\e924";
+}
+
+.icon-linkedin:before {
+  content: "\e925";
+  font-size: .875rem;
+}
+
+.icon-behance:before {
+  content: "\e926";
+}
+
+.icon-dribble:before {
+  content: "\e927";
+}
+
+
 .icon-dots {
   height: 0;
   width: 0;
@@ -173,18 +230,19 @@
   &:before {
     top: -9px;
   }
+
   &:after {
     bottom: -9px;
   }
 }
 
 .icon-gray-circle,
-.icon-white-circle{
+.icon-white-circle {
   width: 1em;
   height: 1em;
   position: relative;
 
-  &:before{
+  &:before {
     position: relative;
     z-index: 2;
     font-size: 0.52em;
@@ -197,7 +255,7 @@
     flex-direction: column;
   }
 
-  &:after{
+  &:after {
     content: "";
     border-radius: 100%;
     position: absolute;
@@ -209,25 +267,25 @@
   }
 
   //custom
-  &.icon-plus-circle{
+  &.icon-plus-circle {
     &:before {
       font-size: .4em;
     }
   }
 }
 
-.icon-gray-circle{
-  &:after{
+.icon-gray-circle {
+  &:after {
     background: #F9F9FD;
   }
 }
 
-.icon-white-circle{
-  &:after{
+.icon-white-circle {
+  &:after {
     background: #fff;
   }
 }
 
-.icon-lg{
+.icon-lg {
   font-size: 40px;
 }

@@ -1,17 +1,82 @@
 <div class="container">
   <div class="page-heading">
-    <h3 class="page-title">Dashboard</h3>
+    <div class="order-md-1 order-lg-1">
+      <h3 class="page-title d-none d-lg-block">Dashboard</h3>
 
-    <div class="filter-actions">
-      <a href="#" class="btn-circle bg-primary rounded-circle mr-3">
-        <div class="icon-filter text-white"></div>
+      <a class="dropdown-link d-block d-lg-none" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ruby Developer<span class="icon-arrow-down"></span></a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+    <div class="filter-actions order-md-2 order-lg-3">
+      <a href="#" class="btn-circle rounded-circle btn-filter mr-3 d-block d-lg-none" id="filterButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="icon-filter"></div>
       </a>
-      <a href="#" class="btn-circle btn-raised bg-white rounded-circle">
-        <span class="icon-plus-rounded text-primary"></span>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterButton2">
+        <form>
+          <h4 class="form-title">Filter by</h4>
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <label for="sort">Sort by</label>
+            <input type="email" class="form-control form-control-sm" id="sort" placeholder="email@example.com">
+          </div>
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <label for="age-min">Age:</label>
+            <div class="d-flex flex-row justify-content-between align-items-center">
+              <input type="email" class="form-control form-control-sm form-control-2" id="age-min" placeholder="email@example.com">
+              <span class="form-divider">-</span>
+              <input type="email" class="form-control form-control-sm form-control-2" id="age-max" placeholder="email@example.com">
+            </div>
+          </div>
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <label for="ethnicity">Ethnicity</label>
+            <div class="d-flex flex-row">
+              <select type="email" class="form-control form-control-sm" id="ethnicity"></select>
+            </div>
+          </div>
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <label for="gender">Gender</label>
+            <div class="d-flex flex-row">
+              <select type="email" class="form-control form-control-sm" id="gender"></select>
+            </div>
+          </div>
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <label for="location">Location</label>
+            <div class="d-flex flex-row">
+              <select type="email" class="form-control form-control-sm" id="location"></select>
+            </div>
+          </div>
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <label for="deadline">Deadline</label>
+            <div class="d-flex flex-row">
+              <select type="email" class="form-control form-control-sm" id="deadline"></select>
+            </div>
+          </div>
+
+          <div class="form-group d-flex flex-row justify-content-between align-items-center">
+            <label for="shortlisted">Shortlisted</label>
+            <div class="d-flex flex-row">
+              <select type="email" class="form-control form-control-sm" id="shortlisted"></select>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <a href="#" class="btn-circle btn-raised rounded-circle">
+        <span class="icon-plus-rounded text-primary bg-white"></span>
+        <span class="label d-none d-lg-flex">Invite Candidate</span>
       </a>
     </div>
 
-    <div class="info-wrapper">
+    <div class="info-wrapper order-md-3 order-lg-2 align-items-start d-flex">
       <ul class="info list-unstyled m-0 d-flex flex-row align-items-start justify-content-between">
         <li>
           <div class="name">Candidates</div>

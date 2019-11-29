@@ -1,0 +1,164 @@
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>New Job</title>
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#063dc7">
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="HireLogic">
+  <meta name="application-name" content="HireLogic">
+  <meta name="msapplication-TileColor" content="#fdffc8">
+  <meta name="msapplication-config" content="./images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap"
+        rel="stylesheet">
+  <!-- /fonts -->
+
+  <!-- styles -->
+  <link rel="stylesheet" href="./main.css">
+  <!-- /styles -->
+</head>
+
+<body>
+<div class="page-wrapper page-form">
+  <div class="card-form-wrapper">
+    <div class="card card-form card-form-lg">
+      <div class="card-header">
+        <img class="company-image" src="images/Volvo_Logo.png" alt="company-logo">
+        <h3 class="page-title">Complete your profile, Dawid.</h3>
+      </div>
+
+      <div class="card-body">
+        <form class="settings-form" id="regForm" action="">
+
+          <div class="row-3">
+            <div class="form-group form-column-1">
+              <div class="form-group">
+                <label for="uploadFile">Upload CV</label>
+                <div class="input-group mb-3">
+                  <input type="text" id="uploadFile" class="form-control" placeholder="..."
+                         aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <input type="file" class="form-control" placeholder="..." aria-label="Recipient's username"
+                         aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="button-addon2">Browse</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-3">
+            <div class="form-group form-column-1">
+              <div class="form-group">
+                <label for="exampleInputName2">Date of Birth</label>
+                <input type="text" class="form-control" id="exampleInputName2" aria-describedby="emailHelp"
+                       placeholder="Enter full name">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputName3">Gender</label>
+                <input type="text" class="form-control" id="exampleInputName3" aria-describedby="emailHelp"
+                       placeholder="Enter full name">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputName4">Ethnicity</label>
+                <input type="text" class="form-control" id="exampleInputName4" aria-describedby="emailHelp"
+                       placeholder="Enter full name">
+              </div>
+            </div>
+
+            <div class="form-group form-column-1">
+              <div class="form-group">
+                <label for="exampleInputName5">Phone Number</label>
+                <input type="text" class="form-control" id="exampleInputName5" aria-describedby="emailHelp"
+                       placeholder="Enter full name">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputName6">Educational Level</label>
+                <input type="text" class="form-control" id="exampleInputName6" aria-describedby="emailHelp"
+                       placeholder="Enter full name">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputName7">Years of Experience in Similar Position</label>
+                <input type="text" class="form-control" id="exampleInputName7" aria-describedby="emailHelp"
+                       placeholder="Enter full name">
+              </div>
+            </div>
+
+            <div class="form-group form-column-1">
+              <label for="exampleInputName8">Social Links</label>
+
+              <div class="form-group">
+                <div class="input prepend-image">
+                  <span class="icon-github"></span>
+                  <input type="text" class="form-control" id="exampleInputName8" aria-describedby="emailHelp"
+                         placeholder="/example">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input prepend-image">
+                  <span class="icon-linkedin"></span>
+                  <input type="text" class="form-control" id="exampleInputName9" aria-describedby="emailHelp"
+                         placeholder="/example">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input prepend-image">
+                  <span class="icon-behance"></span>
+                  <input type="text" class="form-control" id="exampleInputName10" aria-describedby="emailHelp"
+                         placeholder="/example">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input prepend-image">
+                  <span class="icon-dribble"></span>
+                  <input type="text" class="form-control" id="exampleInputName11" aria-describedby="emailHelp"
+                         placeholder="/example">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-3">
+            <div class="form-group form-column-2">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Address</label>
+                <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-set justify-content-start">
+            <button class="btn btn-primary">Save profile</button>
+            <a href="candidate-signup.html" class="btn btn-secondary">Previous step</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://rawgit.com/tpreusse/radar-chart-d3/master/src/radar-chart.css">
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<script type="text/javascript" src="./bundle.js"></script>
+
+</body>
+</html>

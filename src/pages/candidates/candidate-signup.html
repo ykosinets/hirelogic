@@ -1,0 +1,58 @@
+@@include('views/head.html', {"title" : "New Job"})
+<body>
+<div class="page-wrapper page-form">
+  <div class="card-form-wrapper">
+    <div class="card card-form">
+      <div class="card-header">
+        <img class="company-image" src="images/Volvo_Logo.png" alt="company-logo">
+        <h3 class="page-title">Register to take a test.</h3>
+        <p class="page-subtitle page-subtitle-lg">Hello John, you’ve been invited to Volvo test, congrats!</p>
+      </div>
+
+      <div class="card-body">
+        <form class="settings-form" id="regForm" action="">
+          <div class="form-group">
+            <p class="form-info">The register form contains only three short steps.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputName1">Full name</label>
+            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
+                   placeholder="Enter full name">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputName2">E-mail Address</label>
+            <input type="email" class="form-control" id="exampleInputName2" aria-describedby="emailHelp"
+                   placeholder="Enter email">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputName3">Password</label>
+            <input type="password" class="form-control" id="exampleInputName3" aria-describedby="emailHelp">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputName4">Repeat Password</label>
+            <input type="password" class="form-control" id="exampleInputName4" aria-describedby="emailHelp">
+          </div>
+
+          <div class="form-group checkboxes-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheckTest1">
+              <label class="custom-control-label" for="customCheckTest1">I have read and agree with <a href="#">terms & conditions</a>.</label>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column align-items-start justify-content-start">
+            <button class="btn btn-primary">Create account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('views/scripts.html')
+</body>
+</html>

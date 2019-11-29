@@ -1,18 +1,42 @@
-.tile-list [class*="col-"]{
+.tile-list [class*="col-"] {
   margin-bottom: 30px;
 }
 
-.card-donut{
-  .chart-legends{
-    @include media-breakpoint-down(md){
+.card-donut {
+  .chart-legends {
+    @include media-breakpoint-down(md) {
       height: 240px;
       margin-bottom: 0;
       margin-right: 10px;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       height: auto;
       margin-right: 0;
       margin-bottom: 15px;
+    }
+  }
+}
+
+.card-bar{
+  .chart-legends {
+    float: right;
+
+    @include media-breakpoint-down(md){
+      float: none;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.page-dashboard {
+  .page-heading .info-wrapper {
+    @include media-breakpoint-down(md) {
+      width: auto;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
     }
   }
 }

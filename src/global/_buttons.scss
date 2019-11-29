@@ -43,28 +43,49 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 }
 
 .btn-circle {
-  height: 40px;
-  width: 40px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
   text-decoration: none !important;
+  line-height: 40px;
+
+  .label{
+    line-height: 40px;
+    margin: 0 0 0 10px;
+
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
 
   [class^="icon"] {
     font-size: 1rem;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 100%;
   }
 }
 
 .btn-raised {
-  box-shadow: 1px 1px 5px 0 rgb(233, 233, 238);
-  transition: .2s box-shadow ease-in-out;
+  [class^="icon"] {
+    box-shadow: 1px 1px 5px 0 rgb(233, 233, 238);
+    transition: .2s box-shadow ease-in-out;
+  }
 
   &:hover {
-    box-shadow: 0 0 3px 0 rgb(233, 233, 238);
+    [class^="icon"] {
+      box-shadow: 0 0 3px 0 rgb(233, 233, 238);
+    }
   }
 }
 
@@ -140,15 +161,19 @@ $btn-state-all: "&,&:hover, &:focus, &.focus, &:active, &.active, &:not(:disable
 }
 
 .btn-circle.btn-filter {
-  border: 1px solid $primary;
-  background: $primary;
-  color: $white;
+  [class^="icon"] {
+    border: 1px solid $primary;
+    background: $primary;
+    color: $white;
+  }
 
   &[aria-expanded="true"],
   &:hover {
-    background: $white;
-    border-color: $success;
-    color: $success;
+    [class^="icon"] {
+      background: $white;
+      border-color: $success;
+      color: $success;
+    }
   }
 }
 
